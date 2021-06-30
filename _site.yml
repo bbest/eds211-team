@@ -1,7 +1,7 @@
-name: "meds-distill-template"
+name: "EDS 211: Go Team!"
 title: "EDS 211"
 description: |
-  MEDS Courses distill template
+  EDS 211: Team Science, Collaborative Analysis and Project Management
 output_dir: "docs"
 navbar:
   right:

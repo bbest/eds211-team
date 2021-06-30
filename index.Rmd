@@ -1,6 +1,6 @@
 ---
-title: "EDS 211: Optional MEDS Template"
-description: "A minimal website skeleton and theme for MEDS course with distill (by RStudio)"
+title: "EDS 211: Go Team!"
+description: "EDS 211: Team Science, Collaborative Analysis and Project Management"
 site: distill::distill_website
 ---
 
