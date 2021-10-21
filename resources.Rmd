@@ -1,15 +1,15 @@
 ---
-title: "Course resources"
+title: "Resources"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<p style="color: #ba5e00"><b>TO UPDATE THIS PAGE:</b> Open and edit the <b>resources.Rmd</b> file, in the project root, to delete this placeholder text and customize with your own!</p>
+- **Agile Software Development**
+  * book: Sutherland & Sutherland (2014) [Scrum: The Art of Doing Twice the Work in Half the Time](https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X) by Jeff  & J.J. Sutherland
+  * book: Sutherland (2019) [The Scrum Fieldbook: Faster performance. Better results. Starting now.](https://www.amazon.com/Scrum-Fieldbook-performance-results-Starting-ebook/dp/B07SXFG8SC)
 
-### More on `distill`
-
--   RStudio's [`distill` website](https://rstudio.github.io/distill/)
--   Inspiration and examples from the [distillery](https://distillery.rbind.io/showcase.html)
+- **Github Project Management**
+  * [GitHub  Project Management](https://github.com/features#features-project-management)
 

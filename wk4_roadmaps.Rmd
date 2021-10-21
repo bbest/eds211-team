@@ -1,0 +1,20 @@
+---
+title: '`r paste("Week", params$module)`'
+params:
+  module: "4. Roadmaps & Burndown"
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F)
+```
+
+## Schedule
+
+```{r}
+source(here::here("functions.R"))
+get_sched() %>% 
+  filter(Module == params$module) %>% 
+  dt_sched()
+```
+
+

@@ -1,113 +1,45 @@
 ---
-title: "EDS 211: Go Team!"
+title: "EDS 211: Team Science"
 description: "EDS 211: Team Science, Collaborative Analysis and Project Management"
 site: distill::distill_website
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
-
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F)
 ```
 
-```{r, out.width = "100%", fig.cap = "Update this image by dropping your new image into the img folder of the project, then open the index.Rmd & change the path to point to the new image. Image: Mississippi River south of Memphis, TN, from USGS shared on Unsplash (https://unsplash.com/photos/35Z2ylLRCO8)."}
+## Schedule
 
-# UPDATE IMAGE HERE 
-# or copy/paste this code elsewhere, updating the file path, to add other images to your site!
-knitr::include_graphics("img/usgs_sat.jpeg")
+```{r}
+source(here::here("functions.R"))
+get_sched() %>% 
+  dt_sched()
 ```
 
-## Welcome to the MEDS distill template
+## Overview
 
-Welcome to the MEDS Course Website template! This template is made with [distill](https://rstudio.github.io/distill/), a package to build lightweight and robust websites in R. This method for creating a course website may make the most sense for MEDS teachers who are familiar with RStudio, R Markdown, git and GitHub (or who want to learn!). For those of you who do *not* want to create your website with distill in R, but still want a course website, check out [Course-in-a-Box](https://course-in-a-box.p2pu.org/) to create a site with no prior coding experience.
+Welcome to the **Team Science** course for the Masters in Environmental Data Science! In this class you'll learn how to work together on code while managing a project. You'll apply these techniques to the group project from the course [Remote Sensing (EDS 220)](https://github.com/samanthastevenson/EDS220_Fall2021) and they should help you manage your Capstone group project starting winter quarter.
+The techniques will help guide three basic questions:
 
-For those wanting to take the distill/R websites path: this template acts as both a starting point for your site, and place to learn basics ways to customize it (different topics currently populate the different modules, which I expect teachers will replace with different weeks or lessons or topics as useful for your courses). 
+1.  What should I work on next?
+2.  How long will it take?
+3.  How do we adapt to change?
 
-### Some starting points:
+These basic questions are however deceptively difficult to answer, especially as the size of the team and scope of the project increases.
 
-- Follow along with the "Getting started with the MEDS distill template" (COMING SOON) instructions to set up your own distill website. Please reach out to Allison for help getting your website started, and submit problems and suggestions as issues [here](https://github.com/allisonhorst/meds-distill-template). 
+**What should I work on next?** You'll learn 'agile' software development techniques to divide work into tasks, which can be assigned to various team members and passed between as work progresses. These tasks can be arranged as cards into columns on a 'Kanban' board: horizontally according to status (ToDo, In Progress, Done) or time (next week, next month, ...); and vertically based on priority (from most to least important, top to bottom). This overview of who is to do what next will be approached with different tools embracing increasing levels of complexity: a Trello board for basic projects without code, a Github Project to integrate Github Issues associated with code level git commit messages, and ZenHub for adding dependencies between issues and clustering into Epics for use with Roadmaps.
 
-- The "Weekly materials" section of this template site can be updated with your course materials, but also in this template serves the additional purpose of showing you how to customize some things on your page.
+**How long will it take?** You'll take on the role of an environmental data science consultancy responding to a request for proposal. In the proposal you'll outline milestones with deliverables and associated dollar amounts based on time estimates and hourly rates of team members. You'll track time spent on each task and report out at the end with a presentation on time spent over and under expectations, which will help update your understanding for future estimates. You'll use Clockify to track time and Rmarkdown to generate reports.
 
-- See the [EDS 212 Website](https://allisonhorst.github.io/EDS_212_essential-math/) for an example of what a customized live course site can look like using this template.
+**How do we adapt to change?** Changes are inevitable with technical problem solving and client requirements. As Mark Zuckerberg famously said "move fast and break things." Iterating quickly within the team and getting feedback from all stakeholders are an important part of the development process and the basis for 'agile' project management. You'll compare 'traditional' project management with scoping tasks at the outset of the project with a Gantt chart as a 'waterfall' diagram showing various phases of the project (eg data collection, analysis and communication).
+As you proceed with the project you'll keep track of tasks that expand and shift with some evaluation after the fact through a burndown report. Other 'agile' techniques and roles will be reviewed to adapt to change.
 
-<p style="color: #ba5e00"><b>TO UPDATE THIS PAGE:</b> Open and edit the <b>index.Rmd</b> file, in the project root, to delete this placeholder text and customize with your own!</p>
+## Grading
 
-## Course description
+Grades will be based on the following percentages:
 
-<p style="color: #ba5e00"><b>NOTE:</b> A lot of this home page information can be directly from your syllabus.</p>
+- Attendance: 10%
+- Labs: 60%
+- Presentation: 30%
 
-Add your course description here.
 
-## Teaching team
-
-**Instructor:** Mike Wazowski (wazowski\@monstersinc.org)
-
--   **Office:** Closet 100
--   **Office hours:** Friday 9pm - 11pm
-
-**Teaching assistant:** Boo (boo\@monstersinc.org)
-
--   **Office:** Boo's Room
--   **Office hours:** Saturday 7am - 8am
-
-## Important links
-
--   Link to full course syllabus (here is the [MEDS optional syllabus template](https://docs.google.com/document/d/1b2CElvwKk-haEA1axY5KvTEBbiSPUf7dIRUNX7gCI6w/edit?usp=sharing))
-
--   Link to Code of Conduct (Bren / UCSB)
-
--   Link to course GitHub Classroom, other essential resources
-
-## Weekly course schedule
-
--   **Lectures:** MW 8am - 9:15am (Warehouse Room 1)
--   **Labs:** Th 10am - 12pm (Warehouse Room 2)
-
-## Learning objectives
-
-Condimentum id venenatis a condimentum. Ultricies mi quis hendrerit dolor magna eget est. Turpis egestas maecenas pharetra convallis. Sem nulla pharetra diam sit amet. Diam volutpat commodo sed egestas egestas fringilla. Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Ornare massa eget egestas purus viverra accumsan in.
-
--   Vulputate eu scelerisque felis imperdiet proin.
--   Euismod nisi porta lorem mollis aliquam.
--   Urna molestie at elementum eu facilisis sed odio morbi quis.
--   Convallis a cras semper auctor neque. Semper quis lectus nulla at volutpat diam ut venenatis tellus.
-
-## Course requirements
-
-### Computing
-
--   Minimum device requirements
-
--   Software requirements
-
--   Account requirements
-
-### Textbook
-
--   Required textbook / information
-
-### Other requirements
-
--   Anything else
--   Important for students to know
-
-## Tentative topics
-
-| Week | Lecture topics | Lab topics |
-|------|----------------|------------|
-| 1    | Topics         | Topics     |
-| 2    | Topics         | Topics     |
-| 3    | Topics         | Topics     |
-| 4    | Topics         | Topics     |
-| 5    | Topics         | Topics     |
-| 6    | Topics         | Topics     |
-| 7    | Topics         | Topics     |
-| 8    | Topics         | Topics     |
-| 9    | Topics         | Topics     |
-| 10   | Topics         | Topics     |
