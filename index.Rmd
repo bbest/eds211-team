@@ -8,6 +8,8 @@ site: distill::distill_website
 knitr::opts_chunk$set(echo = F)
 ```
 
+> If you want to go fast, go alone. If you want to go far, go together. -- African proverb
+
 ## Schedule
 
 ```{r}
