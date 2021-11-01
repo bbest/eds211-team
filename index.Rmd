@@ -58,13 +58,4 @@ md_cite("Bennett", bib_file="eds211-team.bib")
 - Week 3: @perez-riverolTenSimpleRules2016 ([pdf](https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing))
 - Week 4: @larsonBestPracticesAccelerating2019 ([pdf](https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing))
 
-- Bennett and Gadlin (2012)
-  https://drive.google.com/file/d/1LJWfJTo4EWcd6Vxyfg7R6GTES-orY-3B/view?usp=sharing
-- Lowndes et al. (2017)
-  https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing
-- Perez-Riverol et al. (2016)
-  https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing
-- Larson (2019)
-  https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing
-
 
