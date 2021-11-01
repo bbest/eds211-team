@@ -1,7 +1,7 @@
 ---
 title: '`r paste("Week", params$module)`'
 params:
-  module: "2. Time & Boards"
+  module: "2. Time & Github Org"
 ---
 
 ```{r setup, include=F}
