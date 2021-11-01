@@ -11,9 +11,9 @@ navbar:
       menu:
         - text: "1. Introduction"
           href: wk1_intro.html
-        - text: "2. Time & Boards"
+        - text: "2. Time & Github Org"
           href: wk2_time.html
-        - text: "3. Github"
+        - text: "3. Github Issues & Projects"
           href: wk3_github.html
         - text: "4. Roadmaps & Burndown"
           href: wk4_roadmaps.html
@@ -25,7 +25,14 @@ navbar:
       href: https://github.com/bbest/eds211_go-team
 output:
   distill::distill_article:
+    pandoc_args: ["--number-sections"]
+    # theme: "default"
+    # type: "inverse"
     toc: true
+    toc_depth: 4
     toc_float: true
+    number_sections: true
+    anchor_sections: true
 theme: theme.css
 include: [".nojekyll"]
+bibliography: ["eds211-team.bib"]

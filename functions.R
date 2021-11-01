@@ -13,13 +13,37 @@ get_sched <- function(){
 dt_sched <- function(d_sched){
   i_mod <- which(names(d_sched) == "Module") - 1
 
-  DT::datatable(
-    d_sched,
-    rownames = F,
-    extensions = 'RowGroup',
-    options = list(
-      dom = 't',
-      rowGroup = list(
-        dataSrc=c(i_mod)),
-      columnDefs = list(list(visible=F, targets=c(i_mod)))))
+  d_sched %>%
+    mutate(
+      Lecture = ifelse(
+        is.na(Lecture),
+        "",
+        ifelse(
+          is.na(Lecture_link),
+          Lecture,
+          glue::glue("<a href='{Lecture_link}' target='_blank'>{Lecture}</a>"))),
+      Lab     = ifelse(
+        is.na(Lab),
+        "",
+        ifelse(
+          is.na(Lab_link),
+          Lab,
+          glue::glue("<a href='{Lab_link}'     target='_blank'>{Lab}</a>"))),
+      Reading = ifelse(
+        is.na(Reading),
+        "",
+        ifelse(
+          is.na(Reading_link),
+          Reading,
+          glue::glue("<a href='{Reading_link}'     target='_blank'>{Reading}</a>")))) %>%
+    select(-Lecture_link, -Lab_link, -Reading_link, -`Lab\nTechnology`) %>%
+    DT::datatable(
+      rownames = F,
+      extensions = 'RowGroup',
+      options = list(
+        dom = 't',
+        rowGroup = list(
+          dataSrc=c(i_mod)),
+        columnDefs = list(list(visible=F, targets=c(i_mod)))),
+      escape = F)
 }

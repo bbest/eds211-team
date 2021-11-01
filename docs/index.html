@@ -105,10 +105,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="twitter:description" content="EDS 211: Team Science, Collaborative Analysis and Project Management"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Collaboration and Team Science: From Theory to Practice;citation_publication_date=2012;citation_volume=60;citation_doi=10.2310/JIM.0b013e318250871d;citation_issn=1081-5589, 1708-8267;citation_author=L. Michelle Bennett;citation_author=Howard Gadlin"/>
+  <meta name="citation_reference" content="citation_title=Best Practices in Accelerating the Data Science Process in Python;citation_publication_date=2019;citation_publisher=IntechOpen;citation_author=Deanne Larson"/>
+  <meta name="citation_reference" content="citation_title=Our path to better science in less time using open data science tools;citation_publication_date=2017;citation_volume=1;citation_doi=10.1038/s41559-017-0160;citation_issn=2397-334X;citation_author=Julia S. Stewart Lowndes;citation_author=Benjamin D. Best;citation_author=Courtney Scarborough;citation_author=Jamie C. Afflerbach;citation_author=Melanie R. Frazier;citation_author=Casey C. O’Hara;citation_author=Ning Jiang;citation_author=Benjamin S. Halpern"/>
+  <meta name="citation_reference" content="citation_title=Ten Simple Rules for Taking Advantage of Git and GitHub;citation_publication_date=2016;citation_volume=12;citation_doi=10.1371/journal.pcbi.1004947;citation_issn=1553-7358;citation_author=Yasset Perez-Riverol;citation_author=Laurent Gatto;citation_author=Rui Wang;citation_author=Timo Sachsenberg;citation_author=Julian Uszkoreit;citation_author=Felipe da Veiga Leprevost;citation_author=Christian Fufezan;citation_author=Tobias Ternent;citation_author=Stephen J. Eglen;citation_author=Daniel S. Katz;citation_author=Tom J. Pollard;citation_author=Alexander Konovalov;citation_author=Robert M. Flight;citation_author=Kai Blin;citation_author=Juan Antonio Vizcaíno"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["EDS 211: Team Science"]},{"type":"character","attributes":{},"value":["EDS 211: Team Science, Collaborative Analysis and Project Management"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["EDS 211: Team Science"]},{"type":"character","attributes":{},"value":["EDS 211: Team Science, Collaborative Analysis and Project Management"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["eds211-team.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2493,8 +2498,8 @@ Weekly Modules
 </button>
 <div class="nav-dropdown-content">
 <a href="wk1_intro.html">1. Introduction</a>
-<a href="wk2_time.html">2. Time &amp; Boards</a>
-<a href="wk3_github.html">3. Github</a>
+<a href="wk2_time.html">2. Time &amp; Github Org</a>
+<a href="wk3_github.html">3. Github Issues &amp; Projects</a>
 <a href="wk4_roadmaps.html">4. Roadmaps &amp; Burndown</a>
 <a href="wk5_productivity.html">5. Productivity &amp; Presentations</a>
 </div>
@@ -2524,21 +2529,22 @@ Weekly Modules
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#schedule">Schedule</a></li>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#grading">Grading</a></li>
+<li><a href="#schedule"><span class="toc-section-number">0.1</span> Schedule</a></li>
+<li><a href="#overview"><span class="toc-section-number">0.2</span> Overview</a></li>
+<li><a href="#grading"><span class="toc-section-number">0.3</span> Grading</a></li>
+<li><a href="#readings"><span class="toc-section-number">0.4</span> Readings</a></li>
 </ul>
 </nav>
 </div>
 <blockquote>
 <p>If you want to go fast, go alone. If you want to go far, go together. – African proverb</p>
 </blockquote>
-<h2 id="schedule">Schedule</h2>
+<h2 data-number="0.1" id="schedule"><span class="header-section-number">0.1</span> Schedule</h2>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-f60b101f7dc3c54c4509" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f60b101f7dc3c54c4509">{"x":{"filter":"none","vertical":false,"extensions":["RowGroup"],"data":[["Mon, Nov 1","Wed, Nov 3","Mon, Nov 8","Wed, Nov 10","Mon, Nov 15","Wed, Nov 17","Mon, Nov 22","Wed, Nov 24","Mon, Nov 29","Wed, Dec 1"],["1. Introduction","1. Introduction","2. Time &amp; Boards","2. Time &amp; Boards","3. Github","3. Github","4. Roadmaps &amp; Burndown","4. Roadmaps &amp; Burndown","5. Productivity &amp; Presentations","5. Productivity &amp; Presentations"],["intro","plenary","lec_time","lec_kanban","lec_github-issues","lec_github-projects","lec_roadmap","lec_burndown","lec_productivity","presentations"],["lab_proposal",null,"lab_time","lab_trello","lab_github","lab_github","lab_roadmap","lab_burndown","prep presentations",null],[null,null,"lab_proposal","lab_time","lab_trello",null,"lab_github","lab_roadmap","lab_burndown",null],[null,null,10,5,5,null,10,5,5,null],["Google Docs, Google Sheets, Gantt charts",null,"Clockify","Trello","Github: Issues, Pages, branch &amp; merge, markdown, mentions","Github: Milestones, Projects","Zenhub: Epics, Roadmaps","Rmarkdown","Google Chrome extensions, RStudio, Google Drive",null],["Lowndes et al (2017)",null,null,null,"Perez-Riverol et al (2016)",null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>date<\/th>\n      <th>Module<\/th>\n      <th>Lecture<\/th>\n      <th>Lab<\/th>\n      <th>Lab\nDue<\/th>\n      <th>Lab\nPts<\/th>\n      <th>Lab\nTechnology<\/th>\n      <th>Reading<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","rowGroup":{"dataSrc":1},"columnDefs":[{"visible":false,"targets":1},{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-674f9bfe14626ff3154c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-674f9bfe14626ff3154c">{"x":{"filter":"none","vertical":false,"extensions":["RowGroup"],"data":[["Mon, Nov 1","Wed, Nov 3","Mon, Nov 8","Wed, Nov 10","Mon, Nov 15","Wed, Nov 17","Mon, Nov 22","Wed, Nov 24","Mon, Nov 29","Wed, Dec 1"],["1. Introduction","1. Introduction","2. Time & Github Org","2. Time & Github Org","3. Github","3. Github","4. Roadmaps & Burndown","4. Roadmaps & Burndown","5. Productivity & Presentations","5. Productivity & Presentations"],["<a href='https://docs.google.com/presentation/d/1owziy77lGi2mytXoUDj1kyTJIOSFqrOH7I29yDWFlo8/edit#slide=id.gfca83dc967_0_48' target='_blank'>intro<\/a>","<a href='https://docs.google.com/presentation/d/1iDL4z1qf68SVZPxx2nTtteyVZqo9jGcic6D8-Sudl50/edit#slide=id.p' target='_blank'>plenary<\/a>","time","github-org","github-issues","github-projects","roadmap","burndown","productivity","presentations"],["<a href='https://bbest.github.io/eds211-team/lab1_proposal.html'     target='_blank'>proposal<\/a>","","time","github","github","github","lab_roadmap","lab_burndown","prep presentations",""],[null,null,"proposal","time",null,null,"lab_github","lab_roadmap","lab_burndown",null],[null,null,10,5,null,null,15,5,5,null],["<a href='https://drive.google.com/file/d/1LJWfJTo4EWcd6Vxyfg7R6GTES-orY-3B/view?usp=sharing'     target='_blank'>Bennett and Gadlin (2012)<\/a>","","<a href='https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing'     target='_blank'>Lowndes et al. (2017)<\/a>","","<a href='https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing'     target='_blank'>Bennett and Gadlin (2012)<\/a>","","<a href='https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing'     target='_blank'>Larson (2019)<\/a>","","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>date<\/th>\n      <th>Module<\/th>\n      <th>Lecture<\/th>\n      <th>Lab<\/th>\n      <th>Lab\nDue<\/th>\n      <th>Lab\nPts<\/th>\n      <th>Reading<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","rowGroup":{"dataSrc":1},"columnDefs":[{"visible":false,"targets":1},{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
-<h2 id="overview">Overview</h2>
+<h2 data-number="0.2" id="overview"><span class="header-section-number">0.2</span> Overview</h2>
 <p>Welcome to the <strong>Team Science</strong> course for the Masters in Environmental Data Science! In this class you’ll learn how to work together on code while managing a project. You’ll apply these techniques to the group project from the course <a href="https://github.com/samanthastevenson/EDS220_Fall2021">Remote Sensing (EDS 220)</a> and they should help you manage your Capstone group project starting winter quarter. The techniques will help guide three basic questions:</p>
 <ol type="1">
 <li>What should I work on next?</li>
@@ -2549,14 +2555,43 @@ Weekly Modules
 <p><strong>What should I work on next?</strong> You’ll learn ‘agile’ software development techniques to divide work into tasks, which can be assigned to various team members and passed between as work progresses. These tasks can be arranged as cards into columns on a ‘Kanban’ board: horizontally according to status (ToDo, In Progress, Done) or time (next week, next month, …); and vertically based on priority (from most to least important, top to bottom). This overview of who is to do what next will be approached with different tools embracing increasing levels of complexity: a Trello board for basic projects without code, a Github Project to integrate Github Issues associated with code level git commit messages, and ZenHub for adding dependencies between issues and clustering into Epics for use with Roadmaps.</p>
 <p><strong>How long will it take?</strong> You’ll take on the role of an environmental data science consultancy responding to a request for proposal. In the proposal you’ll outline milestones with deliverables and associated dollar amounts based on time estimates and hourly rates of team members. You’ll track time spent on each task and report out at the end with a presentation on time spent over and under expectations, which will help update your understanding for future estimates. You’ll use Clockify to track time and Rmarkdown to generate reports.</p>
 <p><strong>How do we adapt to change?</strong> Changes are inevitable with technical problem solving and client requirements. As Mark Zuckerberg famously said “move fast and break things.” Iterating quickly within the team and getting feedback from all stakeholders are an important part of the development process and the basis for ‘agile’ project management. You’ll compare ‘traditional’ project management with scoping tasks at the outset of the project with a Gantt chart as a ‘waterfall’ diagram showing various phases of the project (eg data collection, analysis and communication). As you proceed with the project you’ll keep track of tasks that expand and shift with some evaluation after the fact through a burndown report. Other ‘agile’ techniques and roles will be reviewed to adapt to change.</p>
-<h2 id="grading">Grading</h2>
+<h2 data-number="0.3" id="grading"><span class="header-section-number">0.3</span> Grading</h2>
 <p>Grades will be based on the following percentages:</p>
 <ul>
 <li>Attendance: 10%</li>
 <li>Labs: 60%</li>
 <li>Presentation: 30%</li>
 </ul>
+<h2 data-number="0.4" id="readings"><span class="header-section-number">0.4</span> Readings</h2>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<!-- TODO: move to UCSB only Google Drive -->
+<ul>
+<li><p>Week 1: <span class="citation" data-cites="bennettCollaborationTeamScience2012"><a href="#ref-bennettCollaborationTeamScience2012" role="doc-biblioref">Bennett and Gadlin</a> (<a href="#ref-bennettCollaborationTeamScience2012" role="doc-biblioref">2012</a>)</span> (<a href="https://drive.google.com/file/d/1LJWfJTo4EWcd6Vxyfg7R6GTES-orY-3B/view?usp=sharing">pdf</a>)</p></li>
+<li><p>Week 2: <span class="citation" data-cites="lowndesOurPathBetter2017"><a href="#ref-lowndesOurPathBetter2017" role="doc-biblioref">Lowndes et al.</a> (<a href="#ref-lowndesOurPathBetter2017" role="doc-biblioref">2017</a>)</span> (<a href="https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing">pdf</a>)</p></li>
+<li><p>Week 3: <span class="citation" data-cites="perez-riverolTenSimpleRules2016"><a href="#ref-perez-riverolTenSimpleRules2016" role="doc-biblioref">Perez-Riverol et al.</a> (<a href="#ref-perez-riverolTenSimpleRules2016" role="doc-biblioref">2016</a>)</span> (<a href="https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing">pdf</a>)</p></li>
+<li><p>Week 4: <span class="citation" data-cites="larsonBestPracticesAccelerating2019"><a href="#ref-larsonBestPracticesAccelerating2019" role="doc-biblioref">Larson</a> (<a href="#ref-larsonBestPracticesAccelerating2019" role="doc-biblioref">2019</a>)</span> (<a href="https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing">pdf</a>)</p></li>
+<li><p>Bennett and Gadlin (2012) <a href="https://drive.google.com/file/d/1LJWfJTo4EWcd6Vxyfg7R6GTES-orY-3B/view?usp=sharing" class="uri">https://drive.google.com/file/d/1LJWfJTo4EWcd6Vxyfg7R6GTES-orY-3B/view?usp=sharing</a></p></li>
+<li><p>Lowndes et al. (2017) <a href="https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing" class="uri">https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing</a></p></li>
+<li><p>Perez-Riverol et al. (2016) <a href="https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing" class="uri">https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing</a></p></li>
+<li><p>Larson (2019) <a href="https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing" class="uri">https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing</a></p></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-bennettCollaborationTeamScience2012" class="csl-entry" role="doc-biblioentry">
+Bennett, L. Michelle, and Howard Gadlin. 2012. <span>“Collaboration and <span>Team Science</span>: <span>From Theory</span> to <span>Practice</span>.”</span> <em>Journal of Investigative Medicine</em> 60 (5): 768–75. <a href="https://doi.org/10.2310/JIM.0b013e318250871d">https://doi.org/10.2310/JIM.0b013e318250871d</a>.
+</div>
+<div id="ref-larsonBestPracticesAccelerating2019" class="csl-entry" role="doc-biblioentry">
+Larson, Deanne. 2019. <span>“Best <span>Practices</span> in <span>Accelerating</span> the <span>Data Science Process</span> in <span>Python</span>.”</span> In <em>Introduction to <span>Data Science</span> and <span>Machine Learning</span></em>. <span>IntechOpen</span>.
+</div>
+<div id="ref-lowndesOurPathBetter2017" class="csl-entry" role="doc-biblioentry">
+Lowndes, Julia S. Stewart, Benjamin D. Best, Courtney Scarborough, Jamie C. Afflerbach, Melanie R. Frazier, Casey C. O’Hara, Ning Jiang, and Benjamin S. Halpern. 2017. <span>“Our Path to Better Science in Less Time Using Open Data Science Tools.”</span> <em>Nature Ecology &amp; Evolution</em> 1 (6): 0160. <a href="https://doi.org/10.1038/s41559-017-0160">https://doi.org/10.1038/s41559-017-0160</a>.
+</div>
+<div id="ref-perez-riverolTenSimpleRules2016" class="csl-entry" role="doc-biblioentry">
+Perez-Riverol, Yasset, Laurent Gatto, Rui Wang, Timo Sachsenberg, Julian Uszkoreit, Felipe da Veiga Leprevost, Christian Fufezan, et al. 2016. <span>“Ten <span>Simple Rules</span> for <span>Taking Advantage</span> of <span>Git</span> and <span>GitHub</span>.”</span> Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (7): e1004947. <a href="https://doi.org/10.1371/journal.pcbi.1004947">https://doi.org/10.1371/journal.pcbi.1004947</a>.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2568,7 +2603,10 @@ Weekly Modules
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
