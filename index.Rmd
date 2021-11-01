@@ -57,5 +57,6 @@ md_cite("Bennett", bib_file="eds211-team.bib")
 - Week 2: @lowndesOurPathBetter2017 ([pdf](https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing))
 - Week 3: @perez-riverolTenSimpleRules2016 ([pdf](https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing))
 - Week 4: @larsonBestPracticesAccelerating2019 ([pdf](https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing))
+- Week 5: @bastilleImprovingIEAApproach2021 ([pdf](https://drive.google.com/file/d/1lZvvLdfzq9xnIpF9fxhVAFWl0laFUB4n/view?usp=sharing))
 
 

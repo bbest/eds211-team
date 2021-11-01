@@ -42,7 +42,7 @@ Think carefully about what you'd like to call your group project. Come up with:
 
 -   **Key**\
     all lower case, no spaces, possibly an acronym\
-    For instance, "ohi". Ideally, find a key that is not already taken on Github. Since [github.com/ohi](https://github.com/ohi) is already taken, we chose "[ohi-science](https://github.com/ohi-science)" as the final key.
+    For instance, "ohi". Ideally, find a key that is not already taken on Github. Since [github.com/ohi](https://github.com/ohi) is already taken, we chose "[ohi-science](https://github.com/ohi-science)" as the final key. You don't need to create a new Github organization just yet. We'll handle that in the Github lab.
 
 # Take Notes in Google Docs
 
@@ -99,8 +99,6 @@ For more complex projects, you might want to display the project schedule with s
 
 8.  Remove the Chart Legend. Click on the chart and three circles in upper right, Edit chart. Click the *Customize* tab in the Chart editor panel, then click *Legend*. Select *Position: None*.
 
-<div>Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
 In the end, you should have a chart like so:
 
 ![](img/lab_proposal/schedule-detailed.jpg){width="600"}
@@ -132,7 +130,7 @@ Include in your proposal:
 
 2.  **Date** in the upper right.
 
-3.  **Contents** with Table of Contents added, similar to Notes.
+3.  **Contents** with Table of Contents added, similar to Notes. Be sure to refresh the Table of Contents after you add the headers below.
 
 4.  **Overview**. Below a Heading 1 of Overview, describe the project summarizing or expanding upon the RFP in a paragraph.
 
