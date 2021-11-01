@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = F)
 
 > If you want to go fast, go alone. If you want to go far, go together. -- African proverb
 
-## Schedule
+# Schedule
 
 ```{r}
 source(here::here("functions.R"))
@@ -19,7 +19,7 @@ get_sched() %>%
   dt_sched()
 ```
 
-## Overview
+# Overview
 
 Welcome to the **Team Science** course for the Masters in Environmental Data Science! In this class you'll learn how to work together on code while managing a project. You'll apply these techniques to the group project from the course [Remote Sensing (EDS 220)](https://github.com/samanthastevenson/EDS220_Fall2021) and they should help you manage your Capstone group project starting winter quarter.
 The techniques will help guide three basic questions:
@@ -37,7 +37,7 @@ These basic questions are however deceptively difficult to answer, especially as
 **How do we adapt to change?** Changes are inevitable with technical problem solving and client requirements. As Mark Zuckerberg famously said "move fast and break things." Iterating quickly within the team and getting feedback from all stakeholders are an important part of the development process and the basis for 'agile' project management. You'll compare 'traditional' project management with scoping tasks at the outset of the project with a Gantt chart as a 'waterfall' diagram showing various phases of the project (eg data collection, analysis and communication).
 As you proceed with the project you'll keep track of tasks that expand and shift with some evaluation after the fact through a burndown report. Other 'agile' techniques and roles will be reviewed to adapt to change.
 
-## Grading
+# Grading
 
 Grades will be based on the following percentages:
 
@@ -45,7 +45,7 @@ Grades will be based on the following percentages:
 - Labs: 60%
 - Presentation: 30%
 
-## Readings
+# Readings
 
 ```{r, eval=F}
 library(citr)
