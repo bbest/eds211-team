@@ -118,7 +118,7 @@ In the end, you should have a chart like so:
 
 # Write the RFP
 
-Create a Google Documents simple named after RFP (Request for proposal) with your project key, so "rfp \| {key}". Give it a title summarizing the desired output product and a new line below that with "Request for Proposal" formatted as a Subtitle. Imagine you are the client seeking the analytic output of your Remote Sensing group project. Write one paragraph describing this as a request to solicit bids from environmental data science consultancies.
+Create a Google Document simply named RFP (Request for Proposal) with your project key, so "rfp \| {key}". Give it a title summarizing the desired output product and a new line below that with "Request for Proposal" formatted as a Subtitle. Imagine you are the client seeking the analytic output of your Remote Sensing group project. Write one paragraph describing this as a request to solicit bids from environmental data science consultancies.
 
 # Write the Proposal
 
