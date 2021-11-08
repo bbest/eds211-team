@@ -25,26 +25,50 @@ You will then **fork** the template repo [samanthastevenson/EDS220_Fall2021_Fina
 
 Have only one group project member follow instructions to [Create a new organization from scratch - GitHub Docs](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch). Even more simply, choose **+** and **New organization** from upper right of [github.com](https://github.com) once you're logged in:
 
-![](img/lab3_github/github_new-org.jpg){style=width:150px;}
+![](img/lab3_github/github_new-org.jpg){style="width:150px;"}
 
-- **Organization account name**: <br>
-  This should be your Project Key from [EDS 211 - Lab 1. Proposal](https://bbest.github.io/eds211-team/lab1_proposal.html#create-group-project-key-and-title), e.g. `ohi-science`).
-- **Contact email**: <br>
-  This should be the email associated with your Github account.
-- **This organization belongs to**: <br>
-  Choose _**My personal account**_.
-- **Add organization members**: <br>
-  Add the Github usernames of the rest of your **team** plus instructors for both classes:
-  - `samanthastevenson` (EDS 220)
-  - `bbest` (EDS 211).
+-   **Organization account name**:\
+    This should be your Project Key from [EDS 211 - Lab 1. Proposal](https://bbest.github.io/eds211-team/lab1_proposal.html#create-group-project-key-and-title), e.g. `ohi-science`).
+
+-   **Contact email**:\
+    This should be the email associated with your Github account.
+
+-   **This organization belongs to**:\
+    Choose ***My personal account***.
+
+-   **Add organization members**:\
+    Add the Github usernames of the rest of your **team** plus instructors for both classes:
+
+    -   `samanthastevenson` (EDS 220)
+    -   `bbest` (EDS 211).
+
+-   **What do you spend time on most day-to-day?**\
+    I chose: Writing code and Planning projects.
+
+-   **How many people do you expect to actively work within this GitHub organization?\
+    **1 -5
+
+-   **What type of work do you plan to use this organization for?\
+    **Education projects
+
+-   **What do you expect to do on GitHub in the next seven days?\
+    **Collaborate on code; Plan and track work; Set up CI/CD \
+    [[Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) / [Continuous Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) such as Github Action to automatically render Rmarkdown to html on website.]
+
+-   **Do you have an existing repository for your project?\
+    **No
+
+## Edit All Invited People to make Owner (lead), Accept invitations (all)
+
+Now the lead needs to visit the **People** tab of the organization, visit **Pending invitations** and make everyone an **Owner** (gear icon, Edit invitation, Owner, Update invitation).
+
+All the rest of the team members need to accept the invitations, which can be done by directly visiting `https://github.com/{org}/{repo}/invitations`.
 
 ## Fork `samanthastevenson/{repo}` into `{org}/{repo}` (lead only)
 
 [Fork the repo - GitHub Docs](https://docs.github.com/en/get-started/quickstart/fork-a-repo):
 
-- **From**: `samanthastevenson/{repo}` <br>
-  The template repository [samanthastevenson/EDS220_Fall2021_FinalProjInfofrom](https://github.com/samanthastevenson/EDS220_Fall2021_FinalProjInfofrom) that Dr. Stevenson created for your Remote Sensing (EDS 220) group project.
--   **To**: `{org}/{repo}` <br>
-  The organization should be what you created in the previous step. You can rename the repo from `EDS220_Fall2021_FinalProjInfofrom` to something shorter like `notebook`.
+-   **From**: `samanthastevenson/{repo}` <br> The template repository [samanthastevenson/EDS220_Fall2021_FinalProjInfofrom](https://github.com/samanthastevenson/EDS220_Fall2021_FinalProjInfofrom) that Dr. Stevenson created for your Remote Sensing (EDS 220) group project.
+-   **To**: `{org}/{repo}` <br> The organization should be what you created in the previous step. You can rename the repo from `EDS220_Fall2021_FinalProjInfofrom` to something shorter like `notebook`.
 
 # ...
