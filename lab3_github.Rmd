@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = F)
 
 # Learning Objectives {.unnumbered}
 
--   **Create Repos in Github Organization**. Create a new Github organization based on your Project Key (e.g. `ohi-science`).
+-   **Create `notebook` Repo in Github Organization**. Create a new Github organization based on your Project Key (e.g. `ohi-science`) and fork the template from Dr Stevenson there.
 
 -   ...
 
@@ -19,13 +19,24 @@ knitr::opts_chunk$set(echo = F)
 
 The Github Organization you create will become the `{owner}` of the project's main `{repo}`. Remember, all of Github is organized according to `github.com/{owner}/{repo}`.
 
-You will then **fork** the template repo [samanthastevenson/EDS220_Fall2021_FinalProjInfofrom](https://github.com/samanthastevenson/EDS220_Fall2021_FinalProjInfofrom) where `{owner}` = `samanthastevenson` into your new Github organization (e.g. `ohi-science` from Project Key of [EDS 211 - Lab 1. Proposal](https://bbest.github.io/eds211-team/lab1_proposal.html#create-group-project-key-and-title)).
+You will then **fork** the template repo [samanthastevenson/EDS220_Fall2021_FinalProjInfofrom](https://github.com/samanthastevenson/EDS220_Fall2021_FinalProjInfofrom) where `{owner}` = `samanthastevenson` into your new Github organization (e.g. `{owner}` = `ohi-science` from Project Key of [EDS 211 - Lab 1. Proposal](https://bbest.github.io/eds211-team/lab1_proposal.html#create-group-project-key-and-title)).
 
 ## Create Github Organization (lead only)
 
 Have only one group project member follow instructions to [Create a new organization from scratch - GitHub Docs](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch). Even more simply, choose **+** and **New organization** from upper right of [github.com](https://github.com) once you're logged in:
 
 ![](img/lab3_github/github_new-org.jpg){style=width:150px;}
+
+- **Organization account name**: <br>
+  This should be your Project Key from [EDS 211 - Lab 1. Proposal](https://bbest.github.io/eds211-team/lab1_proposal.html#create-group-project-key-and-title), e.g. `ohi-science`).
+- **Contact email**: <br>
+  This should be the email associated with your Github account.
+- **This organization belongs to**: <br>
+  Choose _**My personal account**_.
+- **Add organization members**: <br>
+  Add the Github usernames of the rest of your **team** plus instructors for both classes:
+  - `samanthastevenson` (EDS 220)
+  - `bbest` (EDS 211).
 
 ## Fork `samanthastevenson/{repo}` into `{org}/{repo}` (lead only)
 
