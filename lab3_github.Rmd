@@ -1,0 +1,39 @@
+---
+title: 'Lab 3. Github'
+bibliography: ["eds211-team.bib"]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F)
+```
+
+# Learning Objectives {.unnumbered}
+
+-   **Create Repos in Github Organization**. Create a new Github organization based on your Project Key (e.g. `ohi-science`).
+
+-   ...
+
+# Setup Final Project in New Github Organization
+
+The Github Organization you create will become the `{owner}` of the project's main `{repo}`. Remember, all of Github is organized according to `github.com/{owner}/{repo}`.
+
+You will then **fork** the template repo [samanthastevenson/EDS220_Fall2021_FinalProjInfofrom](https://github.com/samanthastevenson/EDS220_Fall2021_FinalProjInfofrom) where `{owner}` = `samanthastevenson` into your new Github organization (e.g. `ohi-science` from Project Key of [EDS 211 - Lab 1. Proposal](https://bbest.github.io/eds211-team/lab1_proposal.html#create-group-project-key-and-title)).
+
+## Create Github Organization (lead only)
+
+Have only one group project member follow instructions to [Create a new organization from scratch - GitHub Docs](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch). Even more simply, choose **+** and **New organization** from upper right of [github.com](https://github.com) once you're logged in:
+
+![](img/lab3_github/github_new-org.jpg){style=width:150px;}
+
+## Fork `samanthastevenson/{repo}` into `{org}/{repo}` (lead only)
+
+[Fork the repo - GitHub Docs](https://docs.github.com/en/get-started/quickstart/fork-a-repo):
+
+- **From**: `samanthastevenson/{repo}` <br>
+  The template repository [samanthastevenson/EDS220_Fall2021_FinalProjInfofrom](https://github.com/samanthastevenson/EDS220_Fall2021_FinalProjInfofrom) that Dr. Stevenson created for your Remote Sensing (EDS 220) group project.
+-   **To**: `{org}/{repo}` <br>
+  The organization should be what you created in the previous step. You can rename the repo from `EDS220_Fall2021_FinalProjInfofrom` to something shorter like `notebook`.
+
+# ...
