@@ -87,26 +87,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>EDS 211: Week 5. Productivity &amp; Presentations</title>
+  <title>EDS 211: Lab 2. Time</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="EDS 211: Week 5. Productivity &amp; Presentations"/>
+  <meta property="og:title" content="EDS 211: Lab 2. Time"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="EDS 211"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="EDS 211: Week 5. Productivity &amp; Presentations"/>
+  <meta property="twitter:title" content="EDS 211: Lab 2. Time"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","params"]}},"value":[{"type":"character","attributes":{},"value":["Week 5. Productivity & Presentations"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["module"]}},"value":[{"type":"character","attributes":{},"value":["5. Productivity & Presentations"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","params","bibliography","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Lab 2. Time"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["module"]}},"value":[{"type":"character","attributes":{},"value":["2. Time & Github Org"]}]},{"type":"character","attributes":{},"value":["eds211-team.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2444,17 +2445,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-  <script src="site_libs/datatables-binding-0.19/datatables.js"></script>
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-  <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-  <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-  <link href="site_libs/dt-ext-rowgroup-1.10.20/css/rowGroup.dataTables.min.css" rel="stylesheet" />
-  <script src="site_libs/dt-ext-rowgroup-1.10.20/js/dataTables.rowGroup.min.js"></script>
-  <link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-  <script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2474,7 +2464,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Week 5. Productivity & Presentations","authors":[]}
+{"title":"Lab 2. Time","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2513,7 +2503,7 @@ Weekly Modules
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Week 5. Productivity &amp; Presentations</h1>
+<h1>Lab 2. Time</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2525,27 +2515,143 @@ Weekly Modules
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#schedule"><span class="toc-section-number">0.1</span> Schedule</a></li>
+<li><a href="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#setup-clockify"><span class="toc-section-number">1</span> Setup Clockify</a>
+<ul>
+<li><a href="#login-with-ucsb-account"><span class="toc-section-number">1.1</span> Login with UCSB Account</a></li>
+<li><a href="#create-project-tasks-lead-only"><span class="toc-section-number">1.2</span> Create Project, Tasks (lead only)</a></li>
+<li><a href="#invite-team-members-lead-only"><span class="toc-section-number">1.3</span> Invite Team Members (lead only)</a></li>
+<li><a href="#install-extra-software"><span class="toc-section-number">1.4</span> Install Extra Software</a></li>
+</ul></li>
+<li><a href="#enter-time"><span class="toc-section-number">2</span> Enter Time</a>
+<ul>
+<li><a href="#manually-past-and-with-timer-present-per-project-task"><span class="toc-section-number">2.1</span> Manually (past) and with Timer (present) per Project Task</a></li>
+</ul></li>
+<li><a href="#create-summary-report"><span class="toc-section-number">3</span> Create Summary Report</a></li>
+<li><a href="#create-personal-time-tracking-website"><span class="toc-section-number">4</span> Create Personal Time Tracking Website</a>
+<ul>
+<li><a href="#create-personal-github-repo"><span class="toc-section-number">4.1</span> Create Personal Github Repo</a></li>
+<li><a href="#clone-to-desktop"><span class="toc-section-number">4.2</span> Clone to Desktop</a></li>
+<li><a href="#save-clockify-api-key-outside-repo"><span class="toc-section-number">4.3</span> Save Clockify API Key <u><strong><em>outside</em></strong></u> Repo</a></li>
+<li><a href="#create-index.rmd"><span class="toc-section-number">4.4</span> Create <code>index.Rmd</code></a></li>
+<li><a href="#setup-github-pages-for-your-repo"><span class="toc-section-number">4.5</span> Setup Github Pages for your Repo</a></li>
+</ul></li>
+<li><a href="#continue-tracking-time-on-your-project"><span class="toc-section-number">5</span> Continue Tracking Time on your Project</a></li>
+<li><a href="#submit-lab-via-form"><span class="toc-section-number">6</span> Submit Lab via Form</a></li>
 </ul>
 </nav>
 </div>
-<h2 data-number="0.1" id="schedule"><span class="header-section-number">0.1</span> Schedule</h2>
+<blockquote>
+<p>Lost time is never found again. <br> – Benjamin Franklin</p>
+</blockquote>
+<h1 class="unnumbered" id="learning-objectives">Learning Objectives</h1>
+<ul>
+<li><p><strong>Track Time with Clockify</strong>. Time can be tracked in a simple spreadsheet, e.g. with columns: date, duration (hours), project, task and description. Even easier would be the ability to click a timer on and off with the ability to select project and task from a drop-down list and enter a textual description. For this timer app, we’ll use <a href="https://clockify.me"><strong>clockify.me</strong></a> with the many features described in the <a href="https://docs.google.com/presentation/d/1t2GFvnEhKcWrs7lSHk29fdCZBhlqx3vjDe2gtKCnJ_U/edit?usp=sharing">time lecture</a>.</p></li>
+<li><p><strong>Setup Project, Tasks, Team</strong>. Setup your project with tasks, including estimated time, and team members.</p></li>
+<li><p><strong>Enter Time Manually or with Timer</strong>. Use any of the Clockify apps (web / browser extension / mobile app) to start and stop the timer, or enter time manually. Select the Project and Task before entering Description and possibly adding a Tag.</p></li>
+<li><p><strong>Generate Project Reports</strong>. Track progress of time spent on tasks, especially relative to initial estimate. Generate Summary and Detailed reports for your project based on day, team member, task, tag, etc.</p></li>
+<li><p><strong>Use the API with an R package</strong>. A simple table of time entries can be extracted using Clockify’s application programming interface (API), which is easy to access with the R package <a href="https://datawookie.github.io/clockify">clockify</a>.</p></li>
+<li><p><strong>Build Personal Website of Time Tracked</strong>. Create a website using <a href="https://pages.github.com">Github Pages</a> from an Rmarkdown document in a new Github repository for reporting your time. The idea is for you to flexibly manipulate the data for your reporting needs rather than rely on Clockify’s interfaces.</p></li>
+</ul>
+<h1 data-number="1" id="setup-clockify"><span class="header-section-number">1</span> Setup Clockify</h1>
+<h2 data-number="1.1" id="login-with-ucsb-account"><span class="header-section-number">1.1</span> Login with UCSB Account</h2>
+<p>Visit <a href="https://clockify.me">clockify.me</a> and click on GO TO TRACKER in upper right. Login with your UCSB Google account.</p>
+<h2 data-number="1.2" id="create-project-tasks-lead-only"><span class="header-section-number">1.2</span> Create Project, Tasks (lead only)</h2>
+<p>Choose a team leader to enter a new Project with Tasks you previously entered in the detailed Schedule from <a href="https://bbest.github.io/eds211-team/lab1_proposal.html#create-detailed-project-schedule">Lab 1. Proposal</a>. Be sure to have only a single project member enter this <strong><em>once</em></strong> to avoid duplication of projects (with different identifiers but possibly the same name) once you subsequently invite team members.</p>
+<p>Create a project on the Project page per * <a href="https://clockify.me/help/projects/managing-projects#creating-a-project-on-the-project-page">Managing projects and clients – Clockify Help</a>. Set the billable rate to $100 per hour.</p>
+<p><img src="img/lab2_time/clockify_add-project.png" /></p>
+<h2 data-number="1.3" id="invite-team-members-lead-only"><span class="header-section-number">1.3</span> Invite Team Members (lead only)</h2>
+<p>Add Team Members using UCSB emails, per <a href="https://clockify.me/help/users/inviting-users">Inviting and managing users – Clockify Help</a>.</p>
+<p><img src="img/lab2_time/clockify_add-team-member.png" /></p>
+<h2 data-number="1.4" id="install-extra-software"><span class="header-section-number">1.4</span> Install Extra Software</h2>
+<p>Install the Desktop app, Browser Extension and optionally Mobile app from <a href="https://clockify.me/apps">clockify.me/apps</a>.</p>
+<h1 data-number="2" id="enter-time"><span class="header-section-number">2</span> Enter Time</h1>
+<h2 data-number="2.1" id="manually-past-and-with-timer-present-per-project-task"><span class="header-section-number">2.1</span> Manually (past) and with Timer (present) per Project Task</h2>
+<p>Now that you have Clockify setup for you and your Project, you’re ready to track time. Use the website or installed apps to <a href="https://clockify.me/help/time-tracking/creating-a-time-entry">track time</a> by creating entries with Descriptions that include the letters <strong><code>#testing</code></strong> (so we can filter out these bogus entries later):</p>
+<ul>
+<li><p>Add time entries for EACH project Task both:</p>
+<ul>
+<li><p><strong>Manually</strong> for last month of October in the <strong><em>past</em></strong>; and with</p></li>
+<li><p><strong>Timer</strong> for a few seconds in the <strong><em>present</em></strong>.</p></li>
+</ul></li>
+</ul>
+<p><img src="img/lab2_time/clockify_track-time.jpeg" /></p>
+<h1 data-number="3" id="create-summary-report"><span class="header-section-number">3</span> Create Summary Report</h1>
+<p>By User (lead only)</p>
+<p>Now create a Summary Report per Team Member for October &amp; November, per <a href="https://clockify.me/help/reports/summary-report">Summary report – Clockify Help</a>.</p>
+<p><img src="img/lab2_time/clockify_summary-report.png" /></p>
+<p>Be sure to share the report publicly, per <a href="https://clockify.me/help/reports/sharing-reports">Sharing reports – Clockify Help</a>. All team members will submit this URL for the lab.</p>
+<p><img src="img/lab2_time/clockify_share-report.png" /></p>
+<h1 data-number="4" id="create-personal-time-tracking-website"><span class="header-section-number">4</span> Create Personal Time Tracking Website</h1>
+<h2 data-number="4.1" id="create-personal-github-repo"><span class="header-section-number">4.1</span> Create Personal Github Repo</h2>
+<p>Create a Github repository called time in your Github user space (e.g. github.com/bbest/time for me), per <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo">Create a repo - GitHub Docs</a>.</p>
+<h2 data-number="4.2" id="clone-to-desktop"><span class="header-section-number">4.2</span> Clone to Desktop</h2>
+<p>From RStudio, clone the GitHub repository to your computer as a new Project, per <a href="https://happygitwithr.com/rstudio-git-github.html#make-a-repo-on-github-1">Chapter 12 Connect RStudio to Git and GitHub | Happy Git and GitHub for the useR</a>.</p>
+<p><img src="img/lab2_time/github_copy-clone-url.png" /></p>
+<h2 data-number="4.3" id="save-clockify-api-key-outside-repo"><span class="header-section-number">4.3</span> Save Clockify API Key <u><strong><em>outside</em></strong></u> Repo</h2>
+<p>Visit your Profile settings (<a href="https://clockify.me/user/settings">clockify.me/user/settings</a>) and record your private <strong>API key</strong> into a text file on your computer (e.g. <code>~/private/clockify_api-key.txt</code>), but <u><strong><em>outside</em></strong></u> your publicly accessible Github repository.</p>
+<h2 data-number="4.4" id="create-index.rmd"><span class="header-section-number">4.4</span> Create <code>index.Rmd</code></h2>
+<p>Include the following R chunk:</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
 show
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/source.html'>source</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"functions.R"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='fu'>get_sched</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Module</span> <span class='op'>==</span> <span class='va'>params</span><span class='op'>$</span><span class='va'>module</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>dt_sched</span><span class='op'>(</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># get libraries</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/DesiQuintans/librarian'>librarian</a></span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"librarian"</span><span class='op'>)</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/DesiQuintans/librarian'>librarian</a></span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='fu'>librarian</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/librarian/man/shelf.html'>shelf</a></span><span class='op'>(</span>
+  <span class='va'>clockify</span>, <span class='va'>dplyr</span>, <span class='va'>DT</span>, <span class='va'>glue</span>, <span class='va'>lubridate</span>, <span class='va'>readr</span><span class='op'>)</span>
+
+<span class='co'># CHANGE THESE VARIABLES!</span>
+<span class='va'>api_txt</span> <span class='op'>&lt;-</span> <span class='st'>"~/private/clockify_api-key.txt"</span>
+<span class='va'>api_txt</span> <span class='op'>&lt;-</span> <span class='st'>"~/My Drive (ben@ecoquants.com)/private/clockify-api-key_ben@ecoquants.com.txt"</span>
+<span class='va'>project_name</span> <span class='op'>&lt;-</span> <span class='st'>"iea-auto"</span>
+
+<span class='co'># use API key to authenticate</span>
+<span class='va'>CLOCKIFY_API_KEY</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readLines.html'>readLines</a></span><span class='op'>(</span><span class='va'>api_txt</span><span class='op'>)</span>
+<span class='fu'>set_api_key</span><span class='op'>(</span><span class='va'>CLOCKIFY_API_KEY</span><span class='op'>)</span>
+
+<span class='co'># get data</span>
+<span class='va'>d_projects</span> <span class='op'>&lt;-</span> <span class='fu'>projects</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+      <span class='fu'>select</span><span class='op'>(</span><span class='va'>project_id</span>, <span class='va'>project_name</span><span class='op'>)</span>
+<span class='va'>d_users</span> <span class='op'>&lt;-</span> <span class='fu'>users</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+      <span class='fu'>select</span><span class='op'>(</span><span class='va'>user_id</span>, <span class='va'>user_name</span><span class='op'>)</span>
+<span class='va'>d_times</span> <span class='op'>&lt;-</span> <span class='fu'>time_entries</span><span class='op'>(</span>concise <span class='op'>=</span> <span class='cn'>F</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>left_join</span><span class='op'>(</span>
+    <span class='va'>d_projects</span>, by <span class='op'>=</span> <span class='st'>"project_id"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>left_join</span><span class='op'>(</span>
+    <span class='va'>d_users</span>, by <span class='op'>=</span> <span class='st'>"user_id"</span><span class='op'>)</span>
+
+<span class='co'># show table</span>
+<span class='va'>d_times</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>select</span><span class='op'>(</span>
+    <span class='va'>user_name</span>, <span class='va'>project_name</span>, 
+    <span class='va'>time_start</span>, <span class='va'>duration</span>, <span class='va'>description</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>user_name</span>, <span class='va'>project_name</span>, <span class='va'>time_start</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>datatable</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>formatRound</span><span class='op'>(</span>columns<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'duration'</span><span class='op'>)</span>, digits<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
-<div id="htmlwidget-cd1c3c0a055c834ef50c" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cd1c3c0a055c834ef50c">{"x":{"filter":"none","vertical":false,"extensions":["RowGroup"],"data":[["Mon, Nov 29","Wed, Dec 1"],["5. Productivity & Presentations","5. Productivity & Presentations"],["productivity","presentations"],["[prep presentations]",""],["burndown",null],[5,null],["<a href='https://drive.google.com/file/d/1lZvvLdfzq9xnIpF9fxhVAFWl0laFUB4n/view?usp=sharing'     target='_blank'>Bastille et al. (2021)<\/a>",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Date<\/th>\n      <th>Module<\/th>\n      <th>Lecture<\/th>\n      <th>Lab<\/th>\n      <th>Lab\nDue<\/th>\n      <th>Lab\nPts<\/th>\n      <th>Reading<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","rowGroup":{"dataSrc":1},"columnDefs":[{"visible":false,"targets":1},{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
+<p>Knit the document to create <code>index.html</code>, the default web page served for any given folder. The rendered output table should look something like this:</p>
+<p><img src="img/lab2_time/rmd_datatable-time-entries.jpg" /></p>
+<h2 data-number="4.5" id="setup-github-pages-for-your-repo"><span class="header-section-number">4.5</span> Setup Github Pages for your Repo</h2>
+<p>Setup your Github repo to serve the newly generated <code>index.html</code> choosing the root folder, per <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Configuring a publishing source for your GitHub Pages site - GitHub Docs</a>.</p>
+<p><img src="img/lab2_time/github_pages-source.png" /></p>
+<p>Copy the published website URL and paste into the Repository’s About settings after clicking the Gear icon in upper right of your main Github repo website.</p>
+<h1 data-number="5" id="continue-tracking-time-on-your-project"><span class="header-section-number">5</span> Continue Tracking Time on your Project</h1>
+<p>Continue tracking time as you work on your Remote Sensing group projects. Be sure to choose a Task. Later we’ll subdivide your initial Tasks into Github Issues and track time specific to those.</p>
+<p>Next lab we’ll start into using Github by creating a Github organization where you’ll report time for the whole project. We’ll also setup a Github Action to generate a table and charts on a regular basis, such as daily or weekly.</p>
+<h1 data-number="6" id="submit-lab-via-form"><span class="header-section-number">6</span> Submit Lab via Form</h1>
+<p>Please submit the link to the Clockify project report and your personal time tracking website on Github via the following Google Form using your UCSB email:</p>
+<ul>
+<li><a href="https://forms.gle/jqHRdukRaYakNH766">Submission for Lab 2. Proposal</a></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2558,7 +2664,10 @@ show
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">

@@ -3,21 +3,13 @@ title: 'Lab 1. Proposal'
 params:
   module: "1. Introduction"
 bibliography: ["eds211-team.bib"]
-output:
-  distill::distill_article:
-    toc: true
-    toc_float: true
-    toc_depth: 4
-    code_folding: "show"
-    number_sections: true
-    anchor_sections: true
 ---
 
 ```{r setup, include=F}
 knitr::opts_chunk$set(echo = F)
 ```
 
-# Learning Objectives
+# Learning Objectives {-}
 
 -   **Notetaking**. Use Google Docs to keep quick flexible notes as you proceed with meetings using headers and table of contents.
 

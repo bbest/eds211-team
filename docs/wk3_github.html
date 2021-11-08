@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>EDS 211: Week 3. Github</title>
@@ -1859,7 +1860,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2527,8 +2531,20 @@ Weekly Modules
 </div>
 <h2 data-number="0.1" id="schedule"><span class="header-section-number">0.1</span> Schedule</h2>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-ef4ac2b6f7d81997e798" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ef4ac2b6f7d81997e798">{"x":{"filter":"none","vertical":false,"extensions":["RowGroup"],"data":[["Mon, Nov 15","Wed, Nov 17"],["3. Github","3. Github"],["github-issues","github-projects"],["github","github"],[null,null],[null,null],["<a href='https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing'     target='_blank'>Perez-Riverol et al. (2016)<\/a>",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Date<\/th>\n      <th>Module<\/th>\n      <th>Lecture<\/th>\n      <th>Lab<\/th>\n      <th>Lab\nDue<\/th>\n      <th>Lab\nPts<\/th>\n      <th>Reading<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","rowGroup":{"dataSrc":1},"columnDefs":[{"visible":false,"targets":1},{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/source.html'>source</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"functions.R"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>get_sched</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Module</span> <span class='op'>==</span> <span class='va'>params</span><span class='op'>$</span><span class='va'>module</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>dt_sched</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-ff156037f775c4c492cb" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ff156037f775c4c492cb">{"x":{"filter":"none","vertical":false,"extensions":["RowGroup"],"data":[["Mon, Nov 15","Wed, Nov 17"],["3. Github","3. Github"],["github-issues","github-projects"],["github","github"],[null,null],[null,null],["<a href='https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing'     target='_blank'>Perez-Riverol et al. (2016)<\/a>",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Date<\/th>\n      <th>Module<\/th>\n      <th>Lecture<\/th>\n      <th>Lab<\/th>\n      <th>Lab\nDue<\/th>\n      <th>Lab\nPts<\/th>\n      <th>Reading<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","rowGroup":{"dataSrc":1},"columnDefs":[{"visible":false,"targets":1},{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

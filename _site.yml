@@ -25,12 +25,13 @@ navbar:
       href: https://github.com/bbest/eds211_go-team
 output:
   distill::distill_article:
-    # pandoc_args: ["--number-sections"]
     # theme: "default"
     # type: "inverse"
     toc: true
-    # toc_depth: 4
+    toc_depth: 4
     toc_float: true
+    code_folding: "show"
+    pandoc_args: ["--number-sections"]
     # number_sections: true
     # anchor_sections: true
 theme: theme.css
