@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = F)
 
 -   ...
 
-# Setup Final Project in New Github Organization
+# Setup Final Project Notebook Repo in New Github Organization
 
 The Github Organization you create will become the `{owner}` of the project's main `{repo}`. Remember, all of Github is organized according to `github.com/{owner}/{repo}`.
 
