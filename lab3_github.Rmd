@@ -17,10 +17,19 @@ knitr::opts_chunk$set(echo = F)
 
 3.  **Understand Github Workflows**. A **Simple** workflow assumes you have read and write access to a repository. You can synchronize changed files (from using `git commit`) between your computer and Github by simply using `git push` and `git pull`. If you don't have write access, i.e. unable to perform a `git push`, then you need to make a copy of the repo with a `Github fork` into your own writable owner space, i.e. under your Github user or a Github organization to which you can write. This is the **Contribute** model and what powers contributions from community members in the open-source world. Even if you have write capabilities on the repository, you may wish to make a copy with `git branch` to avoid merge conflicts with others while you're working on some new feature or bug fix. This is the **Sandbox** model. Either the forked or branched copy can be synchronized with the original via a `pull request` from the contributor and a `merge` from the origin's owner.
 
-4.  **Handle Merge Conflicts**. Conflicts are inevitable when collaborating with others, so knowing how to deal with them is a key part of the process. Git commits of two different users might operate on the same line(s) of code, which need to be reconciled when merging.
+4.  **Create & Share Website Repo using Github Pages**. The default website repo under a Github organization named exactly `{org}.github.io` is what gets served via the URL `https://{org}.github.io` once Github Pages gets turned on in the repo Settings. You've already done this in the MEDS program for your Github `{user}` space, i.e. `https://{user}.github.io`.
 
-5.  Contribute file changes to any public Github repo with `pull request`.
+5.  **Build Rmarkdown Website**. This simple website uses a `_site.yml` file to apply consistent navigation bars and defaults to all pages. The original \*.Rmd files render to \*.html for serving online. The default web page for any folder is the `index.html`.
 
+6.  **Contribute Workflow: Fork & Pull Request**. After you fork any public repo into your own space, you can make changes and contribute those back to the original repo with a `pull request`, which can then be incorporated with a `merge` by the original repo owner. This is how the open-source world works to incorporate code from the community. You'll use this technique to contribute towards a class directory of projects in the course repo `bbest/eds211-team`.
+
+7.  **Sandbox Workflow: Branch & Merge**. Create a branch in RStudio and merge it in the Terminal.
+
+8.  **Handle Merge Conflicts**. Conflicts are inevitable when collaborating with others, so knowing how to deal with them is a key part of the process. Git commits of two different users might operate on the same line(s) of code, which need to be reconciled when merging.
+
+
+```{=html}
+<!--
 6.  Manage projects in Github with Issues and Project boards. Understand how to reference Issues (e.g. `#2`) in Github commit messages as well as mention other Github users (e.g. `@bbest`).
 
 7.  Write markdown (e.g. `README.md`) to format text, and yaml (e.g. `_site.yml`) for configurations.
@@ -31,6 +40,8 @@ knitr::opts_chunk$set(echo = F)
 
 -   ...
 
+-->
+```
 # Create Github organization [lead only]
 
 The Github Organization you create will become the `{owner}` of the project's main `{repo}`. Remember, all of Github is organized according to `github.com/{owner}/{repo}`.
@@ -190,7 +201,7 @@ Extending the **Sandbox** workflow to full "professional" status, even if you ha
 
 We want go over this entire workflow in this lesson, but it simply combines all the techniques above.
 
-# Create website repo _{org}.github.io_ [lead only]
+# Create website repo *{org}.github.io* [lead only]
 
 Now one person from your group will create a Github repository for your project's website. [**Github Pages**](https://pages.github.com) uses owner/repository `{owner}/{owner}.github.io` to host the owner's website at `https://{owner}.github.io` where `{owner}` can be either a Github username or organization. All other repositories, i.e. `{owner}/{repo}`, can also have websites served via Github Pages as `https://{owner}.github.io/{repo}`.
 
@@ -255,7 +266,7 @@ You should now see these two new files showing up in your repo at `https://githu
 
 Following guidance from [10.5 rmarkdown's site generator \| R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), create a `_site.yml` by going to RStudio's menu **File** -\> **New File** -\> **Text File** and paste the following:
 
-```{.yaml}
+``` {.yaml}
 name: "{org}"
 navbar:
   title: "{org}"
@@ -267,11 +278,11 @@ navbar:
 output_dir: "."
 ```
 
-Be sure to replace `{org}` with your organization's Project Key, e.g. `ohi-science`. **Save** this file as `_site.yml`. 
+Be sure to replace `{org}` with your organization's Project Key, e.g. `ohi-science`. **Save** this file as `_site.yml`.
 
 Next create your `index.Rmd` with this simple content:
 
-```{.markdown}
+``` {.markdown}
 ---
 title: "Welcome"
 ---
@@ -281,19 +292,18 @@ Hello, Website!
 
 Add another page `about.Rmd`:
 
-```{.markdown}
+``` {.markdown}
 ---
 title: "About"
 ---
 
 ## Team Members
 
-
 ```
 
 Finally, render the website by running the following in your R Console:
 
-```{.r}
+``` {.r}
 rmarkdown::render_site()
 ```
 
@@ -315,7 +325,7 @@ Click **Save**. You should now see that the site is "ready to be published".
 
 You should now be able to visit the website URL:
 
-- `https://{org}.github.io`
+-   `https://{org}.github.io`
 
 Notice how the URL is a subset of your Github repo URL:
 
@@ -325,7 +335,7 @@ For easily referencing the website, I recommend returning to the Github repo `ht
 
 You should now see a handy link to get to your website.
 
-# **Contribute** to _eds211-team_ [all members]
+# **Contribute** to *eds211-team* [all members]
 
 So far you've been using the **Simple** workflow to synchronize repos between Github and your local machine with `git push` and `git pull`. Next, you'll learn how to contribute towards a repo for which you don't have write permissions by performing a `fork` and `pull request`, i.e. the **Contribute** workflow.
 
@@ -341,24 +351,25 @@ You now have *write* permissions on this repo.
 
 You could proceed with cloning the repo onto your local machine, making changes there with `git commit` and pushing to Github with `git push`, however we'll take care of this directly through Github web interface.
 
-Visit the `projects/` folder of your forked repo. On the right click **Add file**, **Create new file**. Enter the _exact_ name of your group project's Github organization (upper/lower case matters) and a forward slash (to denote a folder). Then add your _exact_ Github username, e.g.:
+Visit the `projects/` folder of your forked repo. On the right click **Add file**, **Create new file**. Enter the *exact* name of your group project's Github organization (upper/lower case matters) and a forward slash (to denote a folder). Then add your *exact* Github username, e.g.:
 
-![](img/lab3_github/github-contribute_project-org-user.png){style="width:500px"}
+![](img/lab3_github/github-contribute_project-org-user.png){style="width:500px"} 
+
 You do not need to enter anything in the content of the file. Simply click the green Commit new file button, which is the web equivalent of `git commit` (and `git push` since it's already on Github.com).
 
-You'll notice that this branch is "1 commit ahead of eds211-team:main". Click on **Contribute**, **Open pull request**. 
+You'll notice that this branch is "1 commit ahead of eds211-team:main". Click on **Contribute**, **Open pull request**.
 
 ![](img/lab3_github/github-contribute_open-pull-request.jpg){style="width:500px"}
 
-You should be taken to a screen asking for confirmation where you chould click on **Create pull request**. Normally, you'd leave a comment explaining what this pull request is for (but it's obvious enough in this case). Click on the final **Create pull request**. Now you should be taken to the origin [github.com/bbest/eds211-team](https://github.com/bbest/eds211-team) (_NOT_ your {user} forked copy) and under the **Pull requests** see yours.
+You should be taken to a screen asking for confirmation where you chould click on **Create pull request**. Normally, you'd leave a comment explaining what this pull request is for (but it's obvious enough in this case). Click on the final **Create pull request**. Now you should be taken to the origin [github.com/bbest/eds211-team](https://github.com/bbest/eds211-team) (*NOT* your {user} forked copy) and under the **Pull requests** see yours.
 
 ![](img/lab3_github/github-contribute_project-org-user.png){style="width:500px"}
 
-The image above shows a **Merge pull request** since I have admin privileges on this repo. You would _NOT_ so would see it grayed out (or similar).
+The image above shows a **Merge pull request** since I have admin privileges on this repo. You would *NOT* so would see it grayed out (or similar).
 
 Good job! Nothing left for you to do except wait for me (as admin of this repo) to click on **Merge pull request**.
 
-# **Sandbox** on _{org}.github.io_ [all members]
+# **Sandbox** on *{org}.github.io* [all members]
 
 Next, you'll level up your git skills by isolating development of your code in a new `branch`, which is like a **Sandbox** separate from the *main* branch. Your task is to simply add your name to the About page.
 
@@ -372,7 +383,7 @@ Click **Create**. You should now see your new branch. Notice how when you click 
 
 Next, simply edit `about.Rmd` and add a bulleted list item with your name linked to your Github profile below `## Team Members`, e.g.:
 
-```{.md}
+``` {.md}
 - [Ben Best](https://github.com/bbest)
 ```
 
@@ -396,6 +407,251 @@ It might take a minute or so before they show up on your website at `https://{or
     touch .nojekyll
 
 Be sure to **Commit** and **Push** these changes to Github.
+
+# Handle Merge Conflict on Github [all members]
+
+You can also perform a `merge` of a branch on Github with a `pull request` (vs previously more directly with `git merge` in the Terminal). If there's a conflict, Github provides a convenient text editor to resolve any conflicts. You will intentionally create a conflict between two branches and merge them on Github.
+
+You'll use the `time` repo you created in [Lab 2. Time]( https://bbest.github.io/eds211-team/lab2_time.html#create-personal-github-repo) to play with handling a merge conflict.
+
+## Create new branch `test-conflict` in `{user}/time` repo
+
+Previously you created a new branch in RStudio GUI that sends the `git branch` command to the Terminal. Now you'll create a repo branch via Github. Let's use the personal repo `{user}/time` you created in [Lab 2](https://bbest.github.io/eds211-team/lab2_time.html#create-personal-github-repo).
+
+Visit `https://github.com/{user}/time` in your web browser. To create a new branch click on the button with branches in the upper left of the default < > Code tab. The default branch selected is `main`. Enter `test-conflict` and select **Create branch: test conflict** from main: 
+
+![](img/lab3_github/github_new-branch.png){style="width:500px"} 
+
+## Insert `## Welcome` header in `test-conflict` branch
+
+From the previous step you should notice getting switched over to the new branch `test-conflict` based on the branch selected dropdown in the upper left.
+
+Click on `index.Rmd` and click the pencil icon to insert the following:
+
+``` {.markdown}
+## Welcome
+```
+
+Scroll down and notice enter a message under the **Commit changes** header of "+ Welcome":
+
+![](img/lab3_github/github_edit-commit-welcome.png){style="width:500px"} 
+Click on the green **Commit changes** button. Since you're already on Github, you don't need to **Push**.
+
+## Insert `# Hello` header in `main` branch
+
+While still viewing the `index.Rmd` file in Github, switch to the `main` branch. You should notice that the `## Welcome` header is absent. 
+
+Click on the pencil icon to insert the following:
+
+``` {.markdown}
+## Hello
+```
+
+Scroll down and notice enter a message under the **Commit changes** header of "+ Hello". Click on the green **Commit changes** button.
+
+## Create **Pull Request**: `main` <- `test-conflict`
+
+Now visit the **Pull requests** tab of your `time` repo. You might notice a suggestion to **Compare & pull request** the `test-conflict` branch since Github noticed recent changes there.
+
+![](img/lab3_github/github_pull-request-suggested.png){style="width:500px"} 
+
+So you know how to create one regardless of prompting, click on the **New pull request** button. 
+
+![](img/lab3_github/github_pull-request-create.png){style="width:500px"}
+
+Select the `test-conflict` branch. Notice how it says it **Can't automatically merge.**.
+
+![](img/lab3_github/github_pull-request-cant-auto-merge.png){style="width:500px"} 
+
+Click **Create pull request**.  Let's give this pull request the title `Hello (main) <- Welcome (test-conflict)`.
+
+![](img/lab3_github/github_pull-request-conflicts-tobe-resolved.png){style="width:500px"}
+
+
+Click the button to **Resolve conflicts**.
+
+![](img/lab3_github/github_pull-request-resolve-conflicts-editor.png){style="width:500px"}
+
+Notice how you are now presented with files on the left pane and an editor to the right with highlighted lines to resolve and the ability to click on **Prev** and **Next** if we had multiple conflicts.
+
+The conflicts are presented by comparing one branch starting with `<<<<<<< {branch1}` and ending with the other `>>>>>>> {branch2}` seperated by `=======`.
+
+```
+<<<<<<< test-conflict
+## Welcome
+=======
+## Hello
+>>>>>>> main
+```
+
+So if we want to go with Welcome, reduce the lines above to simply:
+
+```
+## Welcome
+```
+
+And **Mark as resolved**. Then click on the green **Commit merge** button. You should then see the option to finally **Merge pull request**.
+
+![](img/lab3_github/github_pull-request-merge-conflicts.png){style="width:500px"}
+
+Click on **Merge pull request** and **Confirm merge**.
+
+![](img/lab3_github/github_pull-request-delete-branch.png){style="width:500px"}
+
+Congratulations! Finally delete the branch which is no longer needed.
+
+<!--
+
+# r3-train 
+
+## Create an Issue in *r3-exercises* to resolve a file conflict
+
+Next we're going to play with some of the [Github Project management](https://github.com/features/project-management/) features while learning how to resolve file conflicts when `git` has a conflict automatically merging competing commits.
+
+Let's visit your Github repo `https://github.com/USER/r3-exercises` and click on **Issues**:
+
+`r img(src='figs/github_issues.png', width=400)`
+
+Click on the green **New issue** button and enter a title and comment like:
+
+-   Title: "resolve a file conflict"
+-   Comment:
+
+``` {.markdown}
+Reference:
+
+* [22.4 Dealing with conflicts | Happy Git and GitHub for the useR](https://happygitwithr.com/git-branches.html#dealing-with-conflicts)
+```
+
+`r img(src='figs/github_new-issue.png', width=600)`
+
+When you switch the comment from **Write** to **Preview**, you'll see how the **markdown** source gets formatted into html with a single item bulleted list and link. Now you're ready to **Submit new issue**.
+
+Ok, let's create file conflict by editing the same line in two different places: 1) the Github website through your web browser, 2) your local machine through RStudio.
+
+In your web browser, go to the **Code** tab of your Github repo at `https://github.com/USER/r3-exercises`. Click on `index.Rmd` and click the pencil icon to change it to:
+
+``` {.markdown}
+---
+title: "Welcome"
+---
+
+Hello, Github!
+```
+
+Scroll down and notice enter a message under the **Commit changes** header of "edit from Github":
+
+`r img(src='figs/github_edit-from-Github.png', width=600)`
+
+Click on the green **Commit changes** button. Since you're already on Github, you don't need to **Push**.
+
+Now go to RStudio, open the `index.Rmd` and change it to:
+
+``` {.markdown}
+---
+title: "Welcome"
+---
+
+Hello, RStudio!
+```
+
+Be sure to **Commit** those changes with the message "edit from RStudio".
+
+Next, **Pull** changes from Github. Now you'll get a long and messy message about a conflict like:
+
+    >>> /usr/bin/git pull
+    From https://github.com/bbest/r3-exercises
+       719143f..17f3524  main       -> origin/main
+    First, rewinding head to replay your work on top of it...
+    Applying: edit from RStudio
+    Using index info to reconstruct a base tree...
+    M   index.Rmd
+    Falling back to patching base and 3-way merge...
+    Auto-merging index.Rmd
+    CONFLICT (content): Merge conflict in index.Rmd
+    error: Failed to merge in the changes.
+    hint: Use 'git am --show-current-patch' to see the failed patch
+    Patch failed at 0001 edit from RStudio
+    Resolve all conflicts manually, mark them as resolved with
+    "git add/rm <conflicted_files>", then run "git rebase --continue".
+    You can instead skip this commit: run "git rebase --skip".
+    To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+Close that. Now in the **Git Commit** dialog window, you'll see:
+
+`r img(src='figs/rstudio_git-conflict.png', width=600)`
+
+The orange `U` refers to an Unresolved conflict. We now need to "manually resolve this conflict". The conflicted portions are compared above and below the `=======`. The conflict begins with `<<<<<<< HEAD` referring to the most recent commit from the ORIGIN on Github, versus ending with `>>>>>>> edit from RStudio` as the most recent LOCAL commit. Let's change the entire contents of this file to:
+
+``` {.markdown}
+---
+title: "Welcome"
+---
+
+Hello, everyone!
+```
+
+Then in the **Git** pane mark `index.Rmd` as Staged, **Commit** and enter the message "resolved file conflict; fixes \#1":
+
+`r img(src='figs/rstudio_git-commit-cnflict-resolved-ref-issue.png', width=600)`
+
+**Commit** this change and notice that we're still "detached":
+
+    [detached HEAD 216c243] resolved file conflict #1
+     1 file changed, 1 insertion(+), 1 deletion(-)
+
+Next, we need to associate the detached HEAD with a new temporary branch and reset the main branch with it before pushing changes back to Github. Please run the following commands in the RStudio **Terminal**:
+
+``` {.bash}
+# associate detached HEAD with new branch temp
+git checkout -b temp
+
+# reset master branch with temp branch as starting point
+git checkout -B main temp
+
+# delete temp branch
+git branch -d temp
+
+# update Github with local main
+git push origin main
+```
+
+For more details, see [git - How can I reconcile detached HEAD with master/origin? - Stack Overflow](https://stackoverflow.com/questions/5772192/how-can-i-reconcile-detached-head-with-master-origin#answer-5772882).
+
+Now visit `https://github.com/USER/r3-exercises/issues/1`. You'll notice that your commit message automatically associated with that issue by simply including `#1` and closed it by prefixing the number with `fixes`.
+
+The point is to be able to associate specific line by line file changes with fixing **bugs** and implementing **new features** of our code.
+
+## Organize Issues in *r3-exercises* Github Project
+
+Let's create a couple **Issues** with the following titles to cue up next week's session:
+
+-   `read a csv and output a table`
+-   `read a wide csv and output a long table`
+
+You should then see these at `https://github.com/USER/r3-exercises/issues`:
+
+`r img(src='figs/github_plus-two-issues.png', width=600)`
+
+Now visit the **Projects** tab, so `https://github.com/USER/r3-exercises/projects`:
+
+`r img(src='figs/github_projects.png', width=600)`
+
+And click the **Create new project** button.
+
+`r img(src='figs/github_new-project.png', width=600)`
+
+Choose the **Automated kanban** style and a title like "management" before clicking **Create project**. You'll next be presented with options to drag existing issues over into any of the columns: **To do**, **In progress** or **Done**:
+
+`r img(src='figs/github_new-project-init.png', width=600)`
+
+Drag the two issues over into **In progress** in the order of priority top to bottom:
+
+`r img(src='figs/github_new-project-issues-dragged.png', width=600)`
+
+A Project board helps answer the question, "What do I need to work on next?"
+
+-->
 
 # Further Reading {.unnumbered}
 

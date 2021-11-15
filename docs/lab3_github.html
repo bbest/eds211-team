@@ -2539,11 +2539,18 @@ Weekly Modules
 </ul></li>
 <li><a href="#contribute-to-eds211-team-all-members"><span class="toc-section-number">6</span> <strong>Contribute</strong> to <em>eds211-team</em> [all members]</a></li>
 <li><a href="#sandbox-on-org.github.io-all-members"><span class="toc-section-number">7</span> <strong>Sandbox</strong> on <em>{org}.github.io</em> [all members]</a></li>
+<li><a href="#handle-merge-conflict-on-github-all-members"><span class="toc-section-number">8</span> Handle Merge Conflict on Github [all members]</a>
+<ul>
+<li><a href="#create-new-branch-test-conflict-in-usertime-repo"><span class="toc-section-number">8.1</span> Create new branch <code>test-conflict</code> in <code>{user}/time</code> repo</a></li>
+<li><a href="#insert-welcome-header-in-test-conflict-branch"><span class="toc-section-number">8.2</span> Insert <code>## Welcome</code> header in <code>test-conflict</code> branch</a></li>
+<li><a href="#insert-hello-header-in-main-branch"><span class="toc-section-number">8.3</span> Insert <code># Hello</code> header in <code>main</code> branch</a></li>
+<li><a href="#create-pull-request-main---test-conflict"><span class="toc-section-number">8.4</span> Create <strong>Pull Request</strong>: <code>main</code> &lt;- <code>test-conflict</code></a></li>
+</ul></li>
 <li><a href="#further-reading">Further Reading</a>
 <ul>
 <li><a href="#git-github">Git &amp; Github</a>
 <ul>
-<li><a href="#markdown-in-github"><span class="toc-section-number">7.0.1</span> Markdown in Github</a></li>
+<li><a href="#markdown-in-github"><span class="toc-section-number">8.4.1</span> Markdown in Github</a></li>
 </ul></li>
 <li><a href="#rstudio-with-git-github">RStudio with Git &amp; Github</a>
 <ul>
@@ -2559,16 +2566,24 @@ Weekly Modules
 <li><p><strong>Create a Github Org</strong>. Create a new Github organization based on your Project Key (e.g. <code>ohi-science</code>). This will be your team’s organization and repositories within for producing deliverables, including a website.</p></li>
 <li><p><strong>Fork Repo into Github Org</strong>. Fork the template final project repository <code>EDS220_Fall2021_FinalProjInfofrom</code> from <code>samanthastevenson</code> into your organization. Forking makes a copy of the original repository into a new owner.</p></li>
 <li><p><strong>Understand Github Workflows</strong>. A <strong>Simple</strong> workflow assumes you have read and write access to a repository. You can synchronize changed files (from using <code>git commit</code>) between your computer and Github by simply using <code>git push</code> and <code>git pull</code>. If you don’t have write access, i.e. unable to perform a <code>git push</code>, then you need to make a copy of the repo with a <code>Github fork</code> into your own writable owner space, i.e. under your Github user or a Github organization to which you can write. This is the <strong>Contribute</strong> model and what powers contributions from community members in the open-source world. Even if you have write capabilities on the repository, you may wish to make a copy with <code>git branch</code> to avoid merge conflicts with others while you’re working on some new feature or bug fix. This is the <strong>Sandbox</strong> model. Either the forked or branched copy can be synchronized with the original via a <code>pull request</code> from the contributor and a <code>merge</code> from the origin’s owner.</p></li>
+<li><p><strong>Create &amp; Share Website Repo using Github Pages</strong>. The default website repo under a Github organization named exactly <code>{org}.github.io</code> is what gets served via the URL <code>https://{org}.github.io</code> once Github Pages gets turned on in the repo Settings. You’ve already done this in the MEDS program for your Github <code>{user}</code> space, i.e. <code>https://{user}.github.io</code>.</p></li>
+<li><p><strong>Build Rmarkdown Website</strong>. This simple website uses a <code>_site.yml</code> file to apply consistent navigation bars and defaults to all pages. The original *.Rmd files render to *.html for serving online. The default web page for any folder is the <code>index.html</code>.</p></li>
+<li><p><strong>Contribute Workflow: Fork &amp; Pull Request</strong>. After you fork any public repo into your own space, you can make changes and contribute those back to the original repo with a <code>pull request</code>, which can then be incorporated with a <code>merge</code> by the original repo owner. This is how the open-source world works to incorporate code from the community. You’ll use this technique to contribute towards a class directory of projects in the course repo <code>bbest/eds211-team</code>.</p></li>
+<li><p><strong>Sandbox Workflow: Branch &amp; Merge</strong>. Create a branch in RStudio and merge it in the Terminal.</p></li>
 <li><p><strong>Handle Merge Conflicts</strong>. Conflicts are inevitable when collaborating with others, so knowing how to deal with them is a key part of the process. Git commits of two different users might operate on the same line(s) of code, which need to be reconciled when merging.</p></li>
-<li><p>Contribute file changes to any public Github repo with <code>pull request</code>.</p></li>
-<li><p>Manage projects in Github with Issues and Project boards. Understand how to reference Issues (e.g. <code>#2</code>) in Github commit messages as well as mention other Github users (e.g. <code>@bbest</code>).</p></li>
-<li><p>Write markdown (e.g. <code>README.md</code>) to format text, and yaml (e.g. <code>_site.yml</code>) for configurations.</p></li>
-<li><p>Use the 3 components of an Rmarkdown: 1) frontmatter in yaml; 2) markdown text; and 3) R code as chunks or inline.</p></li>
-<li><p>Create an Rmarkdown website with a <code>_site.yml</code>.</p></li>
 </ol>
-<ul>
-<li>…</li>
-</ul>
+<!--
+6.  Manage projects in Github with Issues and Project boards. Understand how to reference Issues (e.g. `#2`) in Github commit messages as well as mention other Github users (e.g. `@bbest`).
+
+7.  Write markdown (e.g. `README.md`) to format text, and yaml (e.g. `_site.yml`) for configurations.
+
+8.  Use the 3 components of an Rmarkdown: 1) frontmatter in yaml; 2) markdown text; and 3) R code as chunks or inline.
+
+9.  Create an Rmarkdown website with a `_site.yml`.
+
+-   ...
+
+-->
 <h1 data-number="1" id="create-github-organization-lead-only"><span class="header-section-number">1</span> Create Github organization [lead only]</h1>
 <p>The Github Organization you create will become the <code>{owner}</code> of the project’s main <code>{repo}</code>. Remember, all of Github is organized according to <code>github.com/{owner}/{repo}</code>.</p>
 <p>Have only one group project member follow instructions to <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch">Create a new organization from scratch - GitHub Docs</a>. Even more simply, choose <strong>+</strong> and <strong>New organization</strong> from upper right of <a href="https://github.com">github.com</a> once you’re logged in:</p>
@@ -2821,8 +2836,7 @@ show
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;About&quot;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Team Members</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Team Members</span></span></code></pre></div>
 <p>Finally, render the website by running the following in your R Console:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">render_site</span>()</span></code></pre></div>
 <p>You might need to install the package <code>rmarkdown</code>, which you can do from RStudio’s <strong>Packages</strong> pane, <strong>Install</strong> button and typing “rmarkdown.”</p>
@@ -2852,7 +2866,8 @@ show
 <p>You now have <em>write</em> permissions on this repo.</p>
 <p>You could proceed with cloning the repo onto your local machine, making changes there with <code>git commit</code> and pushing to Github with <code>git push</code>, however we’ll take care of this directly through Github web interface.</p>
 <p>Visit the <code>projects/</code> folder of your forked repo. On the right click <strong>Add file</strong>, <strong>Create new file</strong>. Enter the <em>exact</em> name of your group project’s Github organization (upper/lower case matters) and a forward slash (to denote a folder). Then add your <em>exact</em> Github username, e.g.:</p>
-<p><img src="img/lab3_github/github-contribute_project-org-user.png" style="width:500px" /> You do not need to enter anything in the content of the file. Simply click the green Commit new file button, which is the web equivalent of <code>git commit</code> (and <code>git push</code> since it’s already on Github.com).</p>
+<p><img src="img/lab3_github/github-contribute_project-org-user.png" style="width:500px" /></p>
+<p>You do not need to enter anything in the content of the file. Simply click the green Commit new file button, which is the web equivalent of <code>git commit</code> (and <code>git push</code> since it’s already on Github.com).</p>
 <p>You’ll notice that this branch is “1 commit ahead of eds211-team:main.” Click on <strong>Contribute</strong>, <strong>Open pull request</strong>.</p>
 <p><img src="img/lab3_github/github-contribute_open-pull-request.jpg" style="width:500px" /></p>
 <p>You should be taken to a screen asking for confirmation where you chould click on <strong>Create pull request</strong>. Normally, you’d leave a comment explaining what this pull request is for (but it’s obvious enough in this case). Click on the final <strong>Create pull request</strong>. Now you should be taken to the origin <a href="https://github.com/bbest/eds211-team">github.com/bbest/eds211-team</a> (<em>NOT</em> your {user} forked copy) and under the <strong>Pull requests</strong> see yours.</p>
@@ -2877,6 +2892,201 @@ show
 <p>It might take a minute or so before they show up on your website at <code>https://{org}.github.io</code>. This is because Github Pages were originally designed to render static webpages with some templating capability (e.g. a common navigation menu) using <a href="https://jekyllrb.com">Jekyll</a>. To speed up rendering and disable Jekyll create an empty text file called <code>.nojekyll</code> in the source of the Github Pages folder, in this case the root folder of the repo. On a Mac, you can run this command in <strong>Terminal</strong>:</p>
 <pre><code>touch .nojekyll</code></pre>
 <p>Be sure to <strong>Commit</strong> and <strong>Push</strong> these changes to Github.</p>
+<h1 data-number="8" id="handle-merge-conflict-on-github-all-members"><span class="header-section-number">8</span> Handle Merge Conflict on Github [all members]</h1>
+<p>You can also perform a <code>merge</code> of a branch on Github with a <code>pull request</code> (vs previously more directly with <code>git merge</code> in the Terminal). If there’s a conflict, Github provides a convenient text editor to resolve any conflicts. You will intentionally create a conflict between two branches and merge them on Github.</p>
+<p>You’ll use the <code>time</code> repo you created in <a href="https://bbest.github.io/eds211-team/lab2_time.html#create-personal-github-repo">Lab 2. Time</a> to play with handling a merge conflict.</p>
+<h2 data-number="8.1" id="create-new-branch-test-conflict-in-usertime-repo"><span class="header-section-number">8.1</span> Create new branch <code>test-conflict</code> in <code>{user}/time</code> repo</h2>
+<p>Previously you created a new branch in RStudio GUI that sends the <code>git branch</code> command to the Terminal. Now you’ll create a repo branch via Github. Let’s use the personal repo <code>{user}/time</code> you created in <a href="https://bbest.github.io/eds211-team/lab2_time.html#create-personal-github-repo">Lab 2</a>.</p>
+<p>Visit <code>https://github.com/{user}/time</code> in your web browser. To create a new branch click on the button with branches in the upper left of the default &lt; &gt; Code tab. The default branch selected is <code>main</code>. Enter <code>test-conflict</code> and select <strong>Create branch: test conflict</strong> from main:</p>
+<p><img src="img/lab3_github/github_new-branch.png" style="width:500px" /></p>
+<h2 data-number="8.2" id="insert-welcome-header-in-test-conflict-branch"><span class="header-section-number">8.2</span> Insert <code>## Welcome</code> header in <code>test-conflict</code> branch</h2>
+<p>From the previous step you should notice getting switched over to the new branch <code>test-conflict</code> based on the branch selected dropdown in the upper left.</p>
+<p>Click on <code>index.Rmd</code> and click the pencil icon to insert the following:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Welcome</span></span></code></pre></div>
+<p>Scroll down and notice enter a message under the <strong>Commit changes</strong> header of “+ Welcome”:</p>
+<p><img src="img/lab3_github/github_edit-commit-welcome.png" style="width:500px" /> Click on the green <strong>Commit changes</strong> button. Since you’re already on Github, you don’t need to <strong>Push</strong>.</p>
+<h2 data-number="8.3" id="insert-hello-header-in-main-branch"><span class="header-section-number">8.3</span> Insert <code># Hello</code> header in <code>main</code> branch</h2>
+<p>While still viewing the <code>index.Rmd</code> file in Github, switch to the <code>main</code> branch. You should notice that the <code>## Welcome</code> header is absent.</p>
+<p>Click on the pencil icon to insert the following:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hello</span></span></code></pre></div>
+<p>Scroll down and notice enter a message under the <strong>Commit changes</strong> header of “+ Hello.” Click on the green <strong>Commit changes</strong> button.</p>
+<h2 data-number="8.4" id="create-pull-request-main---test-conflict"><span class="header-section-number">8.4</span> Create <strong>Pull Request</strong>: <code>main</code> &lt;- <code>test-conflict</code></h2>
+<p>Now visit the <strong>Pull requests</strong> tab of your <code>time</code> repo. You might notice a suggestion to <strong>Compare &amp; pull request</strong> the <code>test-conflict</code> branch since Github noticed recent changes there.</p>
+<p><img src="img/lab3_github/github_pull-request-suggested.png" style="width:500px" /></p>
+<p>So you know how to create one regardless of prompting, click on the <strong>New pull request</strong> button.</p>
+<p><img src="img/lab3_github/github_pull-request-create.png" style="width:500px" /></p>
+<p>Select the <code>test-conflict</code> branch. Notice how it says it <strong>Can’t automatically merge.</strong>.</p>
+<p><img src="img/lab3_github/github_pull-request-cant-auto-merge.png" style="width:500px" /></p>
+<p>Click <strong>Create pull request</strong>. Let’s give this pull request the title <code>Hello (main) &lt;- Welcome (test-conflict)</code>.</p>
+<p><img src="img/lab3_github/github_pull-request-conflicts-tobe-resolved.png" style="width:500px" /></p>
+<p>Click the button to <strong>Resolve conflicts</strong>.</p>
+<p><img src="img/lab3_github/github_pull-request-resolve-conflicts-editor.png" style="width:500px" /></p>
+<p>Notice how you are now presented with files on the left pane and an editor to the right with highlighted lines to resolve and the ability to click on <strong>Prev</strong> and <strong>Next</strong> if we had multiple conflicts.</p>
+<p>The conflicts are presented by comparing one branch starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; {branch1}</code> and ending with the other <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; {branch2}</code> seperated by <code>=======</code>.</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; test-conflict
+## Welcome
+=======
+## Hello
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; main</code></pre>
+<p>So if we want to go with Welcome, reduce the lines above to simply:</p>
+<pre><code>## Welcome</code></pre>
+<p>And <strong>Mark as resolved</strong>. Then click on the green <strong>Commit merge</strong> button. You should then see the option to finally <strong>Merge pull request</strong>.</p>
+<p><img src="img/lab3_github/github_pull-request-merge-conflicts.png" style="width:500px" /></p>
+<p>Click on <strong>Merge pull request</strong> and <strong>Confirm merge</strong>.</p>
+<p><img src="img/lab3_github/github_pull-request-delete-branch.png" style="width:500px" /></p>
+<p>Congratulations! Finally delete the branch which is no longer needed.</p>
+<!--
+
+# r3-train 
+
+## Create an Issue in *r3-exercises* to resolve a file conflict
+
+Next we're going to play with some of the [Github Project management](https://github.com/features/project-management/) features while learning how to resolve file conflicts when `git` has a conflict automatically merging competing commits.
+
+Let's visit your Github repo `https://github.com/USER/r3-exercises` and click on **Issues**:
+
+`<img src="figs/github_issues.png" width="400"/>`{=html}
+
+Click on the green **New issue** button and enter a title and comment like:
+
+-   Title: "resolve a file conflict"
+-   Comment:
+
+``` {.markdown}
+Reference:
+
+* [22.4 Dealing with conflicts | Happy Git and GitHub for the useR](https://happygitwithr.com/git-branches.html#dealing-with-conflicts)
+```
+
+`<img src="figs/github_new-issue.png" width="600"/>`{=html}
+
+When you switch the comment from **Write** to **Preview**, you'll see how the **markdown** source gets formatted into html with a single item bulleted list and link. Now you're ready to **Submit new issue**.
+
+Ok, let's create file conflict by editing the same line in two different places: 1) the Github website through your web browser, 2) your local machine through RStudio.
+
+In your web browser, go to the **Code** tab of your Github repo at `https://github.com/USER/r3-exercises`. Click on `index.Rmd` and click the pencil icon to change it to:
+
+``` {.markdown}
+---
+title: "Welcome"
+---
+
+Hello, Github!
+```
+
+Scroll down and notice enter a message under the **Commit changes** header of "edit from Github":
+
+`<img src="figs/github_edit-from-Github.png" width="600"/>`{=html}
+
+Click on the green **Commit changes** button. Since you're already on Github, you don't need to **Push**.
+
+Now go to RStudio, open the `index.Rmd` and change it to:
+
+``` {.markdown}
+---
+title: "Welcome"
+---
+
+Hello, RStudio!
+```
+
+Be sure to **Commit** those changes with the message "edit from RStudio".
+
+Next, **Pull** changes from Github. Now you'll get a long and messy message about a conflict like:
+
+    >>> /usr/bin/git pull
+    From https://github.com/bbest/r3-exercises
+       719143f..17f3524  main       -> origin/main
+    First, rewinding head to replay your work on top of it...
+    Applying: edit from RStudio
+    Using index info to reconstruct a base tree...
+    M   index.Rmd
+    Falling back to patching base and 3-way merge...
+    Auto-merging index.Rmd
+    CONFLICT (content): Merge conflict in index.Rmd
+    error: Failed to merge in the changes.
+    hint: Use 'git am --show-current-patch' to see the failed patch
+    Patch failed at 0001 edit from RStudio
+    Resolve all conflicts manually, mark them as resolved with
+    "git add/rm <conflicted_files>", then run "git rebase --continue".
+    You can instead skip this commit: run "git rebase --skip".
+    To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+Close that. Now in the **Git Commit** dialog window, you'll see:
+
+`<img src="figs/rstudio_git-conflict.png" width="600"/>`{=html}
+
+The orange `U` refers to an Unresolved conflict. We now need to "manually resolve this conflict". The conflicted portions are compared above and below the `=======`. The conflict begins with `<<<<<<< HEAD` referring to the most recent commit from the ORIGIN on Github, versus ending with `>>>>>>> edit from RStudio` as the most recent LOCAL commit. Let's change the entire contents of this file to:
+
+``` {.markdown}
+---
+title: "Welcome"
+---
+
+Hello, everyone!
+```
+
+Then in the **Git** pane mark `index.Rmd` as Staged, **Commit** and enter the message "resolved file conflict; fixes \#1":
+
+`<img src="figs/rstudio_git-commit-cnflict-resolved-ref-issue.png" width="600"/>`{=html}
+
+**Commit** this change and notice that we're still "detached":
+
+    [detached HEAD 216c243] resolved file conflict #1
+     1 file changed, 1 insertion(+), 1 deletion(-)
+
+Next, we need to associate the detached HEAD with a new temporary branch and reset the main branch with it before pushing changes back to Github. Please run the following commands in the RStudio **Terminal**:
+
+``` {.bash}
+# associate detached HEAD with new branch temp
+git checkout -b temp
+
+# reset master branch with temp branch as starting point
+git checkout -B main temp
+
+# delete temp branch
+git branch -d temp
+
+# update Github with local main
+git push origin main
+```
+
+For more details, see [git - How can I reconcile detached HEAD with master/origin? - Stack Overflow](https://stackoverflow.com/questions/5772192/how-can-i-reconcile-detached-head-with-master-origin#answer-5772882).
+
+Now visit `https://github.com/USER/r3-exercises/issues/1`. You'll notice that your commit message automatically associated with that issue by simply including `#1` and closed it by prefixing the number with `fixes`.
+
+The point is to be able to associate specific line by line file changes with fixing **bugs** and implementing **new features** of our code.
+
+## Organize Issues in *r3-exercises* Github Project
+
+Let's create a couple **Issues** with the following titles to cue up next week's session:
+
+-   `read a csv and output a table`
+-   `read a wide csv and output a long table`
+
+You should then see these at `https://github.com/USER/r3-exercises/issues`:
+
+`<img src="figs/github_plus-two-issues.png" width="600"/>`{=html}
+
+Now visit the **Projects** tab, so `https://github.com/USER/r3-exercises/projects`:
+
+`<img src="figs/github_projects.png" width="600"/>`{=html}
+
+And click the **Create new project** button.
+
+`<img src="figs/github_new-project.png" width="600"/>`{=html}
+
+Choose the **Automated kanban** style and a title like "management" before clicking **Create project**. You'll next be presented with options to drag existing issues over into any of the columns: **To do**, **In progress** or **Done**:
+
+`<img src="figs/github_new-project-init.png" width="600"/>`{=html}
+
+Drag the two issues over into **In progress** in the order of priority top to bottom:
+
+`<img src="figs/github_new-project-issues-dragged.png" width="600"/>`{=html}
+
+A Project board helps answer the question, "What do I need to work on next?"
+
+-->
 <h1 class="unnumbered" id="further-reading">Further Reading</h1>
 <h2 class="unnumbered" id="git-github">Git &amp; Github</h2>
 <ul>
@@ -2884,7 +3094,7 @@ show
 <li><a href="http://swcarpentry.github.io/git-novice/">Version Control with Git</a></li>
 <li><a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">How to Use Git/GitHub with R</a></li>
 </ul>
-<h3 data-number="7.0.1" id="markdown-in-github"><span class="header-section-number">7.0.1</span> Markdown in Github</h3>
+<h3 data-number="8.4.1" id="markdown-in-github"><span class="header-section-number">8.4.1</span> Markdown in Github</h3>
 <ul>
 <li><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown · GitHub Guides</a>.</li>
 </ul>
@@ -2908,7 +3118,7 @@ show
 <li><a href="https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html">Creating websites in R</a></li>
 <li><a href="https://jules32.github.io/rmarkdown-website-tutorial/">Making free websites with RStudio’s R Markdown</a></li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
