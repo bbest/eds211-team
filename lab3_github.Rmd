@@ -648,7 +648,7 @@ Please submit the links to the Clockify project report and your personal time tr
 -   [Version Control with Git](http://swcarpentry.github.io/git-novice/)
 -   [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/)
 
-### Markdown in Github
+### Markdown in Github {.unnumbered}
 
 -   [Mastering Markdown · GitHub Guides](https://guides.github.com/features/mastering-markdown/).
 
