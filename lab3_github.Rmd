@@ -34,10 +34,6 @@ knitr::opts_chunk$set(echo = F)
 
 7.  Write markdown (e.g. `README.md`) to format text, and yaml (e.g. `_site.yml`) for configurations.
 
-8.  Use the 3 components of an Rmarkdown: 1) frontmatter in yaml; 2) markdown text; and 3) R code as chunks or inline.
-
-9.  Create an Rmarkdown website with a `_site.yml`.
-
 -   ...
 
 -->
@@ -437,11 +433,11 @@ Scroll down and notice enter a message under the **Commit changes** header of "+
 ![](img/lab3_github/github_edit-commit-welcome.png){style="width:500px"} 
 Click on the green **Commit changes** button. Since you're already on Github, you don't need to **Push**.
 
-## Insert `# Hello` header in `main` branch
+## Insert `## Hello` header in `main` branch
 
 While still viewing the `index.Rmd` file in Github, switch to the `main` branch. You should notice that the `## Welcome` header is absent. 
 
-Click on the pencil icon to insert the following:
+Click on the pencil icon to insert a different greeting in the same location as the previous `## Welcome`:
 
 ``` {.markdown}
 ## Hello
@@ -463,11 +459,9 @@ Select the `test-conflict` branch. Notice how it says it **Can't automatically m
 
 ![](img/lab3_github/github_pull-request-cant-auto-merge.png){style="width:500px"} 
 
-Click **Create pull request**.  Let's give this pull request the title `Hello (main) <- Welcome (test-conflict)`.
+Click **Create pull request**.  Let's give this pull request the title `Hello (main) <- Welcome (test-conflict)` to remind ourselves what's updating what. Because we intentionally created a conflict on the same line of code, you should see the following warning.
 
 ![](img/lab3_github/github_pull-request-conflicts-tobe-resolved.png){style="width:500px"}
-
-
 Click the button to **Resolve conflicts**.
 
 ![](img/lab3_github/github_pull-request-resolve-conflicts-editor.png){style="width:500px"}
@@ -484,7 +478,7 @@ The conflicts are presented by comparing one branch starting with `<<<<<<< {bran
 >>>>>>> main
 ```
 
-So if we want to go with Welcome, reduce the lines above to simply:
+So if we want to go with the `## Welcome` header, reduce the lines above to simply:
 
 ```
 ## Welcome
@@ -500,158 +494,149 @@ Click on **Merge pull request** and **Confirm merge**.
 
 Congratulations! Finally delete the branch which is no longer needed.
 
-<!--
+# Use Github **Issues**
 
-# r3-train 
+Next, you'll learn how to create and use [Github Issues](https://github.com/features/issues). Github Issues allow you to discuss tasks, whether fixing a bug or creating a feature, as a thread of comments. They can be assigned to Github users on your team and organized with labels, Milestones and Projects (up later).
 
-## Create an Issue in *r3-exercises* to resolve a file conflict
+## Create Issue in `{user}/time` [all members]
 
-Next we're going to play with some of the [Github Project management](https://github.com/features/project-management/) features while learning how to resolve file conflicts when `git` has a conflict automatically merging competing commits.
+Please again visit your personal repo `https://github.com/{user}/time` that you created in [Lab 2](https://bbest.github.io/eds211-team/lab2_time.html#create-personal-github-repo). Click on the **Issues** tab and click the green **New issue** button.
 
-Let's visit your Github repo `https://github.com/USER/r3-exercises` and click on **Issues**:
+Give it the following **Title**:
 
-`r img(src='figs/github_issues.png', width=400)`
-
-Click on the green **New issue** button and enter a title and comment like:
-
--   Title: "resolve a file conflict"
--   Comment:
-
-``` {.markdown}
-Reference:
-
-* [22.4 Dealing with conflicts | Happy Git and GitHub for the useR](https://happygitwithr.com/git-branches.html#dealing-with-conflicts)
+```
+testing Github Issue features
 ```
 
-`r img(src='figs/github_new-issue.png', width=600)`
+And add the following into the initial **commment**:
 
-When you switch the comment from **Write** to **Preview**, you'll see how the **markdown** source gets formatted into html with a single item bulleted list and link. Now you're ready to **Submit new issue**.
+```
+## Github Issue Basics
+- [x] Create an issue
+- [x] Create this task list in initial comment of issue
+- [ ] Convert the following two tasks into issues:
+  - [ ] Assign user
+  - [ ] Add new label
+- [ ] Add emoji reaction to a comment
 
-Ok, let's create file conflict by editing the same line in two different places: 1) the Github website through your web browser, 2) your local machine through RStudio.
+## Github Flavored Markdown in Issue Comments
+- [ ] Paste a screenshot into a comment
+- [ ] Reference lines of code with a canonical URL
+- [ ] Add a fenced R code block
+- [ ] Mention a Github user on your team
+- [ ] Use emoji in a comment
 
-In your web browser, go to the **Code** tab of your Github repo at `https://github.com/USER/r3-exercises`. Click on `index.Rmd` and click the pencil icon to change it to:
-
-``` {.markdown}
----
-title: "Welcome"
----
-
-Hello, Github!
+## Reference Issues
+- [ ] Mention in issue comment another issue that is in the same repo
+- [ ] Mention in issue comment another issue that is in a different repo
+- [ ] Mention in `git commit` message an issue in the same repo
 ```
 
-Scroll down and notice enter a message under the **Commit changes** header of "edit from Github":
+Click the green button **Submit new issue**.
 
-`r img(src='figs/github_edit-from-Github.png', width=600)`
+Please notice a couple things after you initially [Create a Github Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue):
 
-Click on the green **Commit changes** button. Since you're already on Github, you don't need to **Push**.
+- You should see that the first issue you created here is `#2`, not `#1`. That's because **Pull Requests** in Github, including the one you created in Step [8.4 Create **Pull Request**: `main` <- `test-conflict`](#create-pull-request-main---test-conflict), count as a Github Issue. They similarly allow a conversation to happen between successive comments and possible code changes wrapped in git commits.
 
-Now go to RStudio, open the `index.Rmd` and change it to:
+- The initial two tasks were already checked by using `- [x]` instead of `- [ ]`. You can reorder the items in the [Github Task List](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-task-lists) by dragging items up/down, even between headers.
 
-``` {.markdown}
----
-title: "Welcome"
----
+## Work through Tasks [all members]
 
-Hello, RStudio!
-```
+Please next accomplish each task and check the task in the issue's list. Note the following:
 
-Be sure to **Commit** those changes with the message "edit from RStudio".
+- [ ] `Convert the following two tasks into issues:`. You can [convert a task to an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-task-list-item) by hovering over the task and clicking the [dot in a circle] icon in the upper-right corner of the task. 
 
-Next, **Pull** changes from Github. Now you'll get a long and messy message about a conflict like:
+- [ ] `Assign user`. When trying to [assign a Github User to an Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users) you won't have any users available in your `{user}/time` repo. Instead, you'll do this in your `{org}/notebook` repo later. So for this issue `Assign user` converted from a task, go ahead and assign the **label** `wontfix` and then **Close issue** with **comment** `Skipping for personal repo {user}/time. Doing later for {org}/notebook`. Then notice how in the task list of the original issue `testing Github Issue features` this task gets automatically checked by the converted issue's Closed status.
 
-    >>> /usr/bin/git pull
-    From https://github.com/bbest/r3-exercises
-       719143f..17f3524  main       -> origin/main
-    First, rewinding head to replay your work on top of it...
-    Applying: edit from RStudio
-    Using index info to reconstruct a base tree...
-    M   index.Rmd
-    Falling back to patching base and 3-way merge...
-    Auto-merging index.Rmd
-    CONFLICT (content): Merge conflict in index.Rmd
-    error: Failed to merge in the changes.
-    hint: Use 'git am --show-current-patch' to see the failed patch
-    Patch failed at 0001 edit from RStudio
-    Resolve all conflicts manually, mark them as resolved with
-    "git add/rm <conflicted_files>", then run "git rebase --continue".
-    You can instead skip this commit: run "git rebase --skip".
-    To abort and get back to the state before "git rebase", run "git rebase --abort".
+- [ ] `Add new label`. In this issue converted from a task, assign the Label (right side of issue) to `test` after you add it by editing the labels.
+  
+  ![](img/lab3_github/github_edit-labels.png){style="width:150px"}
+- [ ] Add emoji reaction to one of your own comments. See [Add Reactions to Pull Requests, Issues, and Comments | The GitHub Blog](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/). \
+  ![](https://github.blog/wp-content/uploads/2016/03/d55b8b7e-e6ba-11e5-9b31-59a8db92e456.gif?resize=917%2C359){style="width:500px"}
 
-Close that. Now in the **Git Commit** dialog window, you'll see:
+- [ ] `Paste a screenshot into a comment`. Hint: use keyboard shortcuts on [Mac](https://support.apple.com/en-us/HT201361) or [Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcut-for-print-screen-601210c0-b3a9-7b58-bc40-bae4dcf5f108).
 
-`r img(src='figs/rstudio_git-conflict.png', width=600)`
+- [ ] `Reference lines of code with a canonical URL`. Highlight multiple lines from the `index.Rmd` in your `{user}/time` repo, such as the two lines of customized variable values under `# CHANGE THESE VARIABLES!`. Be sure to get the canonical URL referencing the specific git commit. The easiest way is using the `y` [Github keyboard shortcut](https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#issues-and-pull-requests). Paste this URL in a new comment. Notice the lines of code show up in the comment. And these persist for this version (or git commit) even as subsequent git commits might change those lines (or even delete the file altogether).
 
-The orange `U` refers to an Unresolved conflict. We now need to "manually resolve this conflict". The conflicted portions are compared above and below the `=======`. The conflict begins with `<<<<<<< HEAD` referring to the most recent commit from the ORIGIN on Github, versus ending with `>>>>>>> edit from RStudio` as the most recent LOCAL commit. Let's change the entire contents of this file to:
+- [ ] `Add a fenced R code block`. Add multiple lines of R code. See [Creating and highlighting code blocks - GitHub Docs](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting) and start with `r` after three backticks instead of `ruby`.
 
-``` {.markdown}
----
-title: "Welcome"
----
+- [ ] `Mention a Github user on your team`. Add a comment referencing another Github user, e.g. `@bbest`, on your team. See [Mentioning people and teams](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams).
 
-Hello, everyone!
-```
+- [ ] `Use emoji in a comment`. See [Basic writing and formatting syntax - GitHub Docs](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#using-emoji).
+  ![](https://docs.github.com/assets/images/help/writing/emoji-rendered.png){style="width:500px"}
 
-Then in the **Git** pane mark `index.Rmd` as Staged, **Commit** and enter the message "resolved file conflict; fixes \#1":
+- [ ] `Mention in issue comment another issue that is in the same repo`. Simply add in a new comment reference to another issue like `#3` . Notice how it gets linked and shows the title on hover.
 
-`r img(src='figs/rstudio_git-commit-cnflict-resolved-ref-issue.png', width=600)`
+- [ ] `Mention in issue comment another issue that is in a different repo`. now mention an issue in a different repo and different owner altogether, e.g. `bbest/eds211-team#21` prefixing with Github `{owner}/{repo}`. See [Autolinked references and URLs - GitHub Docs](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests).
 
-**Commit** this change and notice that we're still "detached":
+- [ ] `Mention in git commit message issue in the same repo`. Make a change in your `index.Rmd`. It can be as simple as adding a newline or comment somewhere. Be sure to reference the issue # in your **git message**. Push it and notice how the commit appears in the thread of comments for the issue.
 
-    [detached HEAD 216c243] resolved file conflict #1
-     1 file changed, 1 insertion(+), 1 deletion(-)
+## Create Issues from Project Tasks in `{org}/notebook` [lead only]
 
-Next, we need to associate the detached HEAD with a new temporary branch and reset the main branch with it before pushing changes back to Github. Please run the following commands in the RStudio **Terminal**:
+Coordinate amongst your project team the creation of Github Issues into `{org}/notebook` using your original project Tasks from the first lab. Then:
 
-``` {.bash}
-# associate detached HEAD with new branch temp
-git checkout -b temp
+- Refine the **Title** of each task if something more specific is appropriate now.
 
-# reset master branch with temp branch as starting point
-git checkout -B main temp
+- Detail with a **Task List** parts of the broader Task that could be broken up.
 
-# delete temp branch
-git branch -d temp
+- **Convert to issues** those Task List items. By creating them this way they are associated with the original broader Task.
 
-# update Github with local main
-git push origin main
-```
+- **Assign users** to the issues.
 
-For more details, see [git - How can I reconcile detached HEAD with master/origin? - Stack Overflow](https://stackoverflow.com/questions/5772192/how-can-i-reconcile-detached-head-with-master-origin#answer-5772882).
+- Include issues that are already complete and **Close** them, adding a screenshot, link, etc summarizing the progress.
 
-Now visit `https://github.com/USER/r3-exercises/issues/1`. You'll notice that your commit message automatically associated with that issue by simply including `#1` and closed it by prefixing the number with `fixes`.
+# Create Github **Milestones** in `{org}/notebook` [lead only]
 
-The point is to be able to associate specific line by line file changes with fixing **bugs** and implementing **new features** of our code.
+Milestones allow you to associate a deadline with a cluster of issues. A progress bar shows how many of the issues are closed versus still open. See [About milestones - GitHub Docs](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones).
 
-## Organize Issues in *r3-exercises* Github Project
+![](https://docs.github.com/assets/images/help/issues/milestone-info-page.png){style="width:800px"}
 
-Let's create a couple **Issues** with the following titles to cue up next week's session:
+Create Milestones per your original Lab 1 Deliverables with due dates. Change these to whatever is most appropriate for now.
 
--   `read a csv and output a table`
--   `read a wide csv and output a long table`
+Note that **Milestones** (an older feature) can only reference issues in the same repo, whereas a **Project** (a newer feature) can reference any repos with the same `{owner}`. This Milestones feature is expected to be superseded with a **Timeline** feature in Github  (per [mention](https://github.com/features/issues/) of "timelines (coming soon)") to probably provide something like a Gantt chart across repos.
 
-You should then see these at `https://github.com/USER/r3-exercises/issues`:
+# Use Github **Projects** (Beta) [lead only]
 
-`r img(src='figs/github_plus-two-issues.png', width=600)`
+The new (Beta) Projects allow you to view your issues, even across repos in the same organization, either:
 
-Now visit the **Projects** tab, so `https://github.com/USER/r3-exercises/projects`:
+* as a **table**: \
+  ![](https://docs.github.com/assets/images/help/issues/projects_table.png){style="width:800px"}
 
-`r img(src='figs/github_projects.png', width=600)`
+* or as a **board**: \
+  ![](https://docs.github.com/assets/images/help/issues/projects_board.png){style="width:800px"}
 
-And click the **Create new project** button.
+The new **table** view adds grouping and sorting to the filtering of the existing **board** view, which is better for viewing prioritization vertically and time or stage horizontally. 
 
-`r img(src='figs/github_new-project.png', width=600)`
+![](https://docs.github.com/assets/images/help/issues/project_view.png){style="width:800px"}
 
-Choose the **Automated kanban** style and a title like "management" before clicking **Create project**. You'll next be presented with options to drag existing issues over into any of the columns: **To do**, **In progress** or **Done**:
+For more, see [About projects (beta) - GitHub Docs](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects).
 
-`r img(src='figs/github_new-project-init.png', width=600)`
+## Create Project (Beta) `Plan` under `{org}`
 
-Drag the two issues over into **In progress** in the order of priority top to bottom:
+Create a project for your organization, so under `https://github.com/{org}` and **Projects**. 
 
-`r img(src='figs/github_new-project-issues-dragged.png', width=600)`
+![](https://docs.github.com/assets/images/help/issues/new_project_beta.png){style="width:600px"}
 
-A Project board helps answer the question, "What do I need to work on next?"
+## Customize the `Plan` Project 
 
--->
+See [Quickstart for projects (beta) - GitHub Docs](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/quickstart) and follow the instructions there for:
+
+- **Adding issues to your project**. Add all the issues you previously created.
+- **Creating a field to track priority**. Note that you can similarly create any field and list of values to help organize your issues. \
+  ![](https://docs.github.com/assets/images/help/projects/new-single-select-field.png){style="width:200px"}
+- **Grouping issues by priority**. This is a new **table** feature that allows you to simply drag and drop issues into a grouping thereby changing its field value to that group. \
+  ![](https://docs.github.com/assets/images/help/projects/move_between_group.gif){style="width:700px"}
+- **Saving the priority view**. You can create views with different groupings, filters and more, oh my!
+- **Adding a board layout**. Be sure to set the **Status** field for each issue first.
+  ![](https://docs.github.com/assets/images/help/projects/project-view-switch.gif){style="width:700px"}
+
+The original Project **board** may also be referred to as a [Kanban (Wikipedia)](https://en.wikipedia.org/wiki/Kanban_(development)), or "billboard" in Japanese. By prioritizing all issues vertically and sequencing them in time horizontally, any user can filter by **Assignee** and answer one of our core questions _What do I need to work on next?_
+
+# Submit Lab via Form [all members]
+
+Please submit the links to the Clockify project report and your personal time tracking website on Github via the following Google Form using your UCSB email:
+
+- [Submission for Lab 3. Github](https://forms.gle/78ppr5Mmm6DuYuct5)
 
 # Further Reading {.unnumbered}
 

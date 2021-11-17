@@ -2609,7 +2609,7 @@ show
 <span class='co'># CHANGE THESE VARIABLES!</span>
 <span class='va'>api_txt</span> <span class='op'>&lt;-</span> <span class='st'>"~/private/clockify_api-key.txt"</span>
 <span class='va'>api_txt</span> <span class='op'>&lt;-</span> <span class='st'>"~/My Drive (ben@ecoquants.com)/private/clockify-api-key_ben@ecoquants.com.txt"</span>
-<span class='va'>project_name</span> <span class='op'>&lt;-</span> <span class='st'>"iea-auto"</span>
+<span class='va'>project_name</span> <span class='op'>&lt;-</span> <span class='st'>"ohi-science"</span>
 
 <span class='co'># use API key to authenticate</span>
 <span class='va'>CLOCKIFY_API_KEY</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readLines.html'>readLines</a></span><span class='op'>(</span><span class='va'>api_txt</span><span class='op'>)</span>
@@ -2628,6 +2628,8 @@ show
 
 <span class='co'># show table</span>
 <span class='va'>d_times</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span>
+    <span class='va'>project_name</span> <span class='op'>==</span> <span class='op'>!</span><span class='op'>!</span><span class='va'>project_name</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
   <span class='fu'>select</span><span class='op'>(</span>
     <span class='va'>user_name</span>, <span class='va'>project_name</span>, 
     <span class='va'>time_start</span>, <span class='va'>duration</span>, <span class='va'>description</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
@@ -2650,7 +2652,7 @@ show
 <h1 data-number="6" id="submit-lab-via-form"><span class="header-section-number">6</span> Submit Lab via Form</h1>
 <p>Please submit the link to the Clockify project report and your personal time tracking website on Github via the following Google Form using your UCSB email:</p>
 <ul>
-<li><a href="https://forms.gle/jqHRdukRaYakNH766">Submission for Lab 2. Proposal</a></li>
+<li><a href="https://forms.gle/jqHRdukRaYakNH766">Submission for Lab 2. Time</a></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

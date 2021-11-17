@@ -160,4 +160,4 @@ Next lab we'll start into using Github by creating a Github organization where y
 
 Please submit the link to the Clockify project report and your personal time tracking website on Github via the following Google Form using your UCSB email:
 
--   [Submission for Lab 2. Proposal](https://forms.gle/jqHRdukRaYakNH766)
+- [Submission for Lab 2. Time](https://forms.gle/jqHRdukRaYakNH766)

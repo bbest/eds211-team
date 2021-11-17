@@ -29,7 +29,7 @@ output:
     # type: "inverse"
     toc: true
     toc_depth: 4
-    toc_float: true
+    # toc_float: true
     code_folding: "show"
     pandoc_args: ["--number-sections"]
     # number_sections: true
