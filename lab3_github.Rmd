@@ -571,6 +571,8 @@ Please next accomplish each task and check the task in the issue's list. Note th
 
 - [ ] `Mention in git commit message issue in the same repo`. Make a change in your `index.Rmd`. It can be as simple as adding a newline or comment somewhere. Be sure to reference the issue # in your **git message**. Push it and notice how the commit appears in the thread of comments for the issue.
 
+Once you've completed all these tasks, **Close the issue**. Congratulations!
+
 ## Create Issues from Project Tasks in `{org}/notebook` [lead only]
 
 Coordinate amongst your project team the creation of Github Issues into `{org}/notebook` using your original project Tasks from the first lab. Then:
