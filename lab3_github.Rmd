@@ -556,8 +556,20 @@ Please next accomplish each task and check the task in the issue's list. Note th
 
 - [ ] `Paste a screenshot into a comment`. Hint: use keyboard shortcuts on [Mac](https://support.apple.com/en-us/HT201361) or [Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcut-for-print-screen-601210c0-b3a9-7b58-bc40-bae4dcf5f108).
 
-- [ ] `Reference lines of code with a canonical URL`. Highlight multiple lines from the `index.Rmd` in your `{user}/time` repo, such as the two lines of customized variable values under `# CHANGE THESE VARIABLES!`. Be sure to get the canonical URL referencing the specific git commit. The easiest way is using the `y` [Github keyboard shortcut](https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#issues-and-pull-requests). Paste this URL in a new comment. Notice the lines of code show up in the comment. And these persist for this version (or git commit) even as subsequent git commits might change those lines (or even delete the file altogether).
-
+- [ ] `Reference lines of code with a canonical URL`. Highlight multiple lines from the `index.Rmd` in your `{user}/time` repo by selecting the line number in the left-hand margin (hold shift to select all lines from previously selected line). The highlighted lines show up in yellow and the URL of your browser should update with an HTML anchor to those lines `#L29-L31`, e.g.  `https://github.com/bbest/time/blob/main/index.Rmd#L29-L31`:
+  
+  ![](img/lab3_github/github_grab-permalink.jpg){style="width:700px"}
+  
+  By selecting **Copy permalink** from the `...` you can copy into your clipboard the URL to the file resolved to the specific commit, e.g. `https://github.com/bbest/time/blob/71383b7952a1f6f0aa00a9cd6906dc8764ba808f/index.Rmd#L29-L31`.
+  
+  Another way to get the URL is to use the `y` [Github keyboard shortcut](https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#issues-and-pull-requests) and copy the URL from your browser's address.
+  
+  Paste this URL in a new comment, i.e. the **Write** tab. Click on **Preview**. You'll notice the lines of code show up in the comment. 
+  
+  ![](img/lab3_github/github_permalink-preview.png){style="width:700px"}
+  
+  And these persist for this version (or git commit) even as subsequent git commits might change those lines (or even delete the file altogether).
+  
 - [ ] `Add a fenced R code block`. Add multiple lines of R code. See [Creating and highlighting code blocks - GitHub Docs](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting) and start with `r` after three backticks instead of `ruby`.
 
 - [ ] `Mention a Github user on your team`. Add a comment referencing another Github user, e.g. `@bbest`, on your team. See [Mentioning people and teams](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams).
@@ -575,7 +587,9 @@ Once you've completed all these tasks, **Close the issue**. Congratulations!
 
 ## Create Issues from Project Tasks in `{org}/notebook` [lead only]
 
-Coordinate amongst your project team the creation of Github Issues into `{org}/notebook` using your original project Tasks from the first lab. Then:
+Coordinate amongst your project team the creation of Github Issues into `{org}/notebook` using your original project Tasks from the first lab.
+
+- Since your `notebook` repo was forked, it by default does not have its own **Issues** (since assuming you would want to file them in the original repo), but you'll need to turn these on in the **Settings** of the repo.
 
 - Refine the **Title** of each task if something more specific is appropriate now.
 

@@ -2990,7 +2990,12 @@ Add emoji reaction to one of your own comments. See <a href="https://github.blog
 <li><p><input type="checkbox" disabled="" />
 <code>Paste a screenshot into a comment</code>. Hint: use keyboard shortcuts on <a href="https://support.apple.com/en-us/HT201361">Mac</a> or <a href="https://support.microsoft.com/en-us/windows/keyboard-shortcut-for-print-screen-601210c0-b3a9-7b58-bc40-bae4dcf5f108">Windows</a>.</p></li>
 <li><p><input type="checkbox" disabled="" />
-<code>Reference lines of code with a canonical URL</code>. Highlight multiple lines from the <code>index.Rmd</code> in your <code>{user}/time</code> repo, such as the two lines of customized variable values under <code># CHANGE THESE VARIABLES!</code>. Be sure to get the canonical URL referencing the specific git commit. The easiest way is using the <code>y</code> <a href="https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#issues-and-pull-requests">Github keyboard shortcut</a>. Paste this URL in a new comment. Notice the lines of code show up in the comment. And these persist for this version (or git commit) even as subsequent git commits might change those lines (or even delete the file altogether).</p></li>
+<code>Reference lines of code with a canonical URL</code>. Highlight multiple lines from the <code>index.Rmd</code> in your <code>{user}/time</code> repo by selecting the line number in the left-hand margin (hold shift to select all lines from previously selected line). The highlighted lines show up in yellow and the URL of your browser should update with an HTML anchor to those lines <code>#L29-L31</code>, e.g. <code>https://github.com/bbest/time/blob/main/index.Rmd#L29-L31</code>:</p><p><img src="img/lab3_github/github_grab-permalink.jpg" style="width:700px" /></p>
+<p>By selecting <strong>Copy permalink</strong> from the <code>...</code> you can copy into your clipboard the URL to the file resolved to the specific commit, e.g. <code>https://github.com/bbest/time/blob/71383b7952a1f6f0aa00a9cd6906dc8764ba808f/index.Rmd#L29-L31</code>.</p>
+<p>Another way to get the URL is to use the <code>y</code> <a href="https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#issues-and-pull-requests">Github keyboard shortcut</a> and copy the URL from your browser’s address.</p>
+<p>Paste this URL in a new comment, i.e. the <strong>Write</strong> tab. Click on <strong>Preview</strong>. You’ll notice the lines of code show up in the comment.</p>
+<p><img src="img/lab3_github/github_permalink-preview.png" style="width:700px" /></p>
+<p>And these persist for this version (or git commit) even as subsequent git commits might change those lines (or even delete the file altogether).</p></li>
 <li><p><input type="checkbox" disabled="" />
 <code>Add a fenced R code block</code>. Add multiple lines of R code. See <a href="https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting">Creating and highlighting code blocks - GitHub Docs</a> and start with <code>r</code> after three backticks instead of <code>ruby</code>.</p></li>
 <li><p><input type="checkbox" disabled="" />
@@ -3006,8 +3011,9 @@ Add emoji reaction to one of your own comments. See <a href="https://github.blog
 </ul>
 <p>Once you’ve completed all these tasks, <strong>Close the issue</strong>. Congratulations!</p>
 <h2 data-number="9.3" id="create-issues-from-project-tasks-in-orgnotebook-lead-only"><span class="header-section-number">9.3</span> Create Issues from Project Tasks in <code>{org}/notebook</code> [lead only]</h2>
-<p>Coordinate amongst your project team the creation of Github Issues into <code>{org}/notebook</code> using your original project Tasks from the first lab. Then:</p>
+<p>Coordinate amongst your project team the creation of Github Issues into <code>{org}/notebook</code> using your original project Tasks from the first lab.</p>
 <ul>
+<li><p>Since your <code>notebook</code> repo was forked, it by default does not have its own <strong>Issues</strong> (since assuming you would want to file them in the original repo), but you’ll need to turn these on in the <strong>Settings</strong> of the repo.</p></li>
 <li><p>Refine the <strong>Title</strong> of each task if something more specific is appropriate now.</p></li>
 <li><p>Detail with a <strong>Task List</strong> parts of the broader Task that could be broken up.</p></li>
 <li><p><strong>Convert to issues</strong> those Task List items. By creating them this way they are associated with the original broader Task.</p></li>
