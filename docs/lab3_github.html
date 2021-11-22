@@ -103,11 +103,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="twitter:title" content="EDS 211: Lab 3. Github"/>
 
   <!--/radix_placeholder_meta_tags-->
-  
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","bibliography","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Lab 3. Github"]},{"type":"character","attributes":{},"value":["eds211-team.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Lab 3. Github"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2558,7 +2557,8 @@ Weekly Modules
 <li><a href="#create-project-beta-plan-under-org"><span class="toc-section-number">11.1</span> Create Project (Beta) <code>Plan</code> under <code>{org}</code></a></li>
 <li><a href="#customize-the-plan-project"><span class="toc-section-number">11.2</span> Customize the <code>Plan</code> Project</a></li>
 </ul></li>
-<li><a href="#submit-lab-via-form-all-members"><span class="toc-section-number">12</span> Submit Lab via Form [all members]</a></li>
+<li><a href="#track-time-on-github-issues"><span class="toc-section-number">12</span> Track Time on Github Issues</a></li>
+<li><a href="#submit-lab-via-form-all-members"><span class="toc-section-number">13</span> Submit Lab via Form [all members]</a></li>
 <li><a href="#further-reading">Further Reading</a>
 <ul>
 <li><a href="#git-github">Git &amp; Github</a>
@@ -2819,7 +2819,7 @@ show
 <h2 data-number="5.2" id="simple-push"><span class="header-section-number">5.2</span> <strong>Simple</strong> <code>push</code></h2>
 <p>Note that in the <strong>Git</strong> pane, the yellow box question marks under <strong>Status</strong> next to <code>.gitignore</code> and <code>{org}.github.io.Rproj</code> indicate these files are not known to the version control system (and asking should they be?). Ticking the boxes under <strong>Staged</strong> changes the <strong>Status</strong> to a turquoise <code>A</code> for added.</p>
 <p>Now click the <strong>Commit</strong> button in the Git pane to open the Review Changes dialog window. Every commit requires a message.</p>
-<p>Click the <strong>Commit</strong> button in the Review Changes dialog window. <strong>Close</strong> this dialog. Note how now “Your branch is ahead of ‘origin/main’ by 1 commit.” The previous <code>git commit</code> operation happened only on the local machine. The “origin” is Github and “main” referring to the main branch.</p>
+<p>Click the <strong>Commit</strong> button in the Review Changes dialog window. <strong>Close</strong> this dialog. Note how now “Your branch is ahead of ‘origin/main’ by 1 commit”. The previous <code>git commit</code> operation happened only on the local machine. The “origin” is Github and “main” referring to the main branch.</p>
 <p>Next, you need to <strong>Push</strong> these changes by clicking on the button in the upper right.</p>
 <p>You should now see these two new files showing up in your repo at <code>https://github.com/{org}/{org}.github.io</code>. These files are displayed with the filename, most recent commit message associated with any changes and the time since last update.</p>
 <h2 data-number="5.3" id="create-rmarkdown-website"><span class="header-section-number">5.3</span> Create Rmarkdown website</h2>
@@ -2848,14 +2848,14 @@ show
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Team Members</span></span></code></pre></div>
 <p>Finally, render the website by running the following in your R Console:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">render_site</span>()</span></code></pre></div>
-<p>You might need to install the package <code>rmarkdown</code>, which you can do from RStudio’s <strong>Packages</strong> pane, <strong>Install</strong> button and typing “rmarkdown.”</p>
-<p>The <strong>Viewer</strong> pane now shows the rendered html. Also notice the unversioned files. Let’s get these onto our Github repo by going into the <strong>Git</strong> pane like previously, ticking the <strong>Staged</strong> boxes, clicking <strong>Commit</strong>, adding a message like “initial website.”</p>
+<p>You might need to install the package <code>rmarkdown</code>, which you can do from RStudio’s <strong>Packages</strong> pane, <strong>Install</strong> button and typing “rmarkdown”.</p>
+<p>The <strong>Viewer</strong> pane now shows the rendered html. Also notice the unversioned files. Let’s get these onto our Github repo by going into the <strong>Git</strong> pane like previously, ticking the <strong>Staged</strong> boxes, clicking <strong>Commit</strong>, adding a message like “initial website”.</p>
 <p>Click on <strong>Commit</strong> in the dialog. Close the Git Commit window and then click on <strong>Push</strong> so your branch is not ahead of the origin Github.</p>
 <p>You should now see these new files showing up in your repo at <code>https://github.com/{org}/{org}.github.io</code>.</p>
 <p>Next, let’s get these files served as a website.</p>
 <h2 data-number="5.4" id="setup-github-pages-to-serve-website"><span class="header-section-number">5.4</span> Setup Github Pages to serve website</h2>
 <p><a href="https://pages.github.com">Github Pages</a> allows you to serve up simple websites from your Github repo. Let’s turn on this feature by visiting the <strong>Settings</strong> tab in <code>https://github.com/{org}/{org}.github.io</code>. Then click the <strong>Pages</strong> menu from the left navbar, choose Branch: <strong>main</strong>, folder <strong>/ (root)</strong>.</p>
-<p>Click <strong>Save</strong>. You should now see that the site is “ready to be published.”</p>
+<p>Click <strong>Save</strong>. You should now see that the site is “ready to be published”.</p>
 <p>You should now be able to visit the website URL:</p>
 <ul>
 <li><code>https://{org}.github.io</code></li>
@@ -2877,7 +2877,7 @@ show
 <p>Visit the <code>projects/</code> folder of your forked repo. On the right click <strong>Add file</strong>, <strong>Create new file</strong>. Enter the <em>exact</em> name of your group project’s Github organization (upper/lower case matters) and a forward slash (to denote a folder). Then add your <em>exact</em> Github username, e.g.:</p>
 <p><img src="img/lab3_github/github-contribute_project-org-user.png" style="width:500px" /></p>
 <p>You do not need to enter anything in the content of the file. Simply click the green Commit new file button, which is the web equivalent of <code>git commit</code> (and <code>git push</code> since it’s already on Github.com).</p>
-<p>You’ll notice that this branch is “1 commit ahead of eds211-team:main.” Click on <strong>Contribute</strong>, <strong>Open pull request</strong>.</p>
+<p>You’ll notice that this branch is “1 commit ahead of eds211-team:main”. Click on <strong>Contribute</strong>, <strong>Open pull request</strong>.</p>
 <p><img src="img/lab3_github/github-contribute_open-pull-request.jpg" style="width:500px" /></p>
 <p>You should be taken to a screen asking for confirmation where you chould click on <strong>Create pull request</strong>. Normally, you’d leave a comment explaining what this pull request is for (but it’s obvious enough in this case). Click on the final <strong>Create pull request</strong>. Now you should be taken to the origin <a href="https://github.com/bbest/eds211-team">github.com/bbest/eds211-team</a> (<em>NOT</em> your {user} forked copy) and under the <strong>Pull requests</strong> see yours.</p>
 <p><img src="img/lab3_github/github-contribute_project-org-user.png" style="width:500px" /></p>
@@ -2918,7 +2918,7 @@ show
 <p>While still viewing the <code>index.Rmd</code> file in Github, switch to the <code>main</code> branch. You should notice that the <code>## Welcome</code> header is absent.</p>
 <p>Click on the pencil icon to insert a different greeting in the same location as the previous <code>## Welcome</code>:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hello</span></span></code></pre></div>
-<p>Scroll down and notice enter a message under the <strong>Commit changes</strong> header of “+ Hello.” Click on the green <strong>Commit changes</strong> button.</p>
+<p>Scroll down and notice enter a message under the <strong>Commit changes</strong> header of “+ Hello”. Click on the green <strong>Commit changes</strong> button.</p>
 <h2 data-number="8.4" id="create-pull-request-main---test-conflict"><span class="header-section-number">8.4</span> Create <strong>Pull Request</strong>: <code>main</code> &lt;- <code>test-conflict</code></h2>
 <p>Now visit the <strong>Pull requests</strong> tab of your <code>time</code> repo. You might notice a suggestion to <strong>Compare &amp; pull request</strong> the <code>test-conflict</code> branch since Github noticed recent changes there.</p>
 <p><img src="img/lab3_github/github_pull-request-suggested.png" style="width:500px" /></p>
@@ -3051,7 +3051,14 @@ Add emoji reaction to one of your own comments. See <a href="https://github.blog
 <li><strong>Adding a board layout</strong>. Be sure to set the <strong>Status</strong> field for each issue first. <img src="https://docs.github.com/assets/images/help/projects/project-view-switch.gif" style="width:700px" /></li>
 </ul>
 <p>The original Project <strong>board</strong> may also be referred to as a <a href="https://en.wikipedia.org/wiki/Kanban_(development)">Kanban (Wikipedia)</a>, or “billboard” in Japanese. By prioritizing all issues vertically and sequencing them in time horizontally, any user can filter by <strong>Assignee</strong> and answer one of our core questions <em>What do I need to work on next?</em></p>
-<h1 data-number="12" id="submit-lab-via-form-all-members"><span class="header-section-number">12</span> Submit Lab via Form [all members]</h1>
+<h1 data-number="12" id="track-time-on-github-issues"><span class="header-section-number">12</span> Track Time on Github Issues</h1>
+<p>After installing the <a href="https://clockify.me/apps#browser-extension">Clockify browser extension</a> for Google Chrome, Microsoft Edge or Mozilla Firefox, you should see an extra <strong>Start timer</strong> link displayed when visiting a Github issue.</p>
+<p><img src="img/lab3_github/clockify_github-issue_start-timer.png" style="width:800px" /></p>
+<p>Clicking on <strong>Start timer</strong> will start the timer with the title and issue number entered into the Description of the Clockify time entry.</p>
+<p><img src="img/lab3_github/clockify_githu-issue_timer-display.png" style="width:400px" /></p>
+<p>You can return to the issue to click on the <strong>Stop timer</strong> link or more directly in the browser extension.</p>
+<p><img src="img/lab3_github/clockify_extension_stop-timer.png" style="width:400px" /></p>
+<h1 data-number="13" id="submit-lab-via-form-all-members"><span class="header-section-number">13</span> Submit Lab via Form [all members]</h1>
 <p>Please submit the links to the Clockify project report and your personal time tracking website on Github via the following Google Form using your UCSB email:</p>
 <ul>
 <li><a href="https://forms.gle/78ppr5Mmm6DuYuct5">Submission for Lab 3. Github</a></li>
@@ -3099,10 +3106,7 @@ Add emoji reaction to one of your own comments. See <a href="https://github.blog
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="references">References</h3>
-<div id="references-listing"></div>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">

@@ -1,6 +1,5 @@
 ---
 title: 'Lab 3. Github'
-bibliography: ["eds211-team.bib"]
 editor_options: 
   chunk_output_type: console
 ---
@@ -647,6 +646,20 @@ See [Quickstart for projects (beta) - GitHub Docs](https://docs.github.com/en/is
   ![](https://docs.github.com/assets/images/help/projects/project-view-switch.gif){style="width:700px"}
 
 The original Project **board** may also be referred to as a [Kanban (Wikipedia)](https://en.wikipedia.org/wiki/Kanban_(development)), or "billboard" in Japanese. By prioritizing all issues vertically and sequencing them in time horizontally, any user can filter by **Assignee** and answer one of our core questions _What do I need to work on next?_
+
+# Track Time on Github Issues
+
+After installing the [Clockify browser extension](https://clockify.me/apps#browser-extension) for Google Chrome, Microsoft Edge or Mozilla Firefox, you should see an extra **Start timer** link displayed when visiting a Github issue.
+
+![](img/lab3_github/clockify_github-issue_start-timer.png){style="width:800px"}
+
+Clicking on **Start timer** will start the timer with the title and issue number entered into the Description of the Clockify time entry.
+
+![](img/lab3_github/clockify_githu-issue_timer-display.png){style="width:400px"}
+
+You can return to the issue to click on the **Stop timer** link or more directly in the browser extension.
+
+![](img/lab3_github/clockify_extension_stop-timer.png){style="width:400px"}
 
 # Submit Lab via Form [all members]
 
