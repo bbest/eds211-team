@@ -628,7 +628,7 @@ For more, see [About projects (beta) - GitHub Docs](https://docs.github.com/en/i
 
 ## Create Project (Beta) `Plan` under `{org}`
 
-Create a project for your organization, so under `https://github.com/{org}` and **Projects**. 
+Create a project named `Plan` for your organization, so under `https://github.com/{org}` and **Projects**. Be sure to select New project **Beta**, not just New project.
 
 ![](https://docs.github.com/assets/images/help/issues/new_project_beta.png){style="width:600px"}
 
