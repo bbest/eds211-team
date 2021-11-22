@@ -575,7 +575,8 @@ Please next accomplish each task and check the task in the issue's list. Note th
 
 - [ ] `Mention in issue comment another issue that is in a different repo`. now mention an issue in a different repo and different owner altogether, e.g. `bbest/eds211-team#21` prefixing with Github `{owner}/{repo}`. See [Autolinked references and URLs - GitHub Docs](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests).
 
-- [ ] `Mention in git commit message issue in the same repo`. Make a change in your `index.Rmd`. It can be as simple as adding a newline or comment somewhere. Be sure to reference the issue # in your **git message**. Push it and notice how the commit appears in the thread of comments for the issue. Now you can see individual commits showing up based on the timestamp between comments in the thread of the issue. This allows for a back and forth conversation. For instance, by adding the comment `+ text. fixes #23`
+- [ ] <a name="mention-issue-in-commit"></a>`Mention in git commit message issue in the same repo`. Make a change in your `index.Rmd`. It can be as simple as adding a newline or comment somewhere. Be sure to reference the issue # in your **git message**. Push it and notice how the commit appears in the thread of comments for the issue. Now you can see individual commits showing up based on the timestamp between comments in the thread of the issue. This allows for a back and forth conversation. For instance, by entering the comment `+ text. fixes #23` in the git commit message (for [2a1d67a](https://github.com/bbest/eds211-team/commit/2a1d67a74c815dbc5e0417bc61e92f7dbd8c86a3)): \
+![](img/lab3_github/github_git-commit-in-issue-thread.png){style="width:700px"}\
 
 Once you've completed all these tasks, **Close the issue**. Congratulations!
 

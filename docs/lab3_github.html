@@ -2584,15 +2584,10 @@ Weekly Modules
 <li><p><strong>Contribute Workflow: Fork &amp; Pull Request</strong>. After you fork any public repo into your own space, you can make changes and contribute those back to the original repo with a <code>pull request</code>, which can then be incorporated with a <code>merge</code> by the original repo owner. This is how the open-source world works to incorporate code from the community. You’ll use this technique to contribute towards a class directory of projects in the course repo <code>bbest/eds211-team</code>.</p></li>
 <li><p><strong>Sandbox Workflow: Branch &amp; Merge</strong>. Create a branch in RStudio and merge it in the Terminal.</p></li>
 <li><p><strong>Handle Merge Conflicts</strong>. Conflicts are inevitable when collaborating with others, so knowing how to deal with them is a key part of the process. Git commits of two different users might operate on the same line(s) of code, which need to be reconciled when merging.</p></li>
+<li><p><strong>Use Github Issues</strong>. Tihub Issues allow you to track progress on an issue with a thread of comments and any Git commits between. In the comments Github flavored markdown allows you to reference other issues (e.g. <code>#2</code>), Github commit messages or Github users (e.g. <code>@bbest</code>), who even get notified by email.</p></li>
+<li><p><strong>Use Github Milestones</strong>. Github Milestones allow you to cluster issues into a deadline date. Milestones only work per repo and are anticipated to be superseded by Github <strong>Timelines</strong> in the future for working across repos for a given Github owner.</p></li>
+<li><p><strong>Use Github Projects</strong>. These Kanban boards provide the high level view of tasks organized by priority vertically and horizontally over time. You can filter by Assignee and with the new Project Beta even add your own fields and view as a table.</p></li>
 </ol>
-<!--
-6.  Manage projects in Github with Issues and Project boards. Understand how to reference Issues (e.g. `#2`) in Github commit messages as well as mention other Github users (e.g. `@bbest`).
-
-7.  Write markdown (e.g. `README.md`) to format text, and yaml (e.g. `_site.yml`) for configurations.
-
--   ...
-
--->
 <h1 data-number="1" id="create-github-organization-lead-only"><span class="header-section-number">1</span> Create Github organization [lead only]</h1>
 <p>The Github Organization you create will become the <code>{owner}</code> of the project’s main <code>{repo}</code>. Remember, all of Github is organized according to <code>github.com/{owner}/{repo}</code>.</p>
 <p>Have only one group project member follow instructions to <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch">Create a new organization from scratch - GitHub Docs</a>. Even more simply, choose <strong>+</strong> and <strong>New organization</strong> from upper right of <a href="https://github.com">github.com</a> once you’re logged in:</p>
@@ -3007,7 +3002,9 @@ Add emoji reaction to one of your own comments. See <a href="https://github.blog
 <li><p><input type="checkbox" disabled="" />
 <code>Mention in issue comment another issue that is in a different repo</code>. now mention an issue in a different repo and different owner altogether, e.g. <code>bbest/eds211-team#21</code> prefixing with Github <code>{owner}/{repo}</code>. See <a href="https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests">Autolinked references and URLs - GitHub Docs</a>.</p></li>
 <li><p><input type="checkbox" disabled="" />
-<code>Mention in git commit message issue in the same repo</code>. Make a change in your <code>index.Rmd</code>. It can be as simple as adding a newline or comment somewhere. Be sure to reference the issue # in your <strong>git message</strong>. Push it and notice how the commit appears in the thread of comments for the issue.</p></li>
+<a name="mention-issue-in-commit"></a><code>Mention in git commit message issue in the same repo</code>. Make a change in your <code>index.Rmd</code>. It can be as simple as adding a newline or comment somewhere. Be sure to reference the issue # in your <strong>git message</strong>. Push it and notice how the commit appears in the thread of comments for the issue. Now you can see individual commits showing up based on the timestamp between comments in the thread of the issue. This allows for a back and forth conversation. For instance, by entering the comment <code>+ text. fixes #23</code> in the git commit message (for <a href="https://github.com/bbest/eds211-team/commit/2a1d67a74c815dbc5e0417bc61e92f7dbd8c86a3">2a1d67a</a>):<br />
+<img src="img/lab3_github/github_git-commit-in-issue-thread.png" style="width:700px" /><br />
+</p></li>
 </ul>
 <p>Once you’ve completed all these tasks, <strong>Close the issue</strong>. Congratulations!</p>
 <h2 data-number="9.3" id="create-issues-from-project-tasks-in-orgnotebook-lead-only"><span class="header-section-number">9.3</span> Create Issues from Project Tasks in <code>{org}/notebook</code> [lead only]</h2>
