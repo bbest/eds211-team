@@ -34,7 +34,7 @@ Start off by creating a workspace, granting Zenhub access to Github repositories
     Note descriptions for the other pipelines like **Icebox** (low priority issues), **Product Backlog** (upcoming issues), **Sprint Backlog** (ready issues for sprint), **In Progress**, **Review/QA**, **Done**.
 
 3.  [Invite your Team to ZenHub](https://help.zenhub.com/support/solutions/articles/43000035792-inviting-your-team-to-zenhub).\
-    Be sure to invite me `ben@ecoquants.com` as a team member as well! Otherwise I will not be able to view (and grade) your workspace.
+    Be sure to invite me by sending link to `ben@ecoquants.com`. Otherwise I will not be able to view (and grade) your workspace.
 
 # Create Roadmap
 
