@@ -83,3 +83,37 @@ Please submit the links to the Zenhub Roadmap and your website page via the foll
 -   Storypoints
 
 -   Dependencies
+
+-   [ZenHub Support](https://help.zenhub.com/support/home)
+
+    -   [Let's Get Started](https://help.zenhub.com/support/solutions/43000361405)
+
+    -   [Working with GitHub Issues and ZenHub Epics](https://help.zenhub.com/support/solutions/43000359263)
+
+    -   [Project planning and sprint management](https://help.zenhub.com/support/solutions/43000359264)
+
+    -   [Reports and gathering insights](https://help.zenhub.com/support/solutions/43000042876)
+
+    -   [Creating your First Workspace](https://help.zenhub.com/support/solutions/articles/43000497224-creating-your-first-team-workspace)
+
+    -   [Getting started with Epics in ZenHub](https://help.zenhub.com/support/solutions/articles/43000500733-getting-started-with-epics)
+
+    -   [Using ZenHub Issues, Milestones, and Epics - YouTube](https://www.youtube.com/watch?v=tJ375ju3xTc)
+
+    -   [Using ZenHub: Team Collaboration and Project Management in GitHub - YouTube](https://www.youtube.com/watch?v=FJBtFjZ55eY&list=PLFIGvQyXSp3CGS8X300Aj-hUZ-VLIhHbk)
+
+    -   [Drive alignment across your organization with ZenHub Roadmaps](https://help.zenhub.com/support/solutions/articles/43000539465-an-introduction-to-zenhub-roadmaps)
+
+    -   [Using ZenHub: Roadmaps - YouTube](https://www.youtube.com/watch?v=Yb_RFA74_GY)
+
+    -   [Using ZenHub: Getting Started with GitHub Issues - YouTube](https://www.youtube.com/watch?v=yQlZFH_pcko&list=PLFIGvQyXSp3CGS8X300Aj-hUZ-VLIhHbk&index=7)
+
+    -   [An Introduction to ZenHub Epics](https://help.zenhub.com/support/solutions/articles/43000010341-an-introduction-to-zenhub-epics)
+
+    -   [Agile Concepts in GitHub and ZenHub](https://help.zenhub.com/support/solutions/articles/43000010338-agile-concepts-in-github-and-zenhub)
+
+    -   [When to use Checklists, Issues and Epics](https://help.zenhub.com/support/solutions/articles/43000031151-when-to-use-checklists-issues-and-epics)
+
+    -   [Using Velocity charts in ZenHub](https://help.zenhub.com/support/solutions/articles/43000010358)
+
+    -   [Creating Burndown charts in ZenHub using GitHub Milestones](https://help.zenhub.com/support/solutions/articles/43000010356)
