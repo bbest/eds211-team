@@ -43,7 +43,7 @@ Click over to the Roadmap menu.
 1.  **Create a new project**. You can give it the same name as your `{org}`. Set the dates to start from when your Lab 1 Gantt chart started, e.g. Nov 1 to Dec 5, 2021.\
     ![](img/lab4_roadmap/zenhub_roadmap.png){width="800"}
 
-2.  **Add epics** by clicking the plus sign `+` next to the project. Create epics that describe the major phases of the project and set start/end dates.\
+2.  **Add epics** by clicking the plus sign `+` next to the project. Create epics that describe the major phases of the project and set start/end dates. To associate Closed issues with an Epic, you might wna\
     ![](img/lab4_roadmap/zenhub_roadmap-with-epics.png){width="800"}
 
 3.  **Add issues to the epics** by going to the **Board**, selecting issues by clicking on the upper left avatar of the issue to select it and then the **Set epic** button.\
@@ -59,7 +59,7 @@ Note that as issues close, the progress meter increments for the associated Epic
 
 You can share a link to the roadmap, but only members of your team can view it. You can, however, export it as an image.
 
-1.  **Export image** of Roadmap with the Share button and save as `images/roadmap.svg` in your `{org}.github.io` repo.\
+1.  **Export image** of Roadmap with the Share button and save as `images/roadmap.svg` in your `{org}.github.io` repo. You might want to prepend the date by a week to get it to show properly on export. \
     ![](img/lab4_roadmap/zenhub_share-roadmap.png)
 
 2.  **Add Roadmap page to website**. Create a roadmap web page with this image. Add a menu item for Roadmap to your website. Hints:
