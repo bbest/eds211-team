@@ -37,9 +37,15 @@ Visit [clockify.me](https://clockify.me) and click on GO TO TRACKER in upper rig
 
 Choose a team leader to enter a new Project with Tasks you previously entered in the detailed Schedule from [Lab 1. Proposal](https://bbest.github.io/eds211-team/lab1_proposal.html#create-detailed-project-schedule). Be sure to have only a single project member enter this ***once*** to avoid duplication of projects (with different identifiers but possibly the same name) once you subsequently invite team members.
 
-Create a project on the Project page per \* [Managing projects and clients -- Clockify Help](https://clockify.me/help/projects/managing-projects#creating-a-project-on-the-project-page). Set the billable rate to \$100 per hour.
+Create a project on the Project page per [Managing projects and clients -- Clockify Help](https://clockify.me/help/projects/managing-projects#creating-a-project-on-the-project-page). Set the billable rate to \$100 per hour.
 
 ![](img/lab2_time/clockify_add-project.png)
+
+### Add Tasks with Hourly Estimates
+
+Use the hours you estimated per Deliverable from the first lab to enter for the Estimate per Task. You'll first need to go to your **Project Settings** and set the **Time estimate** to be **Task based**. Then under the **TASKS** tab, you can **ADD** the tasks and **Set** the time for each.
+
+![](img/lab2_time/clockify_tasks.png){width="800"}
 
 ## Invite Team Members (lead only)
 
@@ -160,4 +166,4 @@ Next lab we'll start into using Github by creating a Github organization where y
 
 Please submit the link to the Clockify project report and your personal time tracking website on Github via the following Google Form using your UCSB email:
 
-- [Submission for Lab 2. Time](https://forms.gle/jqHRdukRaYakNH766)
+-   [Submission for Lab 2. Time](https://forms.gle/jqHRdukRaYakNH766)
