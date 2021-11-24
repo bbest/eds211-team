@@ -80,12 +80,10 @@ Please submit the links to the Zenhub Roadmap and your website page via the foll
 
 # Explore Further {.unnumbered}
 
--   Storypoints
-
--   Dependencies
-
 -   [ZenHub Support](https://help.zenhub.com/support/home)
 
+    -   [Creating GitHub Issue Dependencies using ZenHub](https://help.zenhub.com/support/solutions/articles/43000010349-create-github-issue-dependencies)
+    
     -   [Let's Get Started](https://help.zenhub.com/support/solutions/43000361405)
 
     -   [Working with GitHub Issues and ZenHub Epics](https://help.zenhub.com/support/solutions/43000359263)

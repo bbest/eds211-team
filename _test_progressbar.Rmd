@@ -1,0 +1,14 @@
+---
+title: "Test progress bar"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Using [Progress · Bootstrap](https://getbootstrap.com/docs/4.0/components/progress/):
+
+<div class="progress" style="background-color: #808080;">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+</div>
