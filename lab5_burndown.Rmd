@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = F)
 
 ## Assign a Task to each of your time entries
 
-Visit the Clockify Reports \> Detailed, filter by Project and Task "Without task", Apply Filter. Revisit each of these in your Time Track to assign it a Task.
+You'll be using the Task assigned to each time entry to generate seperate Burndown plots. To ensure a Task is assigned, visit the https://clockify.me \> Go to Tracker \> Reports \> Detailed, filter by Project and Task "Without task", Apply Filter. Revisit each of these in your Time Tracker to assign it a Task.
 
 ## Install `bbest/clockify`
 
@@ -31,11 +31,13 @@ remotes::install_github("bbest/clockify")
 
 Feel free to update any packages with more recent versions if prompted.
 
+In RStudio, you probably need to refresh your Session \> Restart R  in order to see the newly created functions (`time_entries_all()` and `plot_burndown()`). Otherwise R will complain that it can't find those functions, meaning it's still using the old `clockify`, not `bbest/clockify`.
+
 ## Use `time_entries_all()` in your **time** repo
 
-Recall in **Lab 2. Time** that you first used the Clockify API to fetch your time entries and generate a table of those entries in a **time** repo under your Github user space. In Step [4.4. Create index.Rmd](https://bbest.github.io/eds211-team/lab2_time.html#create-index.rmd) the suggested R chunk for the `index.Rmd` had a section `# get data` that used the R package clockify's `time_entries()` to fetch the data.
+Recall in **Lab 2. Time** that you first used the Clockify API to fetch your time entries and generate a table of those entries in a **time** repo under your Github user space. In Step [4.4. Create index.Rmd](https://bbest.github.io/eds211-team/lab2_time.html#create-index.rmd) the suggested R chunk for the `index.Rmd` had a section of R code below the `# get data` that used the R package clockify's `time_entries()` to fetch the data.
 
-You'll want to replace that section with a new function `time_entries_all()` that captures all user time entries (based on Step [1.3 Invite Team Members (lead only)](https://bbest.github.io/eds211-team/lab2_time.html#invite-team-members-lead-only)) and includes the Tasks (from [Step 1.2 Invite Team Members (lead only)](https://bbest.github.io/eds211-team/lab2_time.html#create-project-tasks-lead-only)) associated with the time entries.
+You'll want to replace all that code with the use of a new function `time_entries_all()` that captures _**all**_ user time entries (based on Step [1.3 Invite Team Members (lead only)](https://bbest.github.io/eds211-team/lab2_time.html#invite-team-members-lead-only); not just you, but also your **Team** members working on the same Project) and includes the **Tasks** (from [Step 1.2 Invite Team Members (lead only)](https://bbest.github.io/eds211-team/lab2_time.html#create-project-tasks-lead-only)) associated with the time entries.
 
 Expand the code below to **show** how it should now look. Also update the libraries loaded with `librarian::shelf()`.
 
@@ -71,9 +73,21 @@ d_times <- d_times %>%
   arrange(task_name, time_start)
 ```
 
+Be sure that you replace above with the appropriate values for  and:
+
+- `api_txt` \
+  your API key to Clockify; and
+
+- `project_name` \
+  the exact Project name you input into Clockify. Note there's a commented out function `table(d_times$project_name)` that you can run to tabulate the Projects you've entered into Clockify (probably only one).
+
+Note that in the R code chunk above we have only fetched the time entries. Be sure that you are retrieving your time entries by sending `d_times` to the R Console, e.g. double click `d_times` to highlight the word in the code and per RStudio's Code \> Run Selected Lines, use keyboard shortcuts Command+Return on a Mac or Ctrl+Enter on a PC. Check before and after using `filter()` to ensure that your `project_name` variable is set with a valid value.
+
+Next, you'll output those time entries as a Burndown plot and a table _per Task and Overall_.
+
 ## Use `plot_burndown()` overall and for each Task
 
-Instead of a single table of entries, let's produce a burndown chart for the whole project and table nested in a tab set showing each individual Task in neighboring tabs. See [7.6 Put content in tabs \| R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html).
+Instead of a single table of entries like last time, let's now produce a burndown chart for the whole project along with a table of entries nested in a **tab set** showing each individual Task in neighboring tabs. See [7.6 Put content in tabs \| R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html).
 
 After the code chunk above getting the data, enter a tabset with your Github organization name corresponding to the project (not my example of `my-rad-team`):
 
@@ -81,7 +95,7 @@ After the code chunk above getting the data, enter a tabset with your Github org
 ## my-rad-team {.tabset}
 ```
 
-Then add a tab for Overall.
+Then add a tab for Overall as a subheading (i.e., level 3 `###` after setting up a level 2 header `##` tabset).
 
 ``` {.md}
 ### Overall
@@ -101,7 +115,7 @@ plot_burndown(
 datatable(d_times)
 ```
 
-Then add tabs for each task with a code chunk similar to the Overrall tab except for an extra `filter()` by Task of the data frame `d_times` to get `d_task`. Of course swap out whatever your task names are in Clockify (i.e. so probably not starting with "1. Import") for the project and use the begin and end dates you entered per Task from **Lab 1. Proposal** Step [5 Create Detailed Project Schedule](https://bbest.github.io/eds211-team/lab1_proposal.html#create-detailed-project-schedule).
+Then add tabs for each task with a code chunk similar to the _Overall_ tab except for an extra `filter()` by _Task_ of the data frame `d_times` to get `d_task`, i.e. a data frame of time entries specific to that task.
 
 ``` {.md}
 ### 1. Import
@@ -120,7 +134,16 @@ plot_burndown(
 datatable(d_task)
 ```
 
-Repeat for each task, swapping out the begin/end dates, hours and task names accordingly.
+Repeat for each **Task** for which you previously estimated hours, per _**Deliverable**_ in **Lab 1. Proposal** Step [5 Create Detailed Project Schedule](https://bbest.github.io/eds211-team/lab1_proposal.html#create-detailed-project-schedule). The chunk for _Overall_ should have an `hrs` value that is the sum of all the `hrs` value for all the _Tasks_.
+
+Note that For each of these chunks using the `plot_burndown()` function, be sure to swap out with appropriate values for : 
+
+- `beg` \
+  the beginning date of each Task or for the Project Overall.
+- `end` \
+  the end date of each Task or for the Project Overall.
+- `hrs` \
+  the estimated hours to complete each Task (or Deliverable) or sum of all Task `hrs` for the Project Overall.
 
 Your tabs should look similar (although styled differently from this Distill template) to the following:
 
@@ -201,7 +224,30 @@ datatable(d_task)
 :::
 :::
 
-Notice how the red hours used, i.e. "burned", may exceed the estimated trajectory by being below the red line or have plenty extra hours if above.
+
+# Interpret Burndown Plots
+
+How much are you over or under your estimated budget? When did you exceed the budget or stop working on the task? These are the main retrospective questions a burndown plot facilitates visually. Burndown reports are not immediately intuitive, so will require some extra study. 
+
+Notice how the hours used, i.e. "burned" according the black line, may exceed the estimated trajectory by being below the red line or have plenty of extra hours if above.
+
+Remember that the hours are assigned to the beginning date and the dashed line represents the estimated trajectory of using up hours until hitting zero at the end date. The filled area stepped line of hours then gets decremented (along the y-axis) with each time entry (along the x-axis).
+
+So interpreting the examples above:
+
+- The **Overall** project is over budget, i.e. exceeds the number of hours estimated since you can see how the final number of hours burned goes below zero, ie the end of the red dashed estimated hours. This **Overall** project represents the sum of the burndown for all **Tasks**.
+
+- The burndown for the **1. Import** Task starts off with 10 hours and only uses up 5.7 hours total (add `duration_hrs` from all time entries in the table below the plot), leaving an excess 4.3 hours under budget. In other words, this Task took less time than originally estimated.
+
+- The burndown for the **2. Tidy** Task starts off with 5 hours, which gets burned through and below by Nov 10. In the end the task is 7 hours over budget.
+
+- The burndown for the **3. Transform** Task starts off with 5 hours, which gets burned up exactly all in one day Nov 12, so the task is exactly on target with budget.
+
+# Submit Lab
+
+Please use the following Google Form to submit a Link to your web page with Burndown plots and time entry tables for Overall and individual Tasks, i.e. `https://{user}.github.io/time`:
+
+- [Submit Lab 5. Burndown](https://forms.gle/4rAj3Q3bT8CLYkSP6)
 
 # Explore Further {.unnumbered}
 
