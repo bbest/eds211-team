@@ -1,0 +1,212 @@
+---
+title: 'Lab 5. Burndown'
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F)
+```
+
+# Learning Objectives {.unnumbered}
+
+1.  **Create Burndown of Hours Overall and per Task**. A burndown chart shows effort expended over time relative to the original estimate. It shows if you're on track, or perhaps over or under. This provides useful feedback in knowing how the project is progressing for possible repriorizing and/or communicating back with the client. You'll pull from your Clockify hours to report on burndown overall and per task to generate a burndown chart.\
+
+2.  **ZenHub Story Points, Burndown, Velocity and Sprints**. **Story Points** are a unitless measure of complexity to apply to issues. The higher the number of Story Points assigned to the issue, the more complex the issue, relative to other issues with a lower number of Story Points. This measure helps in the planning process and subsequent tracking of progress. **Sprints** are regular, e.g. biweekly, periods over which a set of Issues are assigned for the expectation of fulfilling based on the Story Points associated with Issues and the average number of Story Points accomplished in past Sprints, in other words the **Velocity** of work completed. Although we don't have time to go through the cycles of Sprints this quarter, you're exposed to the concept through the videos from the lecture for possible future application to projects.
+
+# Create Burndown of Hours
+
+## Assign a Task to each of your time entries
+
+Visit the Clockify Reports \> Detailed, filter by Project and Task "Without task", Apply Filter. Revisit each of these in your Time Track to assign it a Task.
+
+## Install `bbest/clockify`
+
+Uninstall your existing `clockify` package and install a newly improved version [`bbest/clockify`](https://github.com/bbest/clockify) that I forked from the original and added functions `time_entries_all()` and `plot_burndown()`.
+
+```{r, eval = F}
+remove.packages("clockify")
+remotes::install_github("bbest/clockify")
+```
+
+Feel free to update any packages with more recent versions if prompted.
+
+## Use `time_entries_all()` in your **time** repo
+
+Recall in **Lab 2. Time** that you first used the Clockify API to fetch your time entries and generate a table of those entries in a **time** repo under your Github user space. In Step [4.4. Create index.Rmd](https://bbest.github.io/eds211-team/lab2_time.html#create-index.rmd) the suggested R chunk for the `index.Rmd` had a section `# get data` that used the R package clockify's `time_entries()` to fetch the data.
+
+You'll want to replace that section with a new function `time_entries_all()` that captures all user time entries (based on Step [1.3 Invite Team Members (lead only)](https://bbest.github.io/eds211-team/lab2_time.html#invite-team-members-lead-only)) and includes the Tasks (from [Step 1.2 Invite Team Members (lead only)](https://bbest.github.io/eds211-team/lab2_time.html#create-project-tasks-lead-only)) associated with the time entries.
+
+Expand the code below to **show** how it should now look. Also update the libraries loaded with `librarian::shelf()`.
+
+```{r}
+# get libraries
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+librarian::shelf(
+  bbest/clockify,
+  dplyr, DT, ggplot2,
+  quiet = TRUE)
+
+# CHANGE THESE VARIABLES!
+api_txt <- "~/private/clockify_api-key.txt"
+api_txt <- "~/My Drive (ben@ecoquants.com)/private/clockify-api-key_ben@ecoquants.com.txt"
+project_name <- "my-rad-team"
+
+# use API key to authenticate
+CLOCKIFY_API_KEY <- readLines(api_txt)
+set_api_key(CLOCKIFY_API_KEY)
+
+# get data
+d_times <- time_entries_all()
+# table(d_times$project_name) # confirm project_name
+d_times <- d_times %>%
+  filter(
+    project_name == !!project_name) %>%
+  select(
+    task_name, time_start, duration_hrs, 
+    user_name, description) %>% 
+  arrange(task_name, time_start)
+```
+
+## Use `plot_burndown()` overall and for each Task
+
+Instead of a single table of entries, let's produce a burndown chart for the whole project and table nested in a tab set showing each individual Task in neighboring tabs. See [7.6 Put content in tabs \| R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html).
+
+After the code chunk above getting the data, enter a tabset with your Github organization name corresponding to the project (not my example of `my-rad-team`):
+
+``` {.md}
+## my-rad-team {.tabset}
+```
+
+Then add a tab for Overall.
+
+``` {.md}
+### Overall
+```
+
+And a code chunk below that using the new [`plot_burndown()`](https://github.com/bbest/clockify/blob/master/R/plot.R) function that uses the `ggplot2` library to create a stepped filled area plot and red dashed line for the estimated burn rate.
+
+```{r, eval = F}
+# plot ALL
+plot_burndown(
+  d_times,
+  beg = as.Date("2021-10-31"), # day before
+  end = as.Date("2021-11-21"), # day after
+  hrs = 20)
+
+# table ALL
+datatable(d_times)
+```
+
+Then add tabs for each task with a code chunk similar to the Overrall tab except for an extra `filter()` by Task of the data frame `d_times` to get `d_task`. Of course swap out whatever your task names are in Clockify (i.e. so probably not starting with "1. Import") for the project and use the begin and end dates you entered per Task from **Lab 1. Proposal** Step [5 Create Detailed Project Schedule](https://bbest.github.io/eds211-team/lab1_proposal.html#create-detailed-project-schedule).
+
+``` {.md}
+### 1. Import
+```
+
+```{r, eval = F}
+task <- "1. Import"
+d_task <- d_times %>% 
+  filter(task_name == !!task)
+plot_burndown(
+  d_task,
+  beg = as.Date("2021-10-31"), # day before
+  end = as.Date("2021-11-08"), # day after
+  hrs = 10)
+
+datatable(d_task)
+```
+
+Repeat for each task, swapping out the begin/end dates, hours and task names accordingly.
+
+Your tabs should look similar (although styled differently from this Distill template) to the following:
+
+```{r panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+### my-rad-team {.unnumbered}
+
+::: {.l-screen}
+::: {.panelset}
+::: {.panel}
+#### Overall {.unnumbered}
+
+```{r, eval = T, echo = F}
+# plot ALL
+plot_burndown(
+  d_times,
+  beg = as.Date("2021-10-31"), # day before
+  end = as.Date("2021-11-21"), # day after
+  hrs = 20)
+
+# table ALL
+datatable(d_times)
+```
+:::
+
+::: {.panel}
+#### 1. Import {.unnumbered}
+
+```{r}
+task <- "1. Import"
+d_task <- d_times %>% 
+  filter(task_name == !!task)
+plot_burndown(
+  d_task,
+  beg = as.Date("2021-10-31"), # day before
+  end = as.Date("2021-11-08"), # day after
+  hrs = 10)
+
+datatable(d_task)
+```
+:::
+
+::: {.panel}
+#### 2. Tidy {.unnumbered}
+
+```{r, eval = T, echo = F}
+task <- "2. Tidy"
+d_task <- d_times %>% 
+  filter(task_name == !!task)
+plot_burndown(
+  d_task,
+  beg = as.Date("2021-10-31"), # day before
+  end = as.Date("2021-11-15"), # day after
+  hrs = 5)
+
+datatable(d_task)
+```
+:::
+
+::: {.panel}
+#### 3. Transform {.unnumbered}
+
+```{r, eval = T, echo = F}
+task <- "3. Transform"
+d_task <- d_times %>% 
+  filter(task_name == !!task)
+plot_burndown(
+  d_task,
+  beg = as.Date("2021-10-31"), # day before
+  end = as.Date("2021-11-21"), # day after
+  hrs = 5)
+
+datatable(d_task)
+```
+:::
+:::
+:::
+
+Notice how the red hours used, i.e. "burned", may exceed the estimated trajectory by being below the red line or have plenty extra hours if above.
+
+# Explore Further {.unnumbered}
+
+- [Creating Burndown charts in ZenHub using GitHub Milestones](https://help.zenhub.com/support/solutions/articles/43000010356)
+
+- [Using Velocity charts in ZenHub](https://help.zenhub.com/support/solutions/articles/43000010358)
+
+- [Creating GitHub Issue Dependencies using ZenHub](https://help.zenhub.com/support/solutions/articles/43000010349-create-github-issue-dependencies)

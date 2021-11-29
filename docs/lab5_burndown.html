@@ -85,58 +85,28 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
-<style>
-  div.csl-bib-body { }
-  div.csl-entry {
-    clear: both;
-    }
-  .hanging div.csl-entry {
-    margin-left:2em;
-    text-indent:-2em;
-  }
-  div.csl-left-margin {
-    min-width:2em;
-    float:left;
-  }
-  div.csl-right-inline {
-    margin-left:2em;
-    padding-left:1em;
-  }
-  div.csl-indent {
-    margin-left: 2em;
-  }
-</style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>EDS 211: EDS 211: Team Science</title>
+  <title>EDS 211: Lab 5. Burndown</title>
 
-  <meta property="description" itemprop="description" content="EDS 211: Team Science, Collaborative Analysis and Project Management"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="EDS 211: EDS 211: Team Science"/>
+  <meta property="og:title" content="EDS 211: Lab 5. Burndown"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="EDS 211: Team Science, Collaborative Analysis and Project Management"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="EDS 211"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="EDS 211: EDS 211: Team Science"/>
-  <meta property="twitter:description" content="EDS 211: Team Science, Collaborative Analysis and Project Management"/>
+  <meta property="twitter:title" content="EDS 211: Lab 5. Burndown"/>
 
   <!--/radix_placeholder_meta_tags-->
-  
-  <meta name="citation_reference" content="citation_title=Improving the IEA Approach Using Principles of Open Data Science;citation_publication_date=2021;citation_publisher=Taylor &amp; Francis;citation_volume=49;citation_doi=10.1080/08920753.2021.1846155;citation_issn=0892-0753;citation_author=Kimberly Bastille;citation_author=Sean Hardison;citation_author=Lynn deWitt;citation_author=Jennifer Brown;citation_author=Jameal Samhouri;citation_author=Sarah Gaichas;citation_author=Sean Lucey;citation_author=Kelly Kearney;citation_author=Ben Best;citation_author=Scott Cross;citation_author=Scott Large;citation_author=Ellen Spooner"/>
-  <meta name="citation_reference" content="citation_title=Collaboration and Team Science: From Theory to Practice;citation_publication_date=2012;citation_volume=60;citation_doi=10.2310/JIM.0b013e318250871d;citation_issn=1081-5589, 1708-8267;citation_author=L. Michelle Bennett;citation_author=Howard Gadlin"/>
-  <meta name="citation_reference" content="citation_title=Best Practices in Accelerating the Data Science Process in Python;citation_publication_date=2019;citation_publisher=IntechOpen;citation_author=Deanne Larson"/>
-  <meta name="citation_reference" content="citation_title=Our path to better science in less time using open data science tools;citation_publication_date=2017;citation_volume=1;citation_doi=10.1038/s41559-017-0160;citation_issn=2397-334X;citation_author=Julia S. Stewart Lowndes;citation_author=Benjamin D. Best;citation_author=Courtney Scarborough;citation_author=Jamie C. Afflerbach;citation_author=Melanie R. Frazier;citation_author=Casey C. O’Hara;citation_author=Ning Jiang;citation_author=Benjamin S. Halpern"/>
-  <meta name="citation_reference" content="citation_title=Ten Simple Rules for Taking Advantage of Git and GitHub;citation_publication_date=2016;citation_volume=12;citation_doi=10.1371/journal.pcbi.1004947;citation_issn=1553-7358;citation_author=Yasset Perez-Riverol;citation_author=Laurent Gatto;citation_author=Rui Wang;citation_author=Timo Sachsenberg;citation_author=Julian Uszkoreit;citation_author=Felipe da Veiga Leprevost;citation_author=Christian Fufezan;citation_author=Tobias Ternent;citation_author=Stephen J. Eglen;citation_author=Daniel S. Katz;citation_author=Tom J. Pollard;citation_author=Alexander Konovalov;citation_author=Robert M. Flight;citation_author=Kai Blin;citation_author=Juan Antonio Vizcaíno"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["EDS 211: Team Science"]},{"type":"character","attributes":{},"value":["EDS 211: Team Science, Collaborative Analysis and Project Management"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["eds211-team.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Lab 5. Burndown"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2474,6 +2444,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <link href="site_libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+  <script src="site_libs/panelset-0.2.6/panelset.js"></script>
   <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
   <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
   <script src="site_libs/datatables-binding-0.19/datatables.js"></script>
@@ -2481,8 +2453,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
   <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
   <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-  <link href="site_libs/dt-ext-rowgroup-1.10.20/css/rowGroup.dataTables.min.css" rel="stylesheet" />
-  <script src="site_libs/dt-ext-rowgroup-1.10.20/js/dataTables.rowGroup.min.js"></script>
   <link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
   <script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
@@ -2504,7 +2474,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"EDS 211: Team Science","description":"EDS 211: Team Science, Collaborative Analysis and Project Management","authors":[]}
+{"title":"Lab 5. Burndown","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2543,10 +2513,10 @@ Weekly Modules
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>EDS 211: Team Science</h1>
+<h1>Lab 5. Burndown</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p>EDS 211: Team Science, Collaborative Analysis and Project Management</p>
+
 </div>
 
 
@@ -2555,95 +2525,293 @@ Weekly Modules
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#schedule"><span class="toc-section-number">1</span> Schedule</a></li>
-<li><a href="#overview"><span class="toc-section-number">2</span> Overview</a></li>
-<li><a href="#office-hours"><span class="toc-section-number">3</span> Office Hours</a></li>
-<li><a href="#grading"><span class="toc-section-number">4</span> Grading</a></li>
-<li><a href="#readings"><span class="toc-section-number">5</span> Readings</a></li>
+<li><a href="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#create-burndown-of-hours"><span class="toc-section-number">1</span> Create Burndown of Hours</a>
+<ul>
+<li><a href="#assign-a-task-to-each-of-your-time-entries"><span class="toc-section-number">1.1</span> Assign a Task to each of your time entries</a></li>
+<li><a href="#install-bbestclockify"><span class="toc-section-number">1.2</span> Install <code>bbest/clockify</code></a></li>
+<li><a href="#use-time_entries_all-in-your-time-repo"><span class="toc-section-number">1.3</span> Use <code>time_entries_all()</code> in your <strong>time</strong> repo</a></li>
+<li><a href="#use-plot_burndown-overall-and-for-each-task"><span class="toc-section-number">1.4</span> Use <code>plot_burndown()</code> overall and for each Task</a>
+<ul>
+<li><a href="#my-rad-team">my-rad-team</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#explore-further">Explore Further</a></li>
 </ul>
 </nav>
 </div>
-<blockquote>
-<p>If you want to go fast, go alone. If you want to go far, go together. – African proverb</p>
-</blockquote>
-<h1 data-number="1" id="schedule"><span class="header-section-number">1</span> Schedule</h1>
-<div class="layout-chunk" data-layout="l-body">
-<details>
-<summary>
-show
-</summary>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/source.html'>source</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"functions.R"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='fu'>get_sched</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>dt_sched</span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
-</div>
-</details>
-<div id="htmlwidget-cd93a42a237f32d4ef8d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cd93a42a237f32d4ef8d">{"x":{"filter":"none","vertical":false,"extensions":["RowGroup"],"data":[["Mon, Nov 1","Wed, Nov 3","Mon, Nov 8","Wed, Nov 10","Mon, Nov 15","Wed, Nov 17","Mon, Nov 22","Wed, Nov 24","Mon, Nov 29","Wed, Dec 1"],["1. Introduction","1. Introduction","2. Time & Github Org","2. Time & Github Org","3. Github","3. Github","4. Roadmaps & Burndown","4. Roadmaps & Burndown","5. Productivity & Presentations","5. Productivity & Presentations"],["<a href='https://docs.google.com/presentation/d/1owziy77lGi2mytXoUDj1kyTJIOSFqrOH7I29yDWFlo8/edit#slide=id.gfca83dc967_0_48' target='_blank'>intro<\/a>","<a href='https://docs.google.com/presentation/d/1iDL4z1qf68SVZPxx2nTtteyVZqo9jGcic6D8-Sudl50/edit#slide=id.p' target='_blank'>plenary<\/a>","<a href='https://docs.google.com/presentation/d/1t2GFvnEhKcWrs7lSHk29fdCZBhlqx3vjDe2gtKCnJ_U/edit?usp=sharing' target='_blank'>time<\/a>","<a href='https://docs.google.com/presentation/d/1IGPzY6qqOYRGJaEKN-k9FnQDXCu4OayCHmJZpmNQdMw/edit?usp=sharing' target='_blank'>github-org<\/a>","<a href='https://docs.google.com/presentation/d/1zbRmMlJk-VBulZVvf9cknzaOhZ3m8rb3hmy9b3BY4-s/edit?usp=sharing' target='_blank'>github-issues<\/a>","github-projects","<a href='https://docs.google.com/presentation/d/1S6ushMnpTu4ZOzy4CQ4gE123Myhn_i7z8GOZsuXGcRw/edit?usp=sharing' target='_blank'>roadmap<\/a>","<a href='https://docs.google.com/presentation/d/1xjAVz7kgIAQpO8hVHP4jSYMu1GlWVvwKvZZ_5mLSF7M/edit?usp=sharing' target='_blank'>burndown<\/a>","<a href='https://docs.google.com/presentation/d/1sIO-tD0P1iInKBhwWzPsVJtebq0EiNu84gz_MclOpRk/edit?usp=sharing' target='_blank'>productivity<\/a>","presentations"],["<a href='https://bbest.github.io/eds211-team/lab1_proposal.html'     target='_blank'>proposal<\/a>","","<a href='https://bbest.github.io/eds211-team/lab2_time.html'     target='_blank'>time<\/a>","<a href='https://bbest.github.io/eds211-team/lab3_github.html'     target='_blank'>github<\/a>","<a href='https://bbest.github.io/eds211-team/lab3_github.html'     target='_blank'>github<\/a>","<a href='https://bbest.github.io/eds211-team/lab3_github.html'     target='_blank'>github<\/a>","<a href='https://bbest.github.io/eds211-team/lab4_roadmap.html'     target='_blank'>roadmap<\/a>","","<a href='https://bbest.github.io/eds211-team/lab5_burndown.html'     target='_blank'>burndown<\/a>",""],[null,null,"proposal","time",null,null,"github","roadmap",null,"burndown"],[null,null,10,5,null,null,15,5,5,null],["<a href='https://drive.google.com/file/d/1LJWfJTo4EWcd6Vxyfg7R6GTES-orY-3B/view?usp=sharing'     target='_blank'>Bennett and Gadlin (2012)<\/a>","","<a href='https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing'     target='_blank'>Lowndes et al. (2017)<\/a>","","<a href='https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing'     target='_blank'>Perez-Riverol et al. (2016)<\/a>","","<a href='https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing'     target='_blank'>Larson (2019)<\/a>","","<a href='https://drive.google.com/file/d/1lZvvLdfzq9xnIpF9fxhVAFWl0laFUB4n/view?usp=sharing'     target='_blank'>Bastille et al. (2021)<\/a>",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Date<\/th>\n      <th>Module<\/th>\n      <th>Lecture<\/th>\n      <th>Lab<\/th>\n      <th>Lab\nDue<\/th>\n      <th>Lab\nPts<\/th>\n      <th>Reading<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","rowGroup":{"dataSrc":1},"columnDefs":[{"visible":false,"targets":1},{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-</div>
-<h1 data-number="2" id="overview"><span class="header-section-number">2</span> Overview</h1>
-<p>Welcome to the <strong>Team Science</strong> course for the Masters in Environmental Data Science! In this class you’ll learn how to work together on code while managing a project. You’ll apply these techniques to the group project from the course <a href="https://github.com/samanthastevenson/EDS220_Fall2021">Remote Sensing (EDS 220)</a> and they should help you manage your Capstone group project starting winter quarter. The techniques will help guide three basic questions:</p>
+<h1 class="unnumbered" id="learning-objectives">Learning Objectives</h1>
 <ol type="1">
-<li>What should I work on next?</li>
-<li>How long will it take?</li>
-<li>How do we adapt to change?</li>
+<li><p><strong>Create Burndown of Hours Overall and per Task</strong>. A burndown chart shows effort expended over time relative to the original estimate. It shows if you’re on track, or perhaps over or under. This provides useful feedback in knowing how the project is progressing for possible repriorizing and/or communicating back with the client. You’ll pull from your Clockify hours to report on burndown overall and per task to generate a burndown chart.<br />
+</p></li>
+<li><p><strong>ZenHub Story Points, Burndown, Velocity and Sprints</strong>. <strong>Story Points</strong> are a unitless measure of complexity to apply to issues. The higher the number of Story Points assigned to the issue, the more complex the issue, relative to other issues with a lower number of Story Points. This measure helps in the planning process and subsequent tracking of progress. <strong>Sprints</strong> are regular, e.g. biweekly, periods over which a set of Issues are assigned for the expectation of fulfilling based on the Story Points associated with Issues and the average number of Story Points accomplished in past Sprints, in other words the <strong>Velocity</strong> of work completed. Although we don’t have time to go through the cycles of Sprints this quarter, you’re exposed to the concept through the videos from the lecture for possible future application to projects.</p></li>
 </ol>
-<p>These basic questions are however deceptively difficult to answer, especially as the size of the team and scope of the project increases.</p>
-<p><strong>What should I work on next?</strong> You’ll learn ‘agile’ software development techniques to divide work into tasks, which can be assigned to various team members and passed between as work progresses. These tasks can be arranged as cards into columns on a ‘Kanban’ board: horizontally according to status (ToDo, In Progress, Done) or time (next week, next month, …); and vertically based on priority (from most to least important, top to bottom). This overview of who is to do what next will be approached with different tools embracing increasing levels of complexity: a Trello board for basic projects without code, a Github Project to integrate Github Issues associated with code level git commit messages, and ZenHub for adding dependencies between issues and clustering into Epics for use with Roadmaps.</p>
-<p><strong>How long will it take?</strong> You’ll take on the role of an environmental data science consultancy responding to a request for proposal. In the proposal you’ll outline milestones with deliverables and associated dollar amounts based on time estimates and hourly rates of team members. You’ll track time spent on each task and report out at the end with a presentation on time spent over and under expectations, which will help update your understanding for future estimates. You’ll use Clockify to track time and Rmarkdown to generate reports.</p>
-<p><strong>How do we adapt to change?</strong> Changes are inevitable with technical problem solving and client requirements. As Mark Zuckerberg famously said “move fast and break things.” Iterating quickly within the team and getting feedback from all stakeholders are an important part of the development process and the basis for ‘agile’ project management. You’ll compare ‘traditional’ project management with scoping tasks at the outset of the project with a Gantt chart as a ‘waterfall’ diagram showing various phases of the project (eg data collection, analysis and communication). As you proceed with the project you’ll keep track of tasks that expand and shift with some evaluation after the fact through a burndown report. Other ‘agile’ techniques and roles will be reviewed to adapt to change.</p>
-<h1 data-number="3" id="office-hours"><span class="header-section-number">3</span> Office Hours</h1>
-<p>Office Hours are <strong>Mondays 1-2pm</strong> at NCEAS. You can swing by the office across from Jamie’s where I’ll be or better yet slot 10 minutes in advance with this calendar:</p>
-<ul>
-<li><a href="https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUVjdUZyZnpvOWFDfGRlZmF1bHR8ZjA1NjI4ZmIyYjFlYTQyOTFkNThjYTM5ZTkyMTIxN2E">Appointment Calendar for Ben’s Office Hours</a></li>
-</ul>
-<h1 data-number="4" id="grading"><span class="header-section-number">4</span> Grading</h1>
-<p>Grades will be based on the following percentages:</p>
-<ul>
-<li>Attendance: 10%</li>
-<li>Labs: 60%</li>
-<li>Presentation: 30%</li>
-</ul>
-<h1 data-number="5" id="readings"><span class="header-section-number">5</span> Readings</h1>
+<h1 data-number="1" id="create-burndown-of-hours"><span class="header-section-number">1</span> Create Burndown of Hours</h1>
+<h2 data-number="1.1" id="assign-a-task-to-each-of-your-time-entries"><span class="header-section-number">1.1</span> Assign a Task to each of your time entries</h2>
+<p>Visit the Clockify Reports &gt; Detailed, filter by Project and Task “Without task”, Apply Filter. Revisit each of these in your Time Track to assign it a Task.</p>
+<h2 data-number="1.2" id="install-bbestclockify"><span class="header-section-number">1.2</span> Install <code>bbest/clockify</code></h2>
+<p>Uninstall your existing <code>clockify</code> package and install a newly improved version <a href="https://github.com/bbest/clockify"><code>bbest/clockify</code></a> that I forked from the original and added functions <code>time_entries_all()</code> and <code>plot_burndown()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
 show
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/crsh/citr'>citr</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/citr/man/md_cite.html'>md_cite</a></span><span class='op'>(</span><span class='st'>"Bennett"</span>, bib_file<span class='op'>=</span><span class='st'>"eds211-team.bib"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/remove.packages.html'>remove.packages</a></span><span class='op'>(</span><span class='st'>"clockify"</span><span class='op'>)</span>
+<span class='fu'>remotes</span><span class='fu'>::</span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span><span class='st'>"bbest/clockify"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
 </div>
-<!-- TODO: move to UCSB only Google Drive -->
+<p>Feel free to update any packages with more recent versions if prompted.</p>
+<h2 data-number="1.3" id="use-time_entries_all-in-your-time-repo"><span class="header-section-number">1.3</span> Use <code>time_entries_all()</code> in your <strong>time</strong> repo</h2>
+<p>Recall in <strong>Lab 2. Time</strong> that you first used the Clockify API to fetch your time entries and generate a table of those entries in a <strong>time</strong> repo under your Github user space. In Step <a href="https://bbest.github.io/eds211-team/lab2_time.html#create-index.rmd">4.4. Create index.Rmd</a> the suggested R chunk for the <code>index.Rmd</code> had a section <code># get data</code> that used the R package clockify’s <code>time_entries()</code> to fetch the data.</p>
+<p>You’ll want to replace that section with a new function <code>time_entries_all()</code> that captures all user time entries (based on Step <a href="https://bbest.github.io/eds211-team/lab2_time.html#invite-team-members-lead-only">1.3 Invite Team Members (lead only)</a>) and includes the Tasks (from <a href="https://bbest.github.io/eds211-team/lab2_time.html#create-project-tasks-lead-only">Step 1.2 Invite Team Members (lead only)</a>) associated with the time entries.</p>
+<p>Expand the code below to <strong>show</strong> how it should now look. Also update the libraries loaded with <code>librarian::shelf()</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># get libraries</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/DesiQuintans/librarian'>librarian</a></span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"librarian"</span><span class='op'>)</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/DesiQuintans/librarian'>librarian</a></span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='fu'>librarian</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/librarian/man/shelf.html'>shelf</a></span><span class='op'>(</span>
+  <span class='va'>bbest</span><span class='op'>/</span><span class='va'>clockify</span>,
+  <span class='va'>dplyr</span>, <span class='va'>DT</span>, <span class='va'>ggplot2</span>,
+  quiet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'># CHANGE THESE VARIABLES!</span>
+<span class='va'>api_txt</span> <span class='op'>&lt;-</span> <span class='st'>"~/private/clockify_api-key.txt"</span>
+<span class='va'>api_txt</span> <span class='op'>&lt;-</span> <span class='st'>"~/My Drive (ben@ecoquants.com)/private/clockify-api-key_ben@ecoquants.com.txt"</span>
+<span class='va'>project_name</span> <span class='op'>&lt;-</span> <span class='st'>"my-rad-team"</span>
+
+<span class='co'># use API key to authenticate</span>
+<span class='va'>CLOCKIFY_API_KEY</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readLines.html'>readLines</a></span><span class='op'>(</span><span class='va'>api_txt</span><span class='op'>)</span>
+<span class='fu'>set_api_key</span><span class='op'>(</span><span class='va'>CLOCKIFY_API_KEY</span><span class='op'>)</span>
+
+<span class='co'># get data</span>
+<span class='va'>d_times</span> <span class='op'>&lt;-</span> <span class='fu'>time_entries_all</span><span class='op'>(</span><span class='op'>)</span>
+<span class='co'># table(d_times$project_name) # confirm project_name</span>
+<span class='va'>d_times</span> <span class='op'>&lt;-</span> <span class='va'>d_times</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span>
+    <span class='va'>project_name</span> <span class='op'>==</span> <span class='op'>!</span><span class='op'>!</span><span class='va'>project_name</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>select</span><span class='op'>(</span>
+    <span class='va'>task_name</span>, <span class='va'>time_start</span>, <span class='va'>duration_hrs</span>, 
+    <span class='va'>user_name</span>, <span class='va'>description</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>task_name</span>, <span class='va'>time_start</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<h2 data-number="1.4" id="use-plot_burndown-overall-and-for-each-task"><span class="header-section-number">1.4</span> Use <code>plot_burndown()</code> overall and for each Task</h2>
+<p>Instead of a single table of entries, let’s produce a burndown chart for the whole project and table nested in a tab set showing each individual Task in neighboring tabs. See <a href="https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html">7.6 Put content in tabs | R Markdown Cookbook</a>.</p>
+<p>After the code chunk above getting the data, enter a tabset with your Github organization name corresponding to the project (not my example of <code>my-rad-team</code>):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## my-rad-team {.tabset}</span></span></code></pre></div>
+<p>Then add a tab for Overall.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Overall</span></span></code></pre></div>
+<p>And a code chunk below that using the new <a href="https://github.com/bbest/clockify/blob/master/R/plot.R"><code>plot_burndown()</code></a> function that uses the <code>ggplot2</code> library to create a stepped filled area plot and red dashed line for the estimated burn rate.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># plot ALL</span>
+<span class='fu'>plot_burndown</span><span class='op'>(</span>
+  <span class='va'>d_times</span>,
+  beg <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-10-31"</span><span class='op'>)</span>, <span class='co'># day before</span>
+  end <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-11-21"</span><span class='op'>)</span>, <span class='co'># day after</span>
+  hrs <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span>
+
+<span class='co'># table ALL</span>
+<span class='fu'>datatable</span><span class='op'>(</span><span class='va'>d_times</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<p>Then add tabs for each task with a code chunk similar to the Overrall tab except for an extra <code>filter()</code> by Task of the data frame <code>d_times</code> to get <code>d_task</code>. Of course swap out whatever your task names are in Clockify (i.e. so probably not starting with “1. Import”) for the project and use the begin and end dates you entered per Task from <strong>Lab 1. Proposal</strong> Step <a href="https://bbest.github.io/eds211-team/lab1_proposal.html#create-detailed-project-schedule">5 Create Detailed Project Schedule</a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Import</span></span></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>task</span> <span class='op'>&lt;-</span> <span class='st'>"1. Import"</span>
+<span class='va'>d_task</span> <span class='op'>&lt;-</span> <span class='va'>d_times</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>task_name</span> <span class='op'>==</span> <span class='op'>!</span><span class='op'>!</span><span class='va'>task</span><span class='op'>)</span>
+<span class='fu'>plot_burndown</span><span class='op'>(</span>
+  <span class='va'>d_task</span>,
+  beg <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-10-31"</span><span class='op'>)</span>, <span class='co'># day before</span>
+  end <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-11-08"</span><span class='op'>)</span>, <span class='co'># day after</span>
+  hrs <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>
+
+<span class='fu'>datatable</span><span class='op'>(</span><span class='va'>d_task</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<p>Repeat for each task, swapping out the begin/end dates, hours and task names accordingly.</p>
+<p>Your tabs should look similar (although styled differently from this Distill template) to the following:</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>xaringanExtra</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/xaringanExtra/man/panelset.html'>use_panelset</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<h3 class="unnumbered" id="my-rad-team">my-rad-team</h3>
+<div class="l-screen">
+<div class="panelset">
+<section id="overall" class="unnumbered panel">
+<h4 class="unnumbered">Overall</h4>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># plot ALL</span>
+<span class='fu'>plot_burndown</span><span class='op'>(</span>
+  <span class='va'>d_times</span>,
+  beg <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-10-31"</span><span class='op'>)</span>, <span class='co'># day before</span>
+  end <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-11-21"</span><span class='op'>)</span>, <span class='co'># day after</span>
+  hrs <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<img src="lab5_burndown_files/figure-html5/unnamed-chunk-5-1.png" width="624" />
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># table ALL</span>
+<span class='fu'>datatable</span><span class='op'>(</span><span class='va'>d_times</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-f35a3ddb49abd8853aa4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f35a3ddb49abd8853aa4">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8"],["1. Import","1. Import","1. Import","2. Tidy","2. Tidy","2. Tidy","2. Tidy","3. Transform"],["2021-11-01T13:00:00Z","2021-11-01T17:13:00Z","2021-11-02T17:13:00Z","2021-11-08T16:00:00Z","2021-11-10T16:00:00Z","2021-11-12T16:00:00Z","2021-11-19T16:00:00Z","2021-11-12T22:00:00Z"],[3.5,1.1,1.1,3,3,3,3,5],["bdbest","Ben Best","Ben Best","Ben Best","Ben Best","Ben Best","Ben Best","Ben Best"],["finding online data source","import CSV from online","import CSV from online","transformed from wide to long","transformed from wide to long","transformed from wide to long","transformed from wide to long","convert to spatial grid"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>task_name<\/th>\n      <th>time_start<\/th>\n      <th>duration_hrs<\/th>\n      <th>user_name<\/th>\n      <th>description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</section>
+<section id="import" class="unnumbered panel">
+<h4 class="unnumbered">1. Import</h4>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>task</span> <span class='op'>&lt;-</span> <span class='st'>"1. Import"</span>
+<span class='va'>d_task</span> <span class='op'>&lt;-</span> <span class='va'>d_times</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>task_name</span> <span class='op'>==</span> <span class='op'>!</span><span class='op'>!</span><span class='va'>task</span><span class='op'>)</span>
+<span class='fu'>plot_burndown</span><span class='op'>(</span>
+  <span class='va'>d_task</span>,
+  beg <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-10-31"</span><span class='op'>)</span>, <span class='co'># day before</span>
+  end <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-11-08"</span><span class='op'>)</span>, <span class='co'># day after</span>
+  hrs <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<img src="lab5_burndown_files/figure-html5/unnamed-chunk-6-1.png" width="624" />
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>datatable</span><span class='op'>(</span><span class='va'>d_task</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-c5076e4a61335c9e9ad7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c5076e4a61335c9e9ad7">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["1. Import","1. Import","1. Import"],["2021-11-01T13:00:00Z","2021-11-01T17:13:00Z","2021-11-02T17:13:00Z"],[3.5,1.1,1.1],["bdbest","Ben Best","Ben Best"],["finding online data source","import CSV from online","import CSV from online"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>task_name<\/th>\n      <th>time_start<\/th>\n      <th>duration_hrs<\/th>\n      <th>user_name<\/th>\n      <th>description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</section>
+<section id="tidy" class="unnumbered panel">
+<h4 class="unnumbered">2. Tidy</h4>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>task</span> <span class='op'>&lt;-</span> <span class='st'>"2. Tidy"</span>
+<span class='va'>d_task</span> <span class='op'>&lt;-</span> <span class='va'>d_times</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>task_name</span> <span class='op'>==</span> <span class='op'>!</span><span class='op'>!</span><span class='va'>task</span><span class='op'>)</span>
+<span class='fu'>plot_burndown</span><span class='op'>(</span>
+  <span class='va'>d_task</span>,
+  beg <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-10-31"</span><span class='op'>)</span>, <span class='co'># day before</span>
+  end <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-11-15"</span><span class='op'>)</span>, <span class='co'># day after</span>
+  hrs <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<img src="lab5_burndown_files/figure-html5/unnamed-chunk-7-1.png" width="624" />
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>datatable</span><span class='op'>(</span><span class='va'>d_task</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-92cad99034ebd4a47534" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-92cad99034ebd4a47534">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4"],["2. Tidy","2. Tidy","2. Tidy","2. Tidy"],["2021-11-08T16:00:00Z","2021-11-10T16:00:00Z","2021-11-12T16:00:00Z","2021-11-19T16:00:00Z"],[3,3,3,3],["Ben Best","Ben Best","Ben Best","Ben Best"],["transformed from wide to long","transformed from wide to long","transformed from wide to long","transformed from wide to long"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>task_name<\/th>\n      <th>time_start<\/th>\n      <th>duration_hrs<\/th>\n      <th>user_name<\/th>\n      <th>description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</section>
+<section id="transform" class="unnumbered panel">
+<h4 class="unnumbered">3. Transform</h4>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>task</span> <span class='op'>&lt;-</span> <span class='st'>"3. Transform"</span>
+<span class='va'>d_task</span> <span class='op'>&lt;-</span> <span class='va'>d_times</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>task_name</span> <span class='op'>==</span> <span class='op'>!</span><span class='op'>!</span><span class='va'>task</span><span class='op'>)</span>
+<span class='fu'>plot_burndown</span><span class='op'>(</span>
+  <span class='va'>d_task</span>,
+  beg <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-10-31"</span><span class='op'>)</span>, <span class='co'># day before</span>
+  end <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"2021-11-21"</span><span class='op'>)</span>, <span class='co'># day after</span>
+  hrs <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<img src="lab5_burndown_files/figure-html5/unnamed-chunk-8-1.png" width="624" />
+<details>
+<summary>
+show
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>datatable</span><span class='op'>(</span><span class='va'>d_task</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-de5e0ce2750a7b298a6d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-de5e0ce2750a7b298a6d">{"x":{"filter":"none","vertical":false,"data":[["1"],["3. Transform"],["2021-11-12T22:00:00Z"],[5],["Ben Best"],["convert to spatial grid"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>task_name<\/th>\n      <th>time_start<\/th>\n      <th>duration_hrs<\/th>\n      <th>user_name<\/th>\n      <th>description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</section>
+</div>
+</div>
+<p>Notice how the red hours used, i.e. “burned”, may exceed the estimated trajectory by being below the red line or have plenty extra hours if above.</p>
+<h1 class="unnumbered" id="explore-further">Explore Further</h1>
 <ul>
-<li>Week 1: <span class="citation" data-cites="bennettCollaborationTeamScience2012"><a href="#ref-bennettCollaborationTeamScience2012" role="doc-biblioref">Bennett and Gadlin</a> (<a href="#ref-bennettCollaborationTeamScience2012" role="doc-biblioref">2012</a>)</span> (<a href="https://drive.google.com/file/d/1LJWfJTo4EWcd6Vxyfg7R6GTES-orY-3B/view?usp=sharing">pdf</a>)</li>
-<li>Week 2: <span class="citation" data-cites="lowndesOurPathBetter2017"><a href="#ref-lowndesOurPathBetter2017" role="doc-biblioref">Lowndes et al.</a> (<a href="#ref-lowndesOurPathBetter2017" role="doc-biblioref">2017</a>)</span> (<a href="https://drive.google.com/file/d/16eswlI2SFQpITD1Oqbi7NPDhTm3Xope4/view?usp=sharing">pdf</a>)</li>
-<li>Week 3: <span class="citation" data-cites="perez-riverolTenSimpleRules2016"><a href="#ref-perez-riverolTenSimpleRules2016" role="doc-biblioref">Perez-Riverol et al.</a> (<a href="#ref-perez-riverolTenSimpleRules2016" role="doc-biblioref">2016</a>)</span> (<a href="https://drive.google.com/file/d/1gt0jrZ3Q6HCqSORb7_L24Twj7WiIlCwO/view?usp=sharing">pdf</a>)</li>
-<li>Week 4: <span class="citation" data-cites="larsonBestPracticesAccelerating2019"><a href="#ref-larsonBestPracticesAccelerating2019" role="doc-biblioref">Larson</a> (<a href="#ref-larsonBestPracticesAccelerating2019" role="doc-biblioref">2019</a>)</span> (<a href="https://drive.google.com/file/d/1ZnAK5c-96B8G_dZkNA3SD6qppEuWz5iA/view?usp=sharing">pdf</a>)</li>
-<li>Week 5: <span class="citation" data-cites="bastilleImprovingIEAApproach2021"><a href="#ref-bastilleImprovingIEAApproach2021" role="doc-biblioref">Bastille et al.</a> (<a href="#ref-bastilleImprovingIEAApproach2021" role="doc-biblioref">2021</a>)</span> (<a href="https://drive.google.com/file/d/1lZvvLdfzq9xnIpF9fxhVAFWl0laFUB4n/view?usp=sharing">pdf</a>)</li>
+<li><p><a href="https://help.zenhub.com/support/solutions/articles/43000010358">Using Velocity charts in ZenHub</a></p></li>
+<li><p><a href="https://help.zenhub.com/support/solutions/articles/43000010356">Creating Burndown charts in ZenHub using GitHub Milestones</a></p></li>
+<li><p><a href="https://help.zenhub.com/support/solutions/articles/43000010349-create-github-issue-dependencies">Creating GitHub Issue Dependencies using ZenHub</a></p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-bastilleImprovingIEAApproach2021" class="csl-entry" role="doc-biblioentry">
-Bastille, Kimberly, Sean Hardison, Lynn deWitt, Jennifer Brown, Jameal Samhouri, Sarah Gaichas, Sean Lucey, et al. 2021. <span>“Improving the <span>IEA Approach Using Principles</span> of <span>Open Data Science</span>.”</span> <em>Coastal Management</em> 49 (1): 72–89. <a href="https://doi.org/10.1080/08920753.2021.1846155">https://doi.org/10.1080/08920753.2021.1846155</a>.
-</div>
-<div id="ref-bennettCollaborationTeamScience2012" class="csl-entry" role="doc-biblioentry">
-Bennett, L. Michelle, and Howard Gadlin. 2012. <span>“Collaboration and <span>Team Science</span>: <span>From Theory</span> to <span>Practice</span>.”</span> <em>Journal of Investigative Medicine</em> 60 (5): 768–75. <a href="https://doi.org/10.2310/JIM.0b013e318250871d">https://doi.org/10.2310/JIM.0b013e318250871d</a>.
-</div>
-<div id="ref-larsonBestPracticesAccelerating2019" class="csl-entry" role="doc-biblioentry">
-Larson, Deanne. 2019. <span>“Best <span>Practices</span> in <span>Accelerating</span> the <span>Data Science Process</span> in <span>Python</span>.”</span> In <em>Introduction to <span>Data Science</span> and <span>Machine Learning</span></em>. <span>IntechOpen</span>.
-</div>
-<div id="ref-lowndesOurPathBetter2017" class="csl-entry" role="doc-biblioentry">
-Lowndes, Julia S. Stewart, Benjamin D. Best, Courtney Scarborough, Jamie C. Afflerbach, Melanie R. Frazier, Casey C. O’Hara, Ning Jiang, and Benjamin S. Halpern. 2017. <span>“Our Path to Better Science in Less Time Using Open Data Science Tools.”</span> <em>Nature Ecology &amp; Evolution</em> 1 (6): 0160. <a href="https://doi.org/10.1038/s41559-017-0160">https://doi.org/10.1038/s41559-017-0160</a>.
-</div>
-<div id="ref-perez-riverolTenSimpleRules2016" class="csl-entry" role="doc-biblioentry">
-Perez-Riverol, Yasset, Laurent Gatto, Rui Wang, Timo Sachsenberg, Julian Uszkoreit, Felipe da Veiga Leprevost, Christian Fufezan, et al. 2016. <span>“Ten <span>Simple Rules</span> for <span>Taking Advantage</span> of <span>Git</span> and <span>GitHub</span>.”</span> Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (7): e1004947. <a href="https://doi.org/10.1371/journal.pcbi.1004947">https://doi.org/10.1371/journal.pcbi.1004947</a>.
-</div>
-</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2655,10 +2823,7 @@ Perez-Riverol, Yasset, Laurent Gatto, Rui Wang, Timo Sachsenberg, Julian Uszkore
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="references">References</h3>
-<div id="references-listing"></div>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">

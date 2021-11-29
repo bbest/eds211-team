@@ -33,7 +33,7 @@ Think carefully about what you'd like to call your group project. Come up with:
     For instance, "Ocean Health Index".
 
 -   **Key**\
-    all lower case, no spaces, possibly an acronym\
+    all lower case letters and numbers [a-z0-9], no spaces or special characters except dash "-" (underscore "_" not allowed), possibly an acronym\
     For instance, "ohi". Ideally, find a key that is not already taken on Github. Since [github.com/ohi](https://github.com/ohi) is already taken, we chose "[ohi-science](https://github.com/ohi-science)" as the final key. You don't need to create a new Github organization just yet. We'll handle that in the Github lab.
 
 # Take Notes in Google Docs
