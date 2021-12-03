@@ -137,3 +137,8 @@ Include in your proposal:
 ***Every team member*** must submit links to the lab outputs via the following Google Form using your UCSB email:
 
 -   [Submission for Lab 1. Proposal](https://forms.gle/VmgQyESQtGb6aodG8)
+
+
+# Explore Further {.unnumbered}
+
+- [What does an AI RFP need to contain? | by Bradley Arsenault | Towards Data Science](https://towardsdatascience.com/what-does-an-ai-rfp-need-to-contain-13c747b316ed)
